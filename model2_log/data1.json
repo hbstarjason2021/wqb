@@ -1,0 +1,1305 @@
+{
+    "count": 886,
+    "results": [
+        {
+            "id": "assets",
+            "description": "Assets - Total",
+            "dataset": {
+                "id": "fundamental6",
+                "name": "Company Fundamental Data for Equity"
+            },
+            "category": {
+                "id": "fundamental",
+                "name": "Fundamental"
+            },
+            "subcategory": {
+                "id": "fundamental-fundamental-data",
+                "name": "Fundamental Data"
+            },
+            "region": "USA",
+            "delay": 1,
+            "universe": "TOP3000",
+            "type": "MATRIX",
+            "coverage": 0.9524,
+            "userCount": 23111,
+            "alphaCount": 75762,
+            "themes": [
+
+            ]
+        },
+        {
+            "id": "assets_curr",
+            "description": "Current Assets - Total",
+            "dataset": {
+                "id": "fundamental6",
+                "name": "Company Fundamental Data for Equity"
+            },
+            "category": {
+                "id": "fundamental",
+                "name": "Fundamental"
+            },
+            "subcategory": {
+                "id": "fundamental-fundamental-data",
+                "name": "Fundamental Data"
+            },
+            "region": "USA",
+            "delay": 1,
+            "universe": "TOP3000",
+            "type": "MATRIX",
+            "coverage": 0.7655,
+            "userCount": 2135,
+            "alphaCount": 11241,
+            "themes": [
+
+            ]
+        },
+        {
+            "id": "bookvalue_ps",
+            "description": "Book Value Per Share",
+            "dataset": {
+                "id": "fundamental6",
+                "name": "Company Fundamental Data for Equity"
+            },
+            "category": {
+                "id": "fundamental",
+                "name": "Fundamental"
+            },
+            "subcategory": {
+                "id": "fundamental-fundamental-data",
+                "name": "Fundamental Data"
+            },
+            "region": "USA",
+            "delay": 1,
+            "universe": "TOP3000",
+            "type": "MATRIX",
+            "coverage": 0.9754,
+            "userCount": 1785,
+            "alphaCount": 8189,
+            "themes": [
+
+            ]
+        },
+        {
+            "id": "capex",
+            "description": "Capital Expenditures",
+            "dataset": {
+                "id": "fundamental6",
+                "name": "Company Fundamental Data for Equity"
+            },
+            "category": {
+                "id": "fundamental",
+                "name": "Fundamental"
+            },
+            "subcategory": {
+                "id": "fundamental-fundamental-data",
+                "name": "Fundamental Data"
+            },
+            "region": "USA",
+            "delay": 1,
+            "universe": "TOP3000",
+            "type": "MATRIX",
+            "coverage": 0.9646,
+            "userCount": 7438,
+            "alphaCount": 19527,
+            "themes": [
+
+            ]
+        },
+        {
+            "id": "cash",
+            "description": "Cash",
+            "dataset": {
+                "id": "fundamental6",
+                "name": "Company Fundamental Data for Equity"
+            },
+            "category": {
+                "id": "fundamental",
+                "name": "Fundamental"
+            },
+            "subcategory": {
+                "id": "fundamental-fundamental-data",
+                "name": "Fundamental Data"
+            },
+            "region": "USA",
+            "delay": 1,
+            "universe": "TOP3000",
+            "type": "MATRIX",
+            "coverage": 0.7529,
+            "userCount": 1700,
+            "alphaCount": 9828,
+            "themes": [
+
+            ]
+        },
+        {
+            "id": "cash_st",
+            "description": "Cash and Short-Term Investments",
+            "dataset": {
+                "id": "fundamental6",
+                "name": "Company Fundamental Data for Equity"
+            },
+            "category": {
+                "id": "fundamental",
+                "name": "Fundamental"
+            },
+            "subcategory": {
+                "id": "fundamental-fundamental-data",
+                "name": "Fundamental Data"
+            },
+            "region": "USA",
+            "delay": 1,
+            "universe": "TOP3000",
+            "type": "MATRIX",
+            "coverage": 0.9463,
+            "userCount": 1087,
+            "alphaCount": 7245,
+            "themes": [
+
+            ]
+        },
+        {
+            "id": "cashflow",
+            "description": "Cashflow (Annual)",
+            "dataset": {
+                "id": "fundamental6",
+                "name": "Company Fundamental Data for Equity"
+            },
+            "category": {
+                "id": "fundamental",
+                "name": "Fundamental"
+            },
+            "subcategory": {
+                "id": "fundamental-fundamental-data",
+                "name": "Fundamental Data"
+            },
+            "region": "USA",
+            "delay": 1,
+            "universe": "TOP3000",
+            "type": "MATRIX",
+            "coverage": 0.9251,
+            "userCount": 1675,
+            "alphaCount": 7591,
+            "themes": [
+
+            ]
+        },
+        {
+            "id": "cashflow_dividends",
+            "description": "Cash Dividends (Cash Flow)",
+            "dataset": {
+                "id": "fundamental6",
+                "name": "Company Fundamental Data for Equity"
+            },
+            "category": {
+                "id": "fundamental",
+                "name": "Fundamental"
+            },
+            "subcategory": {
+                "id": "fundamental-fundamental-data",
+                "name": "Fundamental Data"
+            },
+            "region": "USA",
+            "delay": 1,
+            "universe": "TOP3000",
+            "type": "MATRIX",
+            "coverage": 0.9564,
+            "userCount": 1995,
+            "alphaCount": 4993,
+            "themes": [
+
+            ]
+        },
+        {
+            "id": "cashflow_fin",
+            "description": "Financing Activities - Net Cash Flow",
+            "dataset": {
+                "id": "fundamental6",
+                "name": "Company Fundamental Data for Equity"
+            },
+            "category": {
+                "id": "fundamental",
+                "name": "Fundamental"
+            },
+            "subcategory": {
+                "id": "fundamental-fundamental-data",
+                "name": "Fundamental Data"
+            },
+            "region": "USA",
+            "delay": 1,
+            "universe": "TOP3000",
+            "type": "MATRIX",
+            "coverage": 0.9709,
+            "userCount": 940,
+            "alphaCount": 5996,
+            "themes": [
+
+            ]
+        },
+        {
+            "id": "cashflow_invst",
+            "description": "Investing Activities - Net Cash Flow",
+            "dataset": {
+                "id": "fundamental6",
+                "name": "Company Fundamental Data for Equity"
+            },
+            "category": {
+                "id": "fundamental",
+                "name": "Fundamental"
+            },
+            "subcategory": {
+                "id": "fundamental-fundamental-data",
+                "name": "Fundamental Data"
+            },
+            "region": "USA",
+            "delay": 1,
+            "universe": "TOP3000",
+            "type": "MATRIX",
+            "coverage": 0.9709,
+            "userCount": 758,
+            "alphaCount": 4070,
+            "themes": [
+
+            ]
+        },
+        {
+            "id": "cashflow_op",
+            "description": "Operating Activities - Net Cash Flow",
+            "dataset": {
+                "id": "fundamental6",
+                "name": "Company Fundamental Data for Equity"
+            },
+            "category": {
+                "id": "fundamental",
+                "name": "Fundamental"
+            },
+            "subcategory": {
+                "id": "fundamental-fundamental-data",
+                "name": "Fundamental Data"
+            },
+            "region": "USA",
+            "delay": 1,
+            "universe": "TOP3000",
+            "type": "MATRIX",
+            "coverage": 0.9709,
+            "userCount": 3186,
+            "alphaCount": 8601,
+            "themes": [
+
+            ]
+        },
+        {
+            "id": "cogs",
+            "description": "Cost of Goods Sold",
+            "dataset": {
+                "id": "fundamental6",
+                "name": "Company Fundamental Data for Equity"
+            },
+            "category": {
+                "id": "fundamental",
+                "name": "Fundamental"
+            },
+            "subcategory": {
+                "id": "fundamental-fundamental-data",
+                "name": "Fundamental Data"
+            },
+            "region": "USA",
+            "delay": 1,
+            "universe": "TOP3000",
+            "type": "MATRIX",
+            "coverage": 0.9557,
+            "userCount": 1240,
+            "alphaCount": 8506,
+            "themes": [
+
+            ]
+        },
+        {
+            "id": "current_ratio",
+            "description": "Current Ratio",
+            "dataset": {
+                "id": "fundamental6",
+                "name": "Company Fundamental Data for Equity"
+            },
+            "category": {
+                "id": "fundamental",
+                "name": "Fundamental"
+            },
+            "subcategory": {
+                "id": "fundamental-fundamental-data",
+                "name": "Fundamental Data"
+            },
+            "region": "USA",
+            "delay": 1,
+            "universe": "TOP3000",
+            "type": "MATRIX",
+            "coverage": 0.7806,
+            "userCount": 1257,
+            "alphaCount": 5689,
+            "themes": [
+
+            ]
+        },
+        {
+            "id": "debt",
+            "description": "Debt",
+            "dataset": {
+                "id": "fundamental6",
+                "name": "Company Fundamental Data for Equity"
+            },
+            "category": {
+                "id": "fundamental",
+                "name": "Fundamental"
+            },
+            "subcategory": {
+                "id": "fundamental-fundamental-data",
+                "name": "Fundamental Data"
+            },
+            "region": "USA",
+            "delay": 1,
+            "universe": "TOP3000",
+            "type": "MATRIX",
+            "coverage": 0.7904,
+            "userCount": 5156,
+            "alphaCount": 17037,
+            "themes": [
+
+            ]
+        },
+        {
+            "id": "debt_lt",
+            "description": "Long-Term Debt - Total",
+            "dataset": {
+                "id": "fundamental6",
+                "name": "Company Fundamental Data for Equity"
+            },
+            "category": {
+                "id": "fundamental",
+                "name": "Fundamental"
+            },
+            "subcategory": {
+                "id": "fundamental-fundamental-data",
+                "name": "Fundamental Data"
+            },
+            "region": "USA",
+            "delay": 1,
+            "universe": "TOP3000",
+            "type": "MATRIX",
+            "coverage": 0.9433,
+            "userCount": 6080,
+            "alphaCount": 11880,
+            "themes": [
+
+            ]
+        },
+        {
+            "id": "debt_st",
+            "description": "Debt in Current Liabilities",
+            "dataset": {
+                "id": "fundamental6",
+                "name": "Company Fundamental Data for Equity"
+            },
+            "category": {
+                "id": "fundamental",
+                "name": "Fundamental"
+            },
+            "subcategory": {
+                "id": "fundamental-fundamental-data",
+                "name": "Fundamental Data"
+            },
+            "region": "USA",
+            "delay": 1,
+            "universe": "TOP3000",
+            "type": "MATRIX",
+            "coverage": 0.8796,
+            "userCount": 2823,
+            "alphaCount": 7454,
+            "themes": [
+
+            ]
+        },
+        {
+            "id": "depre_amort",
+            "description": "Depreciation and Amortization - Total",
+            "dataset": {
+                "id": "fundamental6",
+                "name": "Company Fundamental Data for Equity"
+            },
+            "category": {
+                "id": "fundamental",
+                "name": "Fundamental"
+            },
+            "subcategory": {
+                "id": "fundamental-fundamental-data",
+                "name": "Fundamental Data"
+            },
+            "region": "USA",
+            "delay": 1,
+            "universe": "TOP3000",
+            "type": "MATRIX",
+            "coverage": 0.8577,
+            "userCount": 734,
+            "alphaCount": 3700,
+            "themes": [
+
+            ]
+        },
+        {
+            "id": "ebit",
+            "description": "Earnings Before Interest and Taxes",
+            "dataset": {
+                "id": "fundamental6",
+                "name": "Company Fundamental Data for Equity"
+            },
+            "category": {
+                "id": "fundamental",
+                "name": "Fundamental"
+            },
+            "subcategory": {
+                "id": "fundamental-fundamental-data",
+                "name": "Fundamental Data"
+            },
+            "region": "USA",
+            "delay": 1,
+            "universe": "TOP3000",
+            "type": "MATRIX",
+            "coverage": 0.9578,
+            "userCount": 5801,
+            "alphaCount": 15534,
+            "themes": [
+
+            ]
+        },
+        {
+            "id": "ebitda",
+            "description": "Earnings Before Interest",
+            "dataset": {
+                "id": "fundamental6",
+                "name": "Company Fundamental Data for Equity"
+            },
+            "category": {
+                "id": "fundamental",
+                "name": "Fundamental"
+            },
+            "subcategory": {
+                "id": "fundamental-fundamental-data",
+                "name": "Fundamental Data"
+            },
+            "region": "USA",
+            "delay": 1,
+            "universe": "TOP3000",
+            "type": "MATRIX",
+            "coverage": 0.9454,
+            "userCount": 5286,
+            "alphaCount": 15202,
+            "themes": [
+
+            ]
+        },
+        {
+            "id": "employee",
+            "description": "Employees",
+            "dataset": {
+                "id": "fundamental6",
+                "name": "Company Fundamental Data for Equity"
+            },
+            "category": {
+                "id": "fundamental",
+                "name": "Fundamental"
+            },
+            "subcategory": {
+                "id": "fundamental-fundamental-data",
+                "name": "Fundamental Data"
+            },
+            "region": "USA",
+            "delay": 1,
+            "universe": "TOP3000",
+            "type": "MATRIX",
+            "coverage": 0.9588,
+            "userCount": 823,
+            "alphaCount": 4196,
+            "themes": [
+
+            ]
+        },
+        {
+            "id": "enterprise_value",
+            "description": "Enterprise Value",
+            "dataset": {
+                "id": "fundamental6",
+                "name": "Company Fundamental Data for Equity"
+            },
+            "category": {
+                "id": "fundamental",
+                "name": "Fundamental"
+            },
+            "subcategory": {
+                "id": "fundamental-fundamental-data",
+                "name": "Fundamental Data"
+            },
+            "region": "USA",
+            "delay": 1,
+            "universe": "TOP3000",
+            "type": "MATRIX",
+            "coverage": 0.7359,
+            "userCount": 5439,
+            "alphaCount": 15466,
+            "themes": [
+
+            ]
+        },
+        {
+            "id": "eps",
+            "description": "Earnings Per Share (Basic) - Including Extraordinary Items",
+            "dataset": {
+                "id": "fundamental6",
+                "name": "Company Fundamental Data for Equity"
+            },
+            "category": {
+                "id": "fundamental",
+                "name": "Fundamental"
+            },
+            "subcategory": {
+                "id": "fundamental-fundamental-data",
+                "name": "Fundamental Data"
+            },
+            "region": "USA",
+            "delay": 1,
+            "universe": "TOP3000",
+            "type": "MATRIX",
+            "coverage": 0.958,
+            "userCount": 2363,
+            "alphaCount": 14262,
+            "themes": [
+
+            ]
+        },
+        {
+            "id": "equity",
+            "description": "Common/Ordinary Equity - Total",
+            "dataset": {
+                "id": "fundamental6",
+                "name": "Company Fundamental Data for Equity"
+            },
+            "category": {
+                "id": "fundamental",
+                "name": "Fundamental"
+            },
+            "subcategory": {
+                "id": "fundamental-fundamental-data",
+                "name": "Fundamental Data"
+            },
+            "region": "USA",
+            "delay": 1,
+            "universe": "TOP3000",
+            "type": "MATRIX",
+            "coverage": 0.947,
+            "userCount": 2881,
+            "alphaCount": 15129,
+            "themes": [
+
+            ]
+        },
+        {
+            "id": "fnd6_acdo",
+            "description": "Current Assets of Discontinued Operations",
+            "dataset": {
+                "id": "fundamental6",
+                "name": "Company Fundamental Data for Equity"
+            },
+            "category": {
+                "id": "fundamental",
+                "name": "Fundamental"
+            },
+            "subcategory": {
+                "id": "fundamental-fundamental-data",
+                "name": "Fundamental Data"
+            },
+            "region": "USA",
+            "delay": 1,
+            "universe": "TOP3000",
+            "type": "MATRIX",
+            "coverage": 0.6072,
+            "userCount": 1153,
+            "alphaCount": 2207,
+            "themes": [
+
+            ]
+        },
+        {
+            "id": "fnd6_acodo",
+            "description": "Other Current Assets Excl Discontinued Operations",
+            "dataset": {
+                "id": "fundamental6",
+                "name": "Company Fundamental Data for Equity"
+            },
+            "category": {
+                "id": "fundamental",
+                "name": "Fundamental"
+            },
+            "subcategory": {
+                "id": "fundamental-fundamental-data",
+                "name": "Fundamental Data"
+            },
+            "region": "USA",
+            "delay": 1,
+            "universe": "TOP3000",
+            "type": "MATRIX",
+            "coverage": 0.6119,
+            "userCount": 762,
+            "alphaCount": 1982,
+            "themes": [
+
+            ]
+        },
+        {
+            "id": "fnd6_acox",
+            "description": "Current Assets - Other - Sundry",
+            "dataset": {
+                "id": "fundamental6",
+                "name": "Company Fundamental Data for Equity"
+            },
+            "category": {
+                "id": "fundamental",
+                "name": "Fundamental"
+            },
+            "subcategory": {
+                "id": "fundamental-fundamental-data",
+                "name": "Fundamental Data"
+            },
+            "region": "USA",
+            "delay": 1,
+            "universe": "TOP3000",
+            "type": "MATRIX",
+            "coverage": 0.8318,
+            "userCount": 677,
+            "alphaCount": 1618,
+            "themes": [
+
+            ]
+        },
+        {
+            "id": "fnd6_acqgdwl",
+            "description": "Acquired Assets - Goodwill",
+            "dataset": {
+                "id": "fundamental6",
+                "name": "Company Fundamental Data for Equity"
+            },
+            "category": {
+                "id": "fundamental",
+                "name": "Fundamental"
+            },
+            "subcategory": {
+                "id": "fundamental-fundamental-data",
+                "name": "Fundamental Data"
+            },
+            "region": "USA",
+            "delay": 1,
+            "universe": "TOP3000",
+            "type": "MATRIX",
+            "coverage": 0.2632,
+            "userCount": 502,
+            "alphaCount": 943,
+            "themes": [
+
+            ]
+        },
+        {
+            "id": "fnd6_acqintan",
+            "description": "Acquired Assets - Intangibles",
+            "dataset": {
+                "id": "fundamental6",
+                "name": "Company Fundamental Data for Equity"
+            },
+            "category": {
+                "id": "fundamental",
+                "name": "Fundamental"
+            },
+            "subcategory": {
+                "id": "fundamental-fundamental-data",
+                "name": "Fundamental Data"
+            },
+            "region": "USA",
+            "delay": 1,
+            "universe": "TOP3000",
+            "type": "MATRIX",
+            "coverage": 0.261,
+            "userCount": 182,
+            "alphaCount": 434,
+            "themes": [
+
+            ]
+        },
+        {
+            "id": "fnd6_adesinda_curcd",
+            "description": "ISO Currency Code - Company Annual Market",
+            "dataset": {
+                "id": "fundamental6",
+                "name": "Company Fundamental Data for Equity"
+            },
+            "category": {
+                "id": "fundamental",
+                "name": "Fundamental"
+            },
+            "subcategory": {
+                "id": "fundamental-fundamental-data",
+                "name": "Fundamental Data"
+            },
+            "region": "USA",
+            "delay": 1,
+            "universe": "TOP3000",
+            "type": "MATRIX",
+            "coverage": 1,
+            "userCount": 431,
+            "alphaCount": 1708,
+            "themes": [
+
+            ]
+        },
+        {
+            "id": "fnd6_aldo",
+            "description": "Long-term Assets of Discontinued Operations",
+            "dataset": {
+                "id": "fundamental6",
+                "name": "Company Fundamental Data for Equity"
+            },
+            "category": {
+                "id": "fundamental",
+                "name": "Fundamental"
+            },
+            "subcategory": {
+                "id": "fundamental-fundamental-data",
+                "name": "Fundamental Data"
+            },
+            "region": "USA",
+            "delay": 1,
+            "universe": "TOP3000",
+            "type": "MATRIX",
+            "coverage": 0.6127,
+            "userCount": 221,
+            "alphaCount": 760,
+            "themes": [
+
+            ]
+        },
+        {
+            "id": "fnd6_am",
+            "description": "Amortization of Intangibles",
+            "dataset": {
+                "id": "fundamental6",
+                "name": "Company Fundamental Data for Equity"
+            },
+            "category": {
+                "id": "fundamental",
+                "name": "Fundamental"
+            },
+            "subcategory": {
+                "id": "fundamental-fundamental-data",
+                "name": "Fundamental Data"
+            },
+            "region": "USA",
+            "delay": 1,
+            "universe": "TOP3000",
+            "type": "MATRIX",
+            "coverage": 0.6473,
+            "userCount": 374,
+            "alphaCount": 1223,
+            "themes": [
+
+            ]
+        },
+        {
+            "id": "fnd6_aodo",
+            "description": "Other Assets excluding Discontinued Operations",
+            "dataset": {
+                "id": "fundamental6",
+                "name": "Company Fundamental Data for Equity"
+            },
+            "category": {
+                "id": "fundamental",
+                "name": "Fundamental"
+            },
+            "subcategory": {
+                "id": "fundamental-fundamental-data",
+                "name": "Fundamental Data"
+            },
+            "region": "USA",
+            "delay": 1,
+            "universe": "TOP3000",
+            "type": "MATRIX",
+            "coverage": 0.6158,
+            "userCount": 212,
+            "alphaCount": 501,
+            "themes": [
+
+            ]
+        },
+        {
+            "id": "fnd6_aox",
+            "description": "Assets - Other - Sundry",
+            "dataset": {
+                "id": "fundamental6",
+                "name": "Company Fundamental Data for Equity"
+            },
+            "category": {
+                "id": "fundamental",
+                "name": "Fundamental"
+            },
+            "subcategory": {
+                "id": "fundamental-fundamental-data",
+                "name": "Fundamental Data"
+            },
+            "region": "USA",
+            "delay": 1,
+            "universe": "TOP3000",
+            "type": "MATRIX",
+            "coverage": 0.8407,
+            "userCount": 278,
+            "alphaCount": 728,
+            "themes": [
+
+            ]
+        },
+        {
+            "id": "fnd6_aqc",
+            "description": "Acquisitions",
+            "dataset": {
+                "id": "fundamental6",
+                "name": "Company Fundamental Data for Equity"
+            },
+            "category": {
+                "id": "fundamental",
+                "name": "Fundamental"
+            },
+            "subcategory": {
+                "id": "fundamental-fundamental-data",
+                "name": "Fundamental Data"
+            },
+            "region": "USA",
+            "delay": 1,
+            "universe": "TOP3000",
+            "type": "MATRIX",
+            "coverage": 0.8463,
+            "userCount": 353,
+            "alphaCount": 644,
+            "themes": [
+
+            ]
+        },
+        {
+            "id": "fnd6_aqi",
+            "description": "Acquisitions - Income Contribution",
+            "dataset": {
+                "id": "fundamental6",
+                "name": "Company Fundamental Data for Equity"
+            },
+            "category": {
+                "id": "fundamental",
+                "name": "Fundamental"
+            },
+            "subcategory": {
+                "id": "fundamental-fundamental-data",
+                "name": "Fundamental Data"
+            },
+            "region": "USA",
+            "delay": 1,
+            "universe": "TOP3000",
+            "type": "MATRIX",
+            "coverage": 0.3997,
+            "userCount": 150,
+            "alphaCount": 239,
+            "themes": [
+
+            ]
+        },
+        {
+            "id": "fnd6_aqs",
+            "description": "Acquisitions - Sales Contribution",
+            "dataset": {
+                "id": "fundamental6",
+                "name": "Company Fundamental Data for Equity"
+            },
+            "category": {
+                "id": "fundamental",
+                "name": "Fundamental"
+            },
+            "subcategory": {
+                "id": "fundamental-fundamental-data",
+                "name": "Fundamental Data"
+            },
+            "region": "USA",
+            "delay": 1,
+            "universe": "TOP3000",
+            "type": "MATRIX",
+            "coverage": 0.401,
+            "userCount": 84,
+            "alphaCount": 282,
+            "themes": [
+
+            ]
+        },
+        {
+            "id": "fnd6_beta",
+            "description": "beta",
+            "dataset": {
+                "id": "fundamental6",
+                "name": "Company Fundamental Data for Equity"
+            },
+            "category": {
+                "id": "fundamental",
+                "name": "Fundamental"
+            },
+            "subcategory": {
+                "id": "fundamental-fundamental-data",
+                "name": "Fundamental Data"
+            },
+            "region": "USA",
+            "delay": 1,
+            "universe": "TOP3000",
+            "type": "MATRIX",
+            "coverage": 0.7123,
+            "userCount": 177,
+            "alphaCount": 459,
+            "themes": [
+
+            ]
+        },
+        {
+            "id": "fnd6_capxs",
+            "description": "Capital Expenditures",
+            "dataset": {
+                "id": "fundamental6",
+                "name": "Company Fundamental Data for Equity"
+            },
+            "category": {
+                "id": "fundamental",
+                "name": "Fundamental"
+            },
+            "subcategory": {
+                "id": "fundamental-fundamental-data",
+                "name": "Fundamental Data"
+            },
+            "region": "USA",
+            "delay": 1,
+            "universe": "TOP3000",
+            "type": "VECTOR",
+            "coverage": 0.9179,
+            "userCount": 42,
+            "alphaCount": 50,
+            "themes": [
+
+            ]
+        },
+        {
+            "id": "fnd6_capxv",
+            "description": "Capital Expend Property, Plant and Equipment Schd V",
+            "dataset": {
+                "id": "fundamental6",
+                "name": "Company Fundamental Data for Equity"
+            },
+            "category": {
+                "id": "fundamental",
+                "name": "Fundamental"
+            },
+            "subcategory": {
+                "id": "fundamental-fundamental-data",
+                "name": "Fundamental Data"
+            },
+            "region": "USA",
+            "delay": 1,
+            "universe": "TOP3000",
+            "type": "MATRIX",
+            "coverage": 0.8288,
+            "userCount": 520,
+            "alphaCount": 1423,
+            "themes": [
+
+            ]
+        },
+        {
+            "id": "fnd6_caxts",
+            "description": "Cost and Expenses - Total",
+            "dataset": {
+                "id": "fundamental6",
+                "name": "Company Fundamental Data for Equity"
+            },
+            "category": {
+                "id": "fundamental",
+                "name": "Fundamental"
+            },
+            "subcategory": {
+                "id": "fundamental-fundamental-data",
+                "name": "Fundamental Data"
+            },
+            "region": "USA",
+            "delay": 1,
+            "universe": "TOP3000",
+            "type": "VECTOR",
+            "coverage": 0.6384,
+            "userCount": 11,
+            "alphaCount": 13,
+            "themes": [
+
+            ]
+        },
+        {
+            "id": "fnd6_ceql",
+            "description": "Common Equity - Liquidation Value",
+            "dataset": {
+                "id": "fundamental6",
+                "name": "Company Fundamental Data for Equity"
+            },
+            "category": {
+                "id": "fundamental",
+                "name": "Fundamental"
+            },
+            "subcategory": {
+                "id": "fundamental-fundamental-data",
+                "name": "Fundamental Data"
+            },
+            "region": "USA",
+            "delay": 1,
+            "universe": "TOP3000",
+            "type": "MATRIX",
+            "coverage": 0.8955,
+            "userCount": 283,
+            "alphaCount": 1592,
+            "themes": [
+
+            ]
+        },
+        {
+            "id": "fnd6_ch",
+            "description": "Cash",
+            "dataset": {
+                "id": "fundamental6",
+                "name": "Company Fundamental Data for Equity"
+            },
+            "category": {
+                "id": "fundamental",
+                "name": "Fundamental"
+            },
+            "subcategory": {
+                "id": "fundamental-fundamental-data",
+                "name": "Fundamental Data"
+            },
+            "region": "USA",
+            "delay": 1,
+            "universe": "TOP3000",
+            "type": "MATRIX",
+            "coverage": 0.8887,
+            "userCount": 241,
+            "alphaCount": 1220,
+            "themes": [
+
+            ]
+        },
+        {
+            "id": "fnd6_ci",
+            "description": "Comprehensive Income - Total",
+            "dataset": {
+                "id": "fundamental6",
+                "name": "Company Fundamental Data for Equity"
+            },
+            "category": {
+                "id": "fundamental",
+                "name": "Fundamental"
+            },
+            "subcategory": {
+                "id": "fundamental-fundamental-data",
+                "name": "Fundamental Data"
+            },
+            "region": "USA",
+            "delay": 1,
+            "universe": "TOP3000",
+            "type": "MATRIX",
+            "coverage": 0.966,
+            "userCount": 330,
+            "alphaCount": 1664,
+            "themes": [
+
+            ]
+        },
+        {
+            "id": "fnd6_cibegni",
+            "description": "Comp Inc - Beginning Net Income",
+            "dataset": {
+                "id": "fundamental6",
+                "name": "Company Fundamental Data for Equity"
+            },
+            "category": {
+                "id": "fundamental",
+                "name": "Fundamental"
+            },
+            "subcategory": {
+                "id": "fundamental-fundamental-data",
+                "name": "Fundamental Data"
+            },
+            "region": "USA",
+            "delay": 1,
+            "universe": "TOP3000",
+            "type": "MATRIX",
+            "coverage": 0.8604,
+            "userCount": 187,
+            "alphaCount": 659,
+            "themes": [
+
+            ]
+        },
+        {
+            "id": "fnd6_cicurr",
+            "description": "Comp Inc - Currency Trans Adj",
+            "dataset": {
+                "id": "fundamental6",
+                "name": "Company Fundamental Data for Equity"
+            },
+            "category": {
+                "id": "fundamental",
+                "name": "Fundamental"
+            },
+            "subcategory": {
+                "id": "fundamental-fundamental-data",
+                "name": "Fundamental Data"
+            },
+            "region": "USA",
+            "delay": 1,
+            "universe": "TOP3000",
+            "type": "MATRIX",
+            "coverage": 0.8513,
+            "userCount": 376,
+            "alphaCount": 817,
+            "themes": [
+
+            ]
+        },
+        {
+            "id": "fnd6_cidergl",
+            "description": "Comp Inc - Derivative Gains/Losses",
+            "dataset": {
+                "id": "fundamental6",
+                "name": "Company Fundamental Data for Equity"
+            },
+            "category": {
+                "id": "fundamental",
+                "name": "Fundamental"
+            },
+            "subcategory": {
+                "id": "fundamental-fundamental-data",
+                "name": "Fundamental Data"
+            },
+            "region": "USA",
+            "delay": 1,
+            "universe": "TOP3000",
+            "type": "MATRIX",
+            "coverage": 0.8502,
+            "userCount": 145,
+            "alphaCount": 316,
+            "themes": [
+
+            ]
+        },
+        {
+            "id": "fnd6_cik",
+            "description": "nonimportant technical code",
+            "dataset": {
+                "id": "fundamental6",
+                "name": "Company Fundamental Data for Equity"
+            },
+            "category": {
+                "id": "fundamental",
+                "name": "Fundamental"
+            },
+            "subcategory": {
+                "id": "fundamental-fundamental-data",
+                "name": "Fundamental Data"
+            },
+            "region": "USA",
+            "delay": 1,
+            "universe": "TOP3000",
+            "type": "MATRIX",
+            "coverage": 1,
+            "userCount": 247,
+            "alphaCount": 1109,
+            "themes": [
+
+            ]
+        },
+        {
+            "id": "fnd6_cimii",
+            "description": "Comprehensive Income - Noncontrolling Interest",
+            "dataset": {
+                "id": "fundamental6",
+                "name": "Company Fundamental Data for Equity"
+            },
+            "category": {
+                "id": "fundamental",
+                "name": "Fundamental"
+            },
+            "subcategory": {
+                "id": "fundamental-fundamental-data",
+                "name": "Fundamental Data"
+            },
+            "region": "USA",
+            "delay": 1,
+            "universe": "TOP3000",
+            "type": "MATRIX",
+            "coverage": 0.3545,
+            "userCount": 101,
+            "alphaCount": 285,
+            "themes": [
+
+            ]
+        },
+        {
+            "id": "fnd6_ciother",
+            "description": "Comp. Inc. - Other Adj.",
+            "dataset": {
+                "id": "fundamental6",
+                "name": "Company Fundamental Data for Equity"
+            },
+            "category": {
+                "id": "fundamental",
+                "name": "Fundamental"
+            },
+            "subcategory": {
+                "id": "fundamental-fundamental-data",
+                "name": "Fundamental Data"
+            },
+            "region": "USA",
+            "delay": 1,
+            "universe": "TOP3000",
+            "type": "MATRIX",
+            "coverage": 0.8601,
+            "userCount": 1622,
+            "alphaCount": 2161,
+            "themes": [
+
+            ]
+        },
+        {
+            "id": "fnd6_cipen",
+            "description": "Comprehensive Income - Minimum Pension Adjustment",
+            "dataset": {
+                "id": "fundamental6",
+                "name": "Company Fundamental Data for Equity"
+            },
+            "category": {
+                "id": "fundamental",
+                "name": "Fundamental"
+            },
+            "subcategory": {
+                "id": "fundamental-fundamental-data",
+                "name": "Fundamental Data"
+            },
+            "region": "USA",
+            "delay": 1,
+            "universe": "TOP3000",
+            "type": "MATRIX",
+            "coverage": 0.8563,
+            "userCount": 220,
+            "alphaCount": 633,
+            "themes": [
+
+            ]
+        }
+    ]
+}

@@ -1,0 +1,3036 @@
+username: hzhilamp@gmail.com
+password: jiXJO567@##
+response.status_code: 201
+response.json: {'user': {'id': 'ZH14406'}, 'token': {'expiry': 14400.0}, 'permissions': ['TUTORIAL']}
+count: 886
+datafields_list_fundamental6: ['assets' 'assets_curr' 'bookvalue_ps' 'capex' 'cash' 'cash_st' 'cashflow'
+ 'cashflow_dividends' 'cashflow_fin' 'cashflow_invst' 'cashflow_op' 'cogs'
+ 'current_ratio' 'debt' 'debt_lt' 'debt_st' 'depre_amort' 'ebit' 'ebitda'
+ 'employee' 'enterprise_value' 'eps' 'equity' 'fnd6_acdo' 'fnd6_acodo'
+ 'fnd6_acox' 'fnd6_acqgdwl' 'fnd6_acqintan' 'fnd6_adesinda_curcd'
+ 'fnd6_aldo' 'fnd6_am' 'fnd6_aodo' 'fnd6_aox' 'fnd6_aqc' 'fnd6_aqi'
+ 'fnd6_aqs' 'fnd6_beta' 'fnd6_capxv' 'fnd6_ceql' 'fnd6_ch' 'fnd6_ci'
+ 'fnd6_cibegni' 'fnd6_cicurr' 'fnd6_cidergl' 'fnd6_cik' 'fnd6_cimii'
+ 'fnd6_ciother' 'fnd6_cipen' 'fnd6_cisecgl' 'fnd6_citotal' 'fnd6_city'
+ 'fnd6_cld2' 'fnd6_cld3' 'fnd6_cld4' 'fnd6_cld5' 'fnd6_cptmfmq_actq'
+ 'fnd6_cptmfmq_atq' 'fnd6_cptmfmq_ceqq' 'fnd6_cptmfmq_dlttq'
+ 'fnd6_cptmfmq_dpq' 'fnd6_cptmfmq_lctq' 'fnd6_cptmfmq_oibdpq'
+ 'fnd6_cptmfmq_opepsq' 'fnd6_cptmfmq_saleq' 'fnd6_cptnewqv1300_actq'
+ 'fnd6_cptnewqv1300_apq' 'fnd6_cptnewqv1300_atq' 'fnd6_cptnewqv1300_ceqq'
+ 'fnd6_cptnewqv1300_dlttq' 'fnd6_cptnewqv1300_dpq'
+ 'fnd6_cptnewqv1300_epsf12' 'fnd6_cptnewqv1300_epsfxq'
+ 'fnd6_cptnewqv1300_epsx12' 'fnd6_cptnewqv1300_lctq'
+ 'fnd6_cptnewqv1300_ltq' 'fnd6_cptnewqv1300_nopiq'
+ 'fnd6_cptnewqv1300_oeps12' 'fnd6_cptnewqv1300_oiadpq'
+ 'fnd6_cptnewqv1300_oibdpq' 'fnd6_cptnewqv1300_opepsq'
+ 'fnd6_cptnewqv1300_rectq' 'fnd6_cptnewqv1300_req'
+ 'fnd6_cptnewqv1300_saleq' 'fnd6_cptrank_gvkeymap' 'fnd6_cshpri'
+ 'fnd6_cshr' 'fnd6_cshtr' 'fnd6_cshtrq' 'fnd6_cstkcv' 'fnd6_cstkcvq'
+ 'fnd6_currencya_curcd' 'fnd6_currencyqv1300_curcd' 'fnd6_dc' 'fnd6_dclo'
+ 'fnd6_dcpstk' 'fnd6_dcvsr' 'fnd6_dcvsub' 'fnd6_dcvt' 'fnd6_dd' 'fnd6_dd1'
+ 'fnd6_dd1q' 'fnd6_dd2' 'fnd6_dd3' 'fnd6_dd4' 'fnd6_dd5' 'fnd6_dilavx'
+ 'fnd6_dlcch' 'fnd6_dltis' 'fnd6_dlto' 'fnd6_dltp' 'fnd6_dltr' 'fnd6_dm'
+ 'fnd6_dn' 'fnd6_donr' 'fnd6_dpvieb' 'fnd6_drc' 'fnd6_drlt' 'fnd6_ds'
+ 'fnd6_dudd' 'fnd6_dvpa' 'fnd6_dxd2' 'fnd6_dxd3' 'fnd6_dxd4' 'fnd6_dxd5'
+ 'fnd6_ein' 'fnd6_esopct' 'fnd6_esopnr' 'fnd6_esopr' 'fnd6_esubc'
+ 'fnd6_exre' 'fnd6_fatb' 'fnd6_fatc' 'fnd6_fate' 'fnd6_fatl' 'fnd6_fatn'
+ 'fnd6_fato' 'fnd6_fatp' 'fnd6_fiao' 'fnd6_fic' 'fnd6_fopo' 'fnd6_fopox'
+ 'fnd6_fyrc' 'fnd6_ibmii' 'fnd6_idesindq_curcd' 'fnd6_idit' 'fnd6_incorp'
+ 'fnd6_intan' 'fnd6_intc' 'fnd6_intpn' 'fnd6_invfg' 'fnd6_invo'
+ 'fnd6_invrm' 'fnd6_invwip' 'fnd6_itcb' 'fnd6_itci' 'fnd6_ivaco'
+ 'fnd6_ivaeq' 'fnd6_ivao' 'fnd6_ivch' 'fnd6_ivst' 'fnd6_ivstch'
+ 'fnd6_lcox' 'fnd6_lcoxdr' 'fnd6_lifr' 'fnd6_lno' 'fnd6_loc' 'fnd6_lol2'
+ 'fnd6_loxdr' 'fnd6_lqpl1' 'fnd6_lul3' 'fnd6_mfma1_aoloch'
+ 'fnd6_mfma1_apalch' 'fnd6_mfma1_at' 'fnd6_mfma1_capx' 'fnd6_mfma1_csho'
+ 'fnd6_mfma1_dp' 'fnd6_mfma1_dpc' 'fnd6_mfma1_invch' 'fnd6_mfma2_oancf'
+ 'fnd6_mfma2_opeps' 'fnd6_mfma2_recch' 'fnd6_mfma2_revt'
+ 'fnd6_mfma2_txach' 'fnd6_mfmq_cheq' 'fnd6_mfmq_cogsq' 'fnd6_mfmq_cshprq'
+ 'fnd6_mfmq_dlcq' 'fnd6_mfmq_ibcomq' 'fnd6_mfmq_mibtq' 'fnd6_mfmq_piq'
+ 'fnd6_mibn' 'fnd6_mibt' 'fnd6_mkvalt' 'fnd6_mkvaltq' 'fnd6_mrc1'
+ 'fnd6_mrc2' 'fnd6_mrc3' 'fnd6_mrc4' 'fnd6_mrc5' 'fnd6_mrct' 'fnd6_mrcta'
+ 'fnd6_msa' 'fnd6_newa1v1300_aco' 'fnd6_newa1v1300_acominc'
+ 'fnd6_newa1v1300_act' 'fnd6_newa1v1300_ano' 'fnd6_newa1v1300_ao'
+ 'fnd6_newa1v1300_aocidergl' 'fnd6_newa1v1300_aociother'
+ 'fnd6_newa1v1300_aocipen' 'fnd6_newa1v1300_aol2' 'fnd6_newa1v1300_aoloch'
+ 'fnd6_newa1v1300_ap' 'fnd6_newa1v1300_apalch' 'fnd6_newa1v1300_aqpl1'
+ 'fnd6_newa1v1300_at' 'fnd6_newa1v1300_aul3' 'fnd6_newa1v1300_bkvlps'
+ 'fnd6_newa1v1300_caps' 'fnd6_newa1v1300_capx' 'fnd6_newa1v1300_ceq'
+ 'fnd6_newa1v1300_ceqt' 'fnd6_newa1v1300_che' 'fnd6_newa1v1300_chech'
+ 'fnd6_newa1v1300_cogs' 'fnd6_newa1v1300_cshfd' 'fnd6_newa1v1300_cshi'
+ 'fnd6_newa1v1300_csho' 'fnd6_newa1v1300_cstk' 'fnd6_newa1v1300_dcom'
+ 'fnd6_newa1v1300_dlc' 'fnd6_newa1v1300_dltt' 'fnd6_newa1v1300_dp'
+ 'fnd6_newa1v1300_dpact' 'fnd6_newa1v1300_dpc' 'fnd6_newa1v1300_dv'
+ 'fnd6_newa1v1300_dvc' 'fnd6_newa1v1300_dvt' 'fnd6_newa1v1300_ebit'
+ 'fnd6_newa1v1300_ebitda' 'fnd6_newa1v1300_emp' 'fnd6_newa1v1300_epsfi'
+ 'fnd6_newa1v1300_epsfx' 'fnd6_newa1v1300_epspi' 'fnd6_newa1v1300_epspx'
+ 'fnd6_newa1v1300_fca' 'fnd6_newa1v1300_fincf' 'fnd6_newa1v1300_gdwl'
+ 'fnd6_newa1v1300_gp' 'fnd6_newa1v1300_ib' 'fnd6_newa1v1300_ibadj'
+ 'fnd6_newa1v1300_ibc' 'fnd6_newa1v1300_ibcom' 'fnd6_newa1v1300_icapt'
+ 'fnd6_newa1v1300_intano' 'fnd6_newa1v1300_invch' 'fnd6_newa1v1300_invt'
+ 'fnd6_newa1v1300_ivncf' 'fnd6_newa1v1300_lco' 'fnd6_newa1v1300_lct'
+ 'fnd6_newa1v1300_lo' 'fnd6_newa1v1300_lse' 'fnd6_newa1v1300_lt'
+ 'fnd6_newa2v1300_mib' 'fnd6_newa2v1300_mii' 'fnd6_newa2v1300_ni'
+ 'fnd6_newa2v1300_nopi' 'fnd6_newa2v1300_oancf' 'fnd6_newa2v1300_oiadp'
+ 'fnd6_newa2v1300_oibdp' 'fnd6_newa2v1300_opeps' 'fnd6_newa2v1300_optexd'
+ 'fnd6_newa2v1300_pi' 'fnd6_newa2v1300_ppegt' 'fnd6_newa2v1300_ppent'
+ 'fnd6_newa2v1300_prsho' 'fnd6_newa2v1300_rdip' 'fnd6_newa2v1300_rdipa'
+ 'fnd6_newa2v1300_rdipd' 'fnd6_newa2v1300_rdipeps' 'fnd6_newa2v1300_re'
+ 'fnd6_newa2v1300_recch' 'fnd6_newa2v1300_rect' 'fnd6_newa2v1300_reuna'
+ 'fnd6_newa2v1300_revt' 'fnd6_newa2v1300_sale' 'fnd6_newa2v1300_seq'
+ 'fnd6_newa2v1300_seqo' 'fnd6_newa2v1300_spced' 'fnd6_newa2v1300_spceeps'
+ 'fnd6_newa2v1300_spi' 'fnd6_newa2v1300_stkco' 'fnd6_newa2v1300_tstk'
+ 'fnd6_newa2v1300_tstkn' 'fnd6_newa2v1300_txach' 'fnd6_newa2v1300_txdb'
+ 'fnd6_newa2v1300_txditc' 'fnd6_newa2v1300_txp' 'fnd6_newa2v1300_txt'
+ 'fnd6_newa2v1300_wcap' 'fnd6_newa2v1300_xidoc' 'fnd6_newa2v1300_xint'
+ 'fnd6_newa2v1300_xoptd' 'fnd6_newa2v1300_xopteps' 'fnd6_newa2v1300_xrd'
+ 'fnd6_newa2v1300_xsga' 'fnd6_newq_xoptdqp' 'fnd6_newq_xoptepsqp'
+ 'fnd6_newq_xoptqp' 'fnd6_newqv1300_acomincq' 'fnd6_newqv1300_acoq'
+ 'fnd6_newqv1300_altoq' 'fnd6_newqv1300_ancq' 'fnd6_newqv1300_anoq'
+ 'fnd6_newqv1300_aociderglq' 'fnd6_newqv1300_aociotherq'
+ 'fnd6_newqv1300_aocipenq' 'fnd6_newqv1300_aocisecglq'
+ 'fnd6_newqv1300_aol2q' 'fnd6_newqv1300_aoq' 'fnd6_newqv1300_aqpl1q'
+ 'fnd6_newqv1300_aul3q' 'fnd6_newqv1300_capsq' 'fnd6_newqv1300_chq'
+ 'fnd6_newqv1300_cibegniq' 'fnd6_newqv1300_cicurrq'
+ 'fnd6_newqv1300_ciderglq' 'fnd6_newqv1300_cimiiq'
+ 'fnd6_newqv1300_ciotherq' 'fnd6_newqv1300_cipenq' 'fnd6_newqv1300_ciq'
+ 'fnd6_newqv1300_cisecglq' 'fnd6_newqv1300_citotalq'
+ 'fnd6_newqv1300_cogsq' 'fnd6_newqv1300_csh12q' 'fnd6_newqv1300_cshfdq'
+ 'fnd6_newqv1300_cshiq' 'fnd6_newqv1300_cshopq' 'fnd6_newqv1300_cshoq'
+ 'fnd6_newqv1300_cshprq' 'fnd6_newqv1300_cstkq' 'fnd6_newqv1300_dcomq'
+ 'fnd6_newqv1300_dilavq' 'fnd6_newqv1300_dlcq' 'fnd6_newqv1300_dpactq'
+ 'fnd6_newqv1300_drcq' 'fnd6_newqv1300_drltq' 'fnd6_newqv1300_epsfiq'
+ 'fnd6_newqv1300_epspiq' 'fnd6_newqv1300_epspxq' 'fnd6_newqv1300_esopnrq'
+ 'fnd6_newqv1300_esoprq' 'fnd6_newqv1300_fcaq' 'fnd6_newqv1300_gdwlq'
+ 'fnd6_newqv1300_glcea12' 'fnd6_newqv1300_glced12'
+ 'fnd6_newqv1300_glceeps12' 'fnd6_newqv1300_ibadj12'
+ 'fnd6_newqv1300_ibadjq' 'fnd6_newqv1300_ibcomq' 'fnd6_newqv1300_ibmiiq'
+ 'fnd6_newqv1300_ibq' 'fnd6_newqv1300_icaptq' 'fnd6_newqv1300_intanoq'
+ 'fnd6_newqv1300_intanq' 'fnd6_newqv1300_invfgq' 'fnd6_newqv1300_invoq'
+ 'fnd6_newqv1300_invrmq' 'fnd6_newqv1300_invtq' 'fnd6_newqv1300_invwipq'
+ 'fnd6_newqv1300_ivltq' 'fnd6_newqv1300_ivstq' 'fnd6_newqv1300_lcoq'
+ 'fnd6_newqv1300_lltq' 'fnd6_newqv1300_lnoq' 'fnd6_newqv1300_lol2q'
+ 'fnd6_newqv1300_loq' 'fnd6_newqv1300_loxdrq' 'fnd6_newqv1300_lqpl1q'
+ 'fnd6_newqv1300_lseq' 'fnd6_newqv1300_ltmibq' 'fnd6_newqv1300_lul3q'
+ 'fnd6_newqv1300_mibnq' 'fnd6_newqv1300_mibtq' 'fnd6_newqv1300_miiq'
+ 'fnd6_newqv1300_msaq' 'fnd6_newqv1300_oepf12' 'fnd6_newqv1300_oepsxq'
+ 'fnd6_newqv1300_optfvgrq' 'fnd6_newqv1300_optrfrq' 'fnd6_newqv1300_piq'
+ 'fnd6_newqv1300_pncq' 'fnd6_newqv1300_ppegtq' 'fnd6_newqv1300_ppentq'
+ 'fnd6_newqv1300_prcaq' 'fnd6_newqv1300_prcdq' 'fnd6_newqv1300_prcepsq'
+ 'fnd6_newqv1300_prcraq' 'fnd6_newqv1300_rcpq' 'fnd6_newqv1300_rdipaq'
+ 'fnd6_newqv1300_rdipdq' 'fnd6_newqv1300_rdipepsq' 'fnd6_newqv1300_rdipq'
+ 'fnd6_newqv1300_recdq' 'fnd6_newqv1300_rectaq' 'fnd6_newqv1300_rectoq'
+ 'fnd6_newqv1300_rectrq' 'fnd6_newqv1300_reunaq' 'fnd6_newqv1300_revtq'
+ 'fnd6_newqv1300_seqoq' 'fnd6_newqv1300_seqq' 'fnd6_newqv1300_spcedpq'
+ 'fnd6_newqv1300_spcedq' 'fnd6_newqv1300_spceepsp12'
+ 'fnd6_newqv1300_spceepspq' 'fnd6_newqv1300_spceepsq'
+ 'fnd6_newqv1300_spcep12' 'fnd6_newqv1300_spcepd12'
+ 'fnd6_newqv1300_spcepq' 'fnd6_newqv1300_spceq' 'fnd6_newqv1300_spiq'
+ 'fnd6_newqv1300_stkcoq' 'fnd6_newqv1300_stkcpaq' 'fnd6_newqv1300_teqq'
+ 'fnd6_newqv1300_tfvaq' 'fnd6_newqv1300_tfvceq' 'fnd6_newqv1300_tfvlq'
+ 'fnd6_newqv1300_tstknq' 'fnd6_newqv1300_tstkq' 'fnd6_newqv1300_txdbaq'
+ 'fnd6_newqv1300_txdbq' 'fnd6_newqv1300_txdiq' 'fnd6_newqv1300_txditcq'
+ 'fnd6_newqv1300_txpq' 'fnd6_newqv1300_txtq' 'fnd6_newqv1300_txwq'
+ 'fnd6_newqv1300_wcapq' 'fnd6_newqv1300_xintq' 'fnd6_newqv1300_xoprq'
+ 'fnd6_newqv1300_xoptdq' 'fnd6_newqv1300_xoptepsq' 'fnd6_newqv1300_xoptq'
+ 'fnd6_newqv1300_xrdq' 'fnd6_newqv1300_xsgaq' 'fnd6_niadj' 'fnd6_nopio'
+ 'fnd6_np' 'fnd6_npq' 'fnd6_oprepsx' 'fnd6_optca' 'fnd6_optdr'
+ 'fnd6_optdrq' 'fnd6_optex' 'fnd6_optfvgr' 'fnd6_optgr' 'fnd6_optlife'
+ 'fnd6_optlifeq' 'fnd6_optosby' 'fnd6_optosey' 'fnd6_optprcby'
+ 'fnd6_optprcca' 'fnd6_optprcex' 'fnd6_optprcey' 'fnd6_optprcgr'
+ 'fnd6_optprcwa' 'fnd6_optrfr' 'fnd6_optvol' 'fnd6_optvolq' 'fnd6_pidom'
+ 'fnd6_pifo' 'fnd6_pncdq' 'fnd6_pncepsq' 'fnd6_pnrsho' 'fnd6_ppeveb'
+ 'fnd6_prcc' 'fnd6_prccq' 'fnd6_prch' 'fnd6_prchq' 'fnd6_prcl'
+ 'fnd6_prclq' 'fnd6_prstkc' 'fnd6_pstkc' 'fnd6_pstkl' 'fnd6_pstkrv'
+ 'fnd6_rank' 'fnd6_rea' 'fnd6_reajo' 'fnd6_recco' 'fnd6_recd' 'fnd6_recta'
+ 'fnd6_rectr' 'fnd6_siv' 'fnd6_spce' 'fnd6_sppe' 'fnd6_sppiv' 'fnd6_sstk'
+ 'fnd6_state' 'fnd6_stkcpa' 'fnd6_teq' 'fnd6_tfva' 'fnd6_tfvce'
+ 'fnd6_tfvl' 'fnd6_tlcf' 'fnd6_tstkc' 'fnd6_txbco' 'fnd6_txbcof'
+ 'fnd6_txc' 'fnd6_txdba' 'fnd6_txdbca' 'fnd6_txdbcl' 'fnd6_txdbclq'
+ 'fnd6_txdc' 'fnd6_txdfed' 'fnd6_txdfo' 'fnd6_txdi' 'fnd6_txds'
+ 'fnd6_txfed' 'fnd6_txfo' 'fnd6_txndb' 'fnd6_txndba' 'fnd6_txndbl'
+ 'fnd6_txndbr' 'fnd6_txo' 'fnd6_txpd' 'fnd6_txr' 'fnd6_txs'
+ 'fnd6_txtubadjust' 'fnd6_txtubbegin' 'fnd6_txtubend' 'fnd6_txtubposdec'
+ 'fnd6_txtubposinc' 'fnd6_txtubpospdec' 'fnd6_txtubpospinc'
+ 'fnd6_txtubsettle' 'fnd6_txtubsoflimit' 'fnd6_txtubtxtr'
+ 'fnd6_txtubxintbs' 'fnd6_txtubxintis' 'fnd6_txw' 'fnd6_weburl'
+ 'fnd6_xacc' 'fnd6_xaccq' 'fnd6_xad' 'fnd6_xintopt' 'fnd6_xopr' 'fnd6_xpp'
+ 'fnd6_xpr' 'fnd6_xrent' 'fnd6_zipcode' 'goodwill' 'income'
+ 'income_beforeextra' 'income_tax' 'interest_expense' 'inventory'
+ 'inventory_turnover' 'invested_capital' 'liabilities' 'liabilities_curr'
+ 'operating_expense' 'operating_income' 'ppent' 'pretax_income'
+ 'rd_expense' 'receivable' 'retained_earnings' 'return_assets'
+ 'return_equity' 'revenue' 'sales' 'sales_growth' 'sales_ps' 'sga_expense'
+ 'working_capital']
+len(datafields_list_fundamental6): 574
+index: 1
+datafield: assets
+正在循环第 1 个元素, 组装 alpha 表达式: group_rank((assets)/cap, subindustry)
+index: 2
+datafield: assets_curr
+正在循环第 2 个元素, 组装 alpha 表达式: group_rank((assets_curr)/cap, subindustry)
+index: 3
+datafield: bookvalue_ps
+正在循环第 3 个元素, 组装 alpha 表达式: group_rank((bookvalue_ps)/cap, subindustry)
+index: 4
+datafield: capex
+正在循环第 4 个元素, 组装 alpha 表达式: group_rank((capex)/cap, subindustry)
+index: 5
+datafield: cash
+正在循环第 5 个元素, 组装 alpha 表达式: group_rank((cash)/cap, subindustry)
+index: 6
+datafield: cash_st
+正在循环第 6 个元素, 组装 alpha 表达式: group_rank((cash_st)/cap, subindustry)
+index: 7
+datafield: cashflow
+正在循环第 7 个元素, 组装 alpha 表达式: group_rank((cashflow)/cap, subindustry)
+index: 8
+datafield: cashflow_dividends
+正在循环第 8 个元素, 组装 alpha 表达式: group_rank((cashflow_dividends)/cap, subindustry)
+index: 9
+datafield: cashflow_fin
+正在循环第 9 个元素, 组装 alpha 表达式: group_rank((cashflow_fin)/cap, subindustry)
+index: 10
+datafield: cashflow_invst
+正在循环第 10 个元素, 组装 alpha 表达式: group_rank((cashflow_invst)/cap, subindustry)
+index: 11
+datafield: cashflow_op
+正在循环第 11 个元素, 组装 alpha 表达式: group_rank((cashflow_op)/cap, subindustry)
+index: 12
+datafield: cogs
+正在循环第 12 个元素, 组装 alpha 表达式: group_rank((cogs)/cap, subindustry)
+index: 13
+datafield: current_ratio
+正在循环第 13 个元素, 组装 alpha 表达式: group_rank((current_ratio)/cap, subindustry)
+index: 14
+datafield: debt
+正在循环第 14 个元素, 组装 alpha 表达式: group_rank((debt)/cap, subindustry)
+index: 15
+datafield: debt_lt
+正在循环第 15 个元素, 组装 alpha 表达式: group_rank((debt_lt)/cap, subindustry)
+index: 16
+datafield: debt_st
+正在循环第 16 个元素, 组装 alpha 表达式: group_rank((debt_st)/cap, subindustry)
+index: 17
+datafield: depre_amort
+正在循环第 17 个元素, 组装 alpha 表达式: group_rank((depre_amort)/cap, subindustry)
+index: 18
+datafield: ebit
+正在循环第 18 个元素, 组装 alpha 表达式: group_rank((ebit)/cap, subindustry)
+index: 19
+datafield: ebitda
+正在循环第 19 个元素, 组装 alpha 表达式: group_rank((ebitda)/cap, subindustry)
+index: 20
+datafield: employee
+正在循环第 20 个元素, 组装 alpha 表达式: group_rank((employee)/cap, subindustry)
+index: 21
+datafield: enterprise_value
+正在循环第 21 个元素, 组装 alpha 表达式: group_rank((enterprise_value)/cap, subindustry)
+index: 22
+datafield: eps
+正在循环第 22 个元素, 组装 alpha 表达式: group_rank((eps)/cap, subindustry)
+index: 23
+datafield: equity
+正在循环第 23 个元素, 组装 alpha 表达式: group_rank((equity)/cap, subindustry)
+index: 24
+datafield: fnd6_acdo
+正在循环第 24 个元素, 组装 alpha 表达式: group_rank((fnd6_acdo)/cap, subindustry)
+index: 25
+datafield: fnd6_acodo
+正在循环第 25 个元素, 组装 alpha 表达式: group_rank((fnd6_acodo)/cap, subindustry)
+index: 26
+datafield: fnd6_acox
+正在循环第 26 个元素, 组装 alpha 表达式: group_rank((fnd6_acox)/cap, subindustry)
+index: 27
+datafield: fnd6_acqgdwl
+正在循环第 27 个元素, 组装 alpha 表达式: group_rank((fnd6_acqgdwl)/cap, subindustry)
+index: 28
+datafield: fnd6_acqintan
+正在循环第 28 个元素, 组装 alpha 表达式: group_rank((fnd6_acqintan)/cap, subindustry)
+index: 29
+datafield: fnd6_adesinda_curcd
+正在循环第 29 个元素, 组装 alpha 表达式: group_rank((fnd6_adesinda_curcd)/cap, subindustry)
+index: 30
+datafield: fnd6_aldo
+正在循环第 30 个元素, 组装 alpha 表达式: group_rank((fnd6_aldo)/cap, subindustry)
+index: 31
+datafield: fnd6_am
+正在循环第 31 个元素, 组装 alpha 表达式: group_rank((fnd6_am)/cap, subindustry)
+index: 32
+datafield: fnd6_aodo
+正在循环第 32 个元素, 组装 alpha 表达式: group_rank((fnd6_aodo)/cap, subindustry)
+index: 33
+datafield: fnd6_aox
+正在循环第 33 个元素, 组装 alpha 表达式: group_rank((fnd6_aox)/cap, subindustry)
+index: 34
+datafield: fnd6_aqc
+正在循环第 34 个元素, 组装 alpha 表达式: group_rank((fnd6_aqc)/cap, subindustry)
+index: 35
+datafield: fnd6_aqi
+正在循环第 35 个元素, 组装 alpha 表达式: group_rank((fnd6_aqi)/cap, subindustry)
+index: 36
+datafield: fnd6_aqs
+正在循环第 36 个元素, 组装 alpha 表达式: group_rank((fnd6_aqs)/cap, subindustry)
+index: 37
+datafield: fnd6_beta
+正在循环第 37 个元素, 组装 alpha 表达式: group_rank((fnd6_beta)/cap, subindustry)
+index: 38
+datafield: fnd6_capxv
+正在循环第 38 个元素, 组装 alpha 表达式: group_rank((fnd6_capxv)/cap, subindustry)
+index: 39
+datafield: fnd6_ceql
+正在循环第 39 个元素, 组装 alpha 表达式: group_rank((fnd6_ceql)/cap, subindustry)
+index: 40
+datafield: fnd6_ch
+正在循环第 40 个元素, 组装 alpha 表达式: group_rank((fnd6_ch)/cap, subindustry)
+index: 41
+datafield: fnd6_ci
+正在循环第 41 个元素, 组装 alpha 表达式: group_rank((fnd6_ci)/cap, subindustry)
+index: 42
+datafield: fnd6_cibegni
+正在循环第 42 个元素, 组装 alpha 表达式: group_rank((fnd6_cibegni)/cap, subindustry)
+index: 43
+datafield: fnd6_cicurr
+正在循环第 43 个元素, 组装 alpha 表达式: group_rank((fnd6_cicurr)/cap, subindustry)
+index: 44
+datafield: fnd6_cidergl
+正在循环第 44 个元素, 组装 alpha 表达式: group_rank((fnd6_cidergl)/cap, subindustry)
+index: 45
+datafield: fnd6_cik
+正在循环第 45 个元素, 组装 alpha 表达式: group_rank((fnd6_cik)/cap, subindustry)
+index: 46
+datafield: fnd6_cimii
+正在循环第 46 个元素, 组装 alpha 表达式: group_rank((fnd6_cimii)/cap, subindustry)
+index: 47
+datafield: fnd6_ciother
+正在循环第 47 个元素, 组装 alpha 表达式: group_rank((fnd6_ciother)/cap, subindustry)
+index: 48
+datafield: fnd6_cipen
+正在循环第 48 个元素, 组装 alpha 表达式: group_rank((fnd6_cipen)/cap, subindustry)
+index: 49
+datafield: fnd6_cisecgl
+正在循环第 49 个元素, 组装 alpha 表达式: group_rank((fnd6_cisecgl)/cap, subindustry)
+index: 50
+datafield: fnd6_citotal
+正在循环第 50 个元素, 组装 alpha 表达式: group_rank((fnd6_citotal)/cap, subindustry)
+index: 51
+datafield: fnd6_city
+正在循环第 51 个元素, 组装 alpha 表达式: group_rank((fnd6_city)/cap, subindustry)
+index: 52
+datafield: fnd6_cld2
+正在循环第 52 个元素, 组装 alpha 表达式: group_rank((fnd6_cld2)/cap, subindustry)
+index: 53
+datafield: fnd6_cld3
+正在循环第 53 个元素, 组装 alpha 表达式: group_rank((fnd6_cld3)/cap, subindustry)
+index: 54
+datafield: fnd6_cld4
+正在循环第 54 个元素, 组装 alpha 表达式: group_rank((fnd6_cld4)/cap, subindustry)
+index: 55
+datafield: fnd6_cld5
+正在循环第 55 个元素, 组装 alpha 表达式: group_rank((fnd6_cld5)/cap, subindustry)
+index: 56
+datafield: fnd6_cptmfmq_actq
+正在循环第 56 个元素, 组装 alpha 表达式: group_rank((fnd6_cptmfmq_actq)/cap, subindustry)
+index: 57
+datafield: fnd6_cptmfmq_atq
+正在循环第 57 个元素, 组装 alpha 表达式: group_rank((fnd6_cptmfmq_atq)/cap, subindustry)
+index: 58
+datafield: fnd6_cptmfmq_ceqq
+正在循环第 58 个元素, 组装 alpha 表达式: group_rank((fnd6_cptmfmq_ceqq)/cap, subindustry)
+index: 59
+datafield: fnd6_cptmfmq_dlttq
+正在循环第 59 个元素, 组装 alpha 表达式: group_rank((fnd6_cptmfmq_dlttq)/cap, subindustry)
+index: 60
+datafield: fnd6_cptmfmq_dpq
+正在循环第 60 个元素, 组装 alpha 表达式: group_rank((fnd6_cptmfmq_dpq)/cap, subindustry)
+index: 61
+datafield: fnd6_cptmfmq_lctq
+正在循环第 61 个元素, 组装 alpha 表达式: group_rank((fnd6_cptmfmq_lctq)/cap, subindustry)
+index: 62
+datafield: fnd6_cptmfmq_oibdpq
+正在循环第 62 个元素, 组装 alpha 表达式: group_rank((fnd6_cptmfmq_oibdpq)/cap, subindustry)
+index: 63
+datafield: fnd6_cptmfmq_opepsq
+正在循环第 63 个元素, 组装 alpha 表达式: group_rank((fnd6_cptmfmq_opepsq)/cap, subindustry)
+index: 64
+datafield: fnd6_cptmfmq_saleq
+正在循环第 64 个元素, 组装 alpha 表达式: group_rank((fnd6_cptmfmq_saleq)/cap, subindustry)
+index: 65
+datafield: fnd6_cptnewqv1300_actq
+正在循环第 65 个元素, 组装 alpha 表达式: group_rank((fnd6_cptnewqv1300_actq)/cap, subindustry)
+index: 66
+datafield: fnd6_cptnewqv1300_apq
+正在循环第 66 个元素, 组装 alpha 表达式: group_rank((fnd6_cptnewqv1300_apq)/cap, subindustry)
+index: 67
+datafield: fnd6_cptnewqv1300_atq
+正在循环第 67 个元素, 组装 alpha 表达式: group_rank((fnd6_cptnewqv1300_atq)/cap, subindustry)
+index: 68
+datafield: fnd6_cptnewqv1300_ceqq
+正在循环第 68 个元素, 组装 alpha 表达式: group_rank((fnd6_cptnewqv1300_ceqq)/cap, subindustry)
+index: 69
+datafield: fnd6_cptnewqv1300_dlttq
+正在循环第 69 个元素, 组装 alpha 表达式: group_rank((fnd6_cptnewqv1300_dlttq)/cap, subindustry)
+index: 70
+datafield: fnd6_cptnewqv1300_dpq
+正在循环第 70 个元素, 组装 alpha 表达式: group_rank((fnd6_cptnewqv1300_dpq)/cap, subindustry)
+index: 71
+datafield: fnd6_cptnewqv1300_epsf12
+正在循环第 71 个元素, 组装 alpha 表达式: group_rank((fnd6_cptnewqv1300_epsf12)/cap, subindustry)
+index: 72
+datafield: fnd6_cptnewqv1300_epsfxq
+正在循环第 72 个元素, 组装 alpha 表达式: group_rank((fnd6_cptnewqv1300_epsfxq)/cap, subindustry)
+index: 73
+datafield: fnd6_cptnewqv1300_epsx12
+正在循环第 73 个元素, 组装 alpha 表达式: group_rank((fnd6_cptnewqv1300_epsx12)/cap, subindustry)
+index: 74
+datafield: fnd6_cptnewqv1300_lctq
+正在循环第 74 个元素, 组装 alpha 表达式: group_rank((fnd6_cptnewqv1300_lctq)/cap, subindustry)
+index: 75
+datafield: fnd6_cptnewqv1300_ltq
+正在循环第 75 个元素, 组装 alpha 表达式: group_rank((fnd6_cptnewqv1300_ltq)/cap, subindustry)
+index: 76
+datafield: fnd6_cptnewqv1300_nopiq
+正在循环第 76 个元素, 组装 alpha 表达式: group_rank((fnd6_cptnewqv1300_nopiq)/cap, subindustry)
+index: 77
+datafield: fnd6_cptnewqv1300_oeps12
+正在循环第 77 个元素, 组装 alpha 表达式: group_rank((fnd6_cptnewqv1300_oeps12)/cap, subindustry)
+index: 78
+datafield: fnd6_cptnewqv1300_oiadpq
+正在循环第 78 个元素, 组装 alpha 表达式: group_rank((fnd6_cptnewqv1300_oiadpq)/cap, subindustry)
+index: 79
+datafield: fnd6_cptnewqv1300_oibdpq
+正在循环第 79 个元素, 组装 alpha 表达式: group_rank((fnd6_cptnewqv1300_oibdpq)/cap, subindustry)
+index: 80
+datafield: fnd6_cptnewqv1300_opepsq
+正在循环第 80 个元素, 组装 alpha 表达式: group_rank((fnd6_cptnewqv1300_opepsq)/cap, subindustry)
+index: 81
+datafield: fnd6_cptnewqv1300_rectq
+正在循环第 81 个元素, 组装 alpha 表达式: group_rank((fnd6_cptnewqv1300_rectq)/cap, subindustry)
+index: 82
+datafield: fnd6_cptnewqv1300_req
+正在循环第 82 个元素, 组装 alpha 表达式: group_rank((fnd6_cptnewqv1300_req)/cap, subindustry)
+index: 83
+datafield: fnd6_cptnewqv1300_saleq
+正在循环第 83 个元素, 组装 alpha 表达式: group_rank((fnd6_cptnewqv1300_saleq)/cap, subindustry)
+index: 84
+datafield: fnd6_cptrank_gvkeymap
+正在循环第 84 个元素, 组装 alpha 表达式: group_rank((fnd6_cptrank_gvkeymap)/cap, subindustry)
+index: 85
+datafield: fnd6_cshpri
+正在循环第 85 个元素, 组装 alpha 表达式: group_rank((fnd6_cshpri)/cap, subindustry)
+index: 86
+datafield: fnd6_cshr
+正在循环第 86 个元素, 组装 alpha 表达式: group_rank((fnd6_cshr)/cap, subindustry)
+index: 87
+datafield: fnd6_cshtr
+正在循环第 87 个元素, 组装 alpha 表达式: group_rank((fnd6_cshtr)/cap, subindustry)
+index: 88
+datafield: fnd6_cshtrq
+正在循环第 88 个元素, 组装 alpha 表达式: group_rank((fnd6_cshtrq)/cap, subindustry)
+index: 89
+datafield: fnd6_cstkcv
+正在循环第 89 个元素, 组装 alpha 表达式: group_rank((fnd6_cstkcv)/cap, subindustry)
+index: 90
+datafield: fnd6_cstkcvq
+正在循环第 90 个元素, 组装 alpha 表达式: group_rank((fnd6_cstkcvq)/cap, subindustry)
+index: 91
+datafield: fnd6_currencya_curcd
+正在循环第 91 个元素, 组装 alpha 表达式: group_rank((fnd6_currencya_curcd)/cap, subindustry)
+index: 92
+datafield: fnd6_currencyqv1300_curcd
+正在循环第 92 个元素, 组装 alpha 表达式: group_rank((fnd6_currencyqv1300_curcd)/cap, subindustry)
+index: 93
+datafield: fnd6_dc
+正在循环第 93 个元素, 组装 alpha 表达式: group_rank((fnd6_dc)/cap, subindustry)
+index: 94
+datafield: fnd6_dclo
+正在循环第 94 个元素, 组装 alpha 表达式: group_rank((fnd6_dclo)/cap, subindustry)
+index: 95
+datafield: fnd6_dcpstk
+正在循环第 95 个元素, 组装 alpha 表达式: group_rank((fnd6_dcpstk)/cap, subindustry)
+index: 96
+datafield: fnd6_dcvsr
+正在循环第 96 个元素, 组装 alpha 表达式: group_rank((fnd6_dcvsr)/cap, subindustry)
+index: 97
+datafield: fnd6_dcvsub
+正在循环第 97 个元素, 组装 alpha 表达式: group_rank((fnd6_dcvsub)/cap, subindustry)
+index: 98
+datafield: fnd6_dcvt
+正在循环第 98 个元素, 组装 alpha 表达式: group_rank((fnd6_dcvt)/cap, subindustry)
+index: 99
+datafield: fnd6_dd
+正在循环第 99 个元素, 组装 alpha 表达式: group_rank((fnd6_dd)/cap, subindustry)
+index: 100
+datafield: fnd6_dd1
+正在循环第 100 个元素, 组装 alpha 表达式: group_rank((fnd6_dd1)/cap, subindustry)
+index: 101
+datafield: fnd6_dd1q
+正在循环第 101 个元素, 组装 alpha 表达式: group_rank((fnd6_dd1q)/cap, subindustry)
+index: 102
+datafield: fnd6_dd2
+正在循环第 102 个元素, 组装 alpha 表达式: group_rank((fnd6_dd2)/cap, subindustry)
+index: 103
+datafield: fnd6_dd3
+正在循环第 103 个元素, 组装 alpha 表达式: group_rank((fnd6_dd3)/cap, subindustry)
+index: 104
+datafield: fnd6_dd4
+正在循环第 104 个元素, 组装 alpha 表达式: group_rank((fnd6_dd4)/cap, subindustry)
+index: 105
+datafield: fnd6_dd5
+正在循环第 105 个元素, 组装 alpha 表达式: group_rank((fnd6_dd5)/cap, subindustry)
+index: 106
+datafield: fnd6_dilavx
+正在循环第 106 个元素, 组装 alpha 表达式: group_rank((fnd6_dilavx)/cap, subindustry)
+index: 107
+datafield: fnd6_dlcch
+正在循环第 107 个元素, 组装 alpha 表达式: group_rank((fnd6_dlcch)/cap, subindustry)
+index: 108
+datafield: fnd6_dltis
+正在循环第 108 个元素, 组装 alpha 表达式: group_rank((fnd6_dltis)/cap, subindustry)
+index: 109
+datafield: fnd6_dlto
+正在循环第 109 个元素, 组装 alpha 表达式: group_rank((fnd6_dlto)/cap, subindustry)
+index: 110
+datafield: fnd6_dltp
+正在循环第 110 个元素, 组装 alpha 表达式: group_rank((fnd6_dltp)/cap, subindustry)
+index: 111
+datafield: fnd6_dltr
+正在循环第 111 个元素, 组装 alpha 表达式: group_rank((fnd6_dltr)/cap, subindustry)
+index: 112
+datafield: fnd6_dm
+正在循环第 112 个元素, 组装 alpha 表达式: group_rank((fnd6_dm)/cap, subindustry)
+index: 113
+datafield: fnd6_dn
+正在循环第 113 个元素, 组装 alpha 表达式: group_rank((fnd6_dn)/cap, subindustry)
+index: 114
+datafield: fnd6_donr
+正在循环第 114 个元素, 组装 alpha 表达式: group_rank((fnd6_donr)/cap, subindustry)
+index: 115
+datafield: fnd6_dpvieb
+正在循环第 115 个元素, 组装 alpha 表达式: group_rank((fnd6_dpvieb)/cap, subindustry)
+index: 116
+datafield: fnd6_drc
+正在循环第 116 个元素, 组装 alpha 表达式: group_rank((fnd6_drc)/cap, subindustry)
+index: 117
+datafield: fnd6_drlt
+正在循环第 117 个元素, 组装 alpha 表达式: group_rank((fnd6_drlt)/cap, subindustry)
+index: 118
+datafield: fnd6_ds
+正在循环第 118 个元素, 组装 alpha 表达式: group_rank((fnd6_ds)/cap, subindustry)
+index: 119
+datafield: fnd6_dudd
+正在循环第 119 个元素, 组装 alpha 表达式: group_rank((fnd6_dudd)/cap, subindustry)
+index: 120
+datafield: fnd6_dvpa
+正在循环第 120 个元素, 组装 alpha 表达式: group_rank((fnd6_dvpa)/cap, subindustry)
+index: 121
+datafield: fnd6_dxd2
+正在循环第 121 个元素, 组装 alpha 表达式: group_rank((fnd6_dxd2)/cap, subindustry)
+index: 122
+datafield: fnd6_dxd3
+正在循环第 122 个元素, 组装 alpha 表达式: group_rank((fnd6_dxd3)/cap, subindustry)
+index: 123
+datafield: fnd6_dxd4
+正在循环第 123 个元素, 组装 alpha 表达式: group_rank((fnd6_dxd4)/cap, subindustry)
+index: 124
+datafield: fnd6_dxd5
+正在循环第 124 个元素, 组装 alpha 表达式: group_rank((fnd6_dxd5)/cap, subindustry)
+index: 125
+datafield: fnd6_ein
+正在循环第 125 个元素, 组装 alpha 表达式: group_rank((fnd6_ein)/cap, subindustry)
+index: 126
+datafield: fnd6_esopct
+正在循环第 126 个元素, 组装 alpha 表达式: group_rank((fnd6_esopct)/cap, subindustry)
+index: 127
+datafield: fnd6_esopnr
+正在循环第 127 个元素, 组装 alpha 表达式: group_rank((fnd6_esopnr)/cap, subindustry)
+index: 128
+datafield: fnd6_esopr
+正在循环第 128 个元素, 组装 alpha 表达式: group_rank((fnd6_esopr)/cap, subindustry)
+index: 129
+datafield: fnd6_esubc
+正在循环第 129 个元素, 组装 alpha 表达式: group_rank((fnd6_esubc)/cap, subindustry)
+index: 130
+datafield: fnd6_exre
+正在循环第 130 个元素, 组装 alpha 表达式: group_rank((fnd6_exre)/cap, subindustry)
+index: 131
+datafield: fnd6_fatb
+正在循环第 131 个元素, 组装 alpha 表达式: group_rank((fnd6_fatb)/cap, subindustry)
+index: 132
+datafield: fnd6_fatc
+正在循环第 132 个元素, 组装 alpha 表达式: group_rank((fnd6_fatc)/cap, subindustry)
+index: 133
+datafield: fnd6_fate
+正在循环第 133 个元素, 组装 alpha 表达式: group_rank((fnd6_fate)/cap, subindustry)
+index: 134
+datafield: fnd6_fatl
+正在循环第 134 个元素, 组装 alpha 表达式: group_rank((fnd6_fatl)/cap, subindustry)
+index: 135
+datafield: fnd6_fatn
+正在循环第 135 个元素, 组装 alpha 表达式: group_rank((fnd6_fatn)/cap, subindustry)
+index: 136
+datafield: fnd6_fato
+正在循环第 136 个元素, 组装 alpha 表达式: group_rank((fnd6_fato)/cap, subindustry)
+index: 137
+datafield: fnd6_fatp
+正在循环第 137 个元素, 组装 alpha 表达式: group_rank((fnd6_fatp)/cap, subindustry)
+index: 138
+datafield: fnd6_fiao
+正在循环第 138 个元素, 组装 alpha 表达式: group_rank((fnd6_fiao)/cap, subindustry)
+index: 139
+datafield: fnd6_fic
+正在循环第 139 个元素, 组装 alpha 表达式: group_rank((fnd6_fic)/cap, subindustry)
+index: 140
+datafield: fnd6_fopo
+正在循环第 140 个元素, 组装 alpha 表达式: group_rank((fnd6_fopo)/cap, subindustry)
+index: 141
+datafield: fnd6_fopox
+正在循环第 141 个元素, 组装 alpha 表达式: group_rank((fnd6_fopox)/cap, subindustry)
+index: 142
+datafield: fnd6_fyrc
+正在循环第 142 个元素, 组装 alpha 表达式: group_rank((fnd6_fyrc)/cap, subindustry)
+index: 143
+datafield: fnd6_ibmii
+正在循环第 143 个元素, 组装 alpha 表达式: group_rank((fnd6_ibmii)/cap, subindustry)
+index: 144
+datafield: fnd6_idesindq_curcd
+正在循环第 144 个元素, 组装 alpha 表达式: group_rank((fnd6_idesindq_curcd)/cap, subindustry)
+index: 145
+datafield: fnd6_idit
+正在循环第 145 个元素, 组装 alpha 表达式: group_rank((fnd6_idit)/cap, subindustry)
+index: 146
+datafield: fnd6_incorp
+正在循环第 146 个元素, 组装 alpha 表达式: group_rank((fnd6_incorp)/cap, subindustry)
+index: 147
+datafield: fnd6_intan
+正在循环第 147 个元素, 组装 alpha 表达式: group_rank((fnd6_intan)/cap, subindustry)
+index: 148
+datafield: fnd6_intc
+正在循环第 148 个元素, 组装 alpha 表达式: group_rank((fnd6_intc)/cap, subindustry)
+index: 149
+datafield: fnd6_intpn
+正在循环第 149 个元素, 组装 alpha 表达式: group_rank((fnd6_intpn)/cap, subindustry)
+index: 150
+datafield: fnd6_invfg
+正在循环第 150 个元素, 组装 alpha 表达式: group_rank((fnd6_invfg)/cap, subindustry)
+index: 151
+datafield: fnd6_invo
+正在循环第 151 个元素, 组装 alpha 表达式: group_rank((fnd6_invo)/cap, subindustry)
+index: 152
+datafield: fnd6_invrm
+正在循环第 152 个元素, 组装 alpha 表达式: group_rank((fnd6_invrm)/cap, subindustry)
+index: 153
+datafield: fnd6_invwip
+正在循环第 153 个元素, 组装 alpha 表达式: group_rank((fnd6_invwip)/cap, subindustry)
+index: 154
+datafield: fnd6_itcb
+正在循环第 154 个元素, 组装 alpha 表达式: group_rank((fnd6_itcb)/cap, subindustry)
+index: 155
+datafield: fnd6_itci
+正在循环第 155 个元素, 组装 alpha 表达式: group_rank((fnd6_itci)/cap, subindustry)
+index: 156
+datafield: fnd6_ivaco
+正在循环第 156 个元素, 组装 alpha 表达式: group_rank((fnd6_ivaco)/cap, subindustry)
+index: 157
+datafield: fnd6_ivaeq
+正在循环第 157 个元素, 组装 alpha 表达式: group_rank((fnd6_ivaeq)/cap, subindustry)
+index: 158
+datafield: fnd6_ivao
+正在循环第 158 个元素, 组装 alpha 表达式: group_rank((fnd6_ivao)/cap, subindustry)
+index: 159
+datafield: fnd6_ivch
+正在循环第 159 个元素, 组装 alpha 表达式: group_rank((fnd6_ivch)/cap, subindustry)
+index: 160
+datafield: fnd6_ivst
+正在循环第 160 个元素, 组装 alpha 表达式: group_rank((fnd6_ivst)/cap, subindustry)
+index: 161
+datafield: fnd6_ivstch
+正在循环第 161 个元素, 组装 alpha 表达式: group_rank((fnd6_ivstch)/cap, subindustry)
+index: 162
+datafield: fnd6_lcox
+正在循环第 162 个元素, 组装 alpha 表达式: group_rank((fnd6_lcox)/cap, subindustry)
+index: 163
+datafield: fnd6_lcoxdr
+正在循环第 163 个元素, 组装 alpha 表达式: group_rank((fnd6_lcoxdr)/cap, subindustry)
+index: 164
+datafield: fnd6_lifr
+正在循环第 164 个元素, 组装 alpha 表达式: group_rank((fnd6_lifr)/cap, subindustry)
+index: 165
+datafield: fnd6_lno
+正在循环第 165 个元素, 组装 alpha 表达式: group_rank((fnd6_lno)/cap, subindustry)
+index: 166
+datafield: fnd6_loc
+正在循环第 166 个元素, 组装 alpha 表达式: group_rank((fnd6_loc)/cap, subindustry)
+index: 167
+datafield: fnd6_lol2
+正在循环第 167 个元素, 组装 alpha 表达式: group_rank((fnd6_lol2)/cap, subindustry)
+index: 168
+datafield: fnd6_loxdr
+正在循环第 168 个元素, 组装 alpha 表达式: group_rank((fnd6_loxdr)/cap, subindustry)
+index: 169
+datafield: fnd6_lqpl1
+正在循环第 169 个元素, 组装 alpha 表达式: group_rank((fnd6_lqpl1)/cap, subindustry)
+index: 170
+datafield: fnd6_lul3
+正在循环第 170 个元素, 组装 alpha 表达式: group_rank((fnd6_lul3)/cap, subindustry)
+index: 171
+datafield: fnd6_mfma1_aoloch
+正在循环第 171 个元素, 组装 alpha 表达式: group_rank((fnd6_mfma1_aoloch)/cap, subindustry)
+index: 172
+datafield: fnd6_mfma1_apalch
+正在循环第 172 个元素, 组装 alpha 表达式: group_rank((fnd6_mfma1_apalch)/cap, subindustry)
+index: 173
+datafield: fnd6_mfma1_at
+正在循环第 173 个元素, 组装 alpha 表达式: group_rank((fnd6_mfma1_at)/cap, subindustry)
+index: 174
+datafield: fnd6_mfma1_capx
+正在循环第 174 个元素, 组装 alpha 表达式: group_rank((fnd6_mfma1_capx)/cap, subindustry)
+index: 175
+datafield: fnd6_mfma1_csho
+正在循环第 175 个元素, 组装 alpha 表达式: group_rank((fnd6_mfma1_csho)/cap, subindustry)
+index: 176
+datafield: fnd6_mfma1_dp
+正在循环第 176 个元素, 组装 alpha 表达式: group_rank((fnd6_mfma1_dp)/cap, subindustry)
+index: 177
+datafield: fnd6_mfma1_dpc
+正在循环第 177 个元素, 组装 alpha 表达式: group_rank((fnd6_mfma1_dpc)/cap, subindustry)
+index: 178
+datafield: fnd6_mfma1_invch
+正在循环第 178 个元素, 组装 alpha 表达式: group_rank((fnd6_mfma1_invch)/cap, subindustry)
+index: 179
+datafield: fnd6_mfma2_oancf
+正在循环第 179 个元素, 组装 alpha 表达式: group_rank((fnd6_mfma2_oancf)/cap, subindustry)
+index: 180
+datafield: fnd6_mfma2_opeps
+正在循环第 180 个元素, 组装 alpha 表达式: group_rank((fnd6_mfma2_opeps)/cap, subindustry)
+index: 181
+datafield: fnd6_mfma2_recch
+正在循环第 181 个元素, 组装 alpha 表达式: group_rank((fnd6_mfma2_recch)/cap, subindustry)
+index: 182
+datafield: fnd6_mfma2_revt
+正在循环第 182 个元素, 组装 alpha 表达式: group_rank((fnd6_mfma2_revt)/cap, subindustry)
+index: 183
+datafield: fnd6_mfma2_txach
+正在循环第 183 个元素, 组装 alpha 表达式: group_rank((fnd6_mfma2_txach)/cap, subindustry)
+index: 184
+datafield: fnd6_mfmq_cheq
+正在循环第 184 个元素, 组装 alpha 表达式: group_rank((fnd6_mfmq_cheq)/cap, subindustry)
+index: 185
+datafield: fnd6_mfmq_cogsq
+正在循环第 185 个元素, 组装 alpha 表达式: group_rank((fnd6_mfmq_cogsq)/cap, subindustry)
+index: 186
+datafield: fnd6_mfmq_cshprq
+正在循环第 186 个元素, 组装 alpha 表达式: group_rank((fnd6_mfmq_cshprq)/cap, subindustry)
+index: 187
+datafield: fnd6_mfmq_dlcq
+正在循环第 187 个元素, 组装 alpha 表达式: group_rank((fnd6_mfmq_dlcq)/cap, subindustry)
+index: 188
+datafield: fnd6_mfmq_ibcomq
+正在循环第 188 个元素, 组装 alpha 表达式: group_rank((fnd6_mfmq_ibcomq)/cap, subindustry)
+index: 189
+datafield: fnd6_mfmq_mibtq
+正在循环第 189 个元素, 组装 alpha 表达式: group_rank((fnd6_mfmq_mibtq)/cap, subindustry)
+index: 190
+datafield: fnd6_mfmq_piq
+正在循环第 190 个元素, 组装 alpha 表达式: group_rank((fnd6_mfmq_piq)/cap, subindustry)
+index: 191
+datafield: fnd6_mibn
+正在循环第 191 个元素, 组装 alpha 表达式: group_rank((fnd6_mibn)/cap, subindustry)
+index: 192
+datafield: fnd6_mibt
+正在循环第 192 个元素, 组装 alpha 表达式: group_rank((fnd6_mibt)/cap, subindustry)
+index: 193
+datafield: fnd6_mkvalt
+正在循环第 193 个元素, 组装 alpha 表达式: group_rank((fnd6_mkvalt)/cap, subindustry)
+index: 194
+datafield: fnd6_mkvaltq
+正在循环第 194 个元素, 组装 alpha 表达式: group_rank((fnd6_mkvaltq)/cap, subindustry)
+index: 195
+datafield: fnd6_mrc1
+正在循环第 195 个元素, 组装 alpha 表达式: group_rank((fnd6_mrc1)/cap, subindustry)
+index: 196
+datafield: fnd6_mrc2
+正在循环第 196 个元素, 组装 alpha 表达式: group_rank((fnd6_mrc2)/cap, subindustry)
+index: 197
+datafield: fnd6_mrc3
+正在循环第 197 个元素, 组装 alpha 表达式: group_rank((fnd6_mrc3)/cap, subindustry)
+index: 198
+datafield: fnd6_mrc4
+正在循环第 198 个元素, 组装 alpha 表达式: group_rank((fnd6_mrc4)/cap, subindustry)
+index: 199
+datafield: fnd6_mrc5
+正在循环第 199 个元素, 组装 alpha 表达式: group_rank((fnd6_mrc5)/cap, subindustry)
+index: 200
+datafield: fnd6_mrct
+正在循环第 200 个元素, 组装 alpha 表达式: group_rank((fnd6_mrct)/cap, subindustry)
+index: 201
+datafield: fnd6_mrcta
+正在循环第 201 个元素, 组装 alpha 表达式: group_rank((fnd6_mrcta)/cap, subindustry)
+index: 202
+datafield: fnd6_msa
+正在循环第 202 个元素, 组装 alpha 表达式: group_rank((fnd6_msa)/cap, subindustry)
+index: 203
+datafield: fnd6_newa1v1300_aco
+正在循环第 203 个元素, 组装 alpha 表达式: group_rank((fnd6_newa1v1300_aco)/cap, subindustry)
+index: 204
+datafield: fnd6_newa1v1300_acominc
+正在循环第 204 个元素, 组装 alpha 表达式: group_rank((fnd6_newa1v1300_acominc)/cap, subindustry)
+index: 205
+datafield: fnd6_newa1v1300_act
+正在循环第 205 个元素, 组装 alpha 表达式: group_rank((fnd6_newa1v1300_act)/cap, subindustry)
+index: 206
+datafield: fnd6_newa1v1300_ano
+正在循环第 206 个元素, 组装 alpha 表达式: group_rank((fnd6_newa1v1300_ano)/cap, subindustry)
+index: 207
+datafield: fnd6_newa1v1300_ao
+正在循环第 207 个元素, 组装 alpha 表达式: group_rank((fnd6_newa1v1300_ao)/cap, subindustry)
+index: 208
+datafield: fnd6_newa1v1300_aocidergl
+正在循环第 208 个元素, 组装 alpha 表达式: group_rank((fnd6_newa1v1300_aocidergl)/cap, subindustry)
+index: 209
+datafield: fnd6_newa1v1300_aociother
+正在循环第 209 个元素, 组装 alpha 表达式: group_rank((fnd6_newa1v1300_aociother)/cap, subindustry)
+index: 210
+datafield: fnd6_newa1v1300_aocipen
+正在循环第 210 个元素, 组装 alpha 表达式: group_rank((fnd6_newa1v1300_aocipen)/cap, subindustry)
+index: 211
+datafield: fnd6_newa1v1300_aol2
+正在循环第 211 个元素, 组装 alpha 表达式: group_rank((fnd6_newa1v1300_aol2)/cap, subindustry)
+index: 212
+datafield: fnd6_newa1v1300_aoloch
+正在循环第 212 个元素, 组装 alpha 表达式: group_rank((fnd6_newa1v1300_aoloch)/cap, subindustry)
+index: 213
+datafield: fnd6_newa1v1300_ap
+正在循环第 213 个元素, 组装 alpha 表达式: group_rank((fnd6_newa1v1300_ap)/cap, subindustry)
+index: 214
+datafield: fnd6_newa1v1300_apalch
+正在循环第 214 个元素, 组装 alpha 表达式: group_rank((fnd6_newa1v1300_apalch)/cap, subindustry)
+index: 215
+datafield: fnd6_newa1v1300_aqpl1
+正在循环第 215 个元素, 组装 alpha 表达式: group_rank((fnd6_newa1v1300_aqpl1)/cap, subindustry)
+index: 216
+datafield: fnd6_newa1v1300_at
+正在循环第 216 个元素, 组装 alpha 表达式: group_rank((fnd6_newa1v1300_at)/cap, subindustry)
+index: 217
+datafield: fnd6_newa1v1300_aul3
+正在循环第 217 个元素, 组装 alpha 表达式: group_rank((fnd6_newa1v1300_aul3)/cap, subindustry)
+index: 218
+datafield: fnd6_newa1v1300_bkvlps
+正在循环第 218 个元素, 组装 alpha 表达式: group_rank((fnd6_newa1v1300_bkvlps)/cap, subindustry)
+index: 219
+datafield: fnd6_newa1v1300_caps
+正在循环第 219 个元素, 组装 alpha 表达式: group_rank((fnd6_newa1v1300_caps)/cap, subindustry)
+index: 220
+datafield: fnd6_newa1v1300_capx
+正在循环第 220 个元素, 组装 alpha 表达式: group_rank((fnd6_newa1v1300_capx)/cap, subindustry)
+index: 221
+datafield: fnd6_newa1v1300_ceq
+正在循环第 221 个元素, 组装 alpha 表达式: group_rank((fnd6_newa1v1300_ceq)/cap, subindustry)
+index: 222
+datafield: fnd6_newa1v1300_ceqt
+正在循环第 222 个元素, 组装 alpha 表达式: group_rank((fnd6_newa1v1300_ceqt)/cap, subindustry)
+index: 223
+datafield: fnd6_newa1v1300_che
+正在循环第 223 个元素, 组装 alpha 表达式: group_rank((fnd6_newa1v1300_che)/cap, subindustry)
+index: 224
+datafield: fnd6_newa1v1300_chech
+正在循环第 224 个元素, 组装 alpha 表达式: group_rank((fnd6_newa1v1300_chech)/cap, subindustry)
+index: 225
+datafield: fnd6_newa1v1300_cogs
+正在循环第 225 个元素, 组装 alpha 表达式: group_rank((fnd6_newa1v1300_cogs)/cap, subindustry)
+index: 226
+datafield: fnd6_newa1v1300_cshfd
+正在循环第 226 个元素, 组装 alpha 表达式: group_rank((fnd6_newa1v1300_cshfd)/cap, subindustry)
+index: 227
+datafield: fnd6_newa1v1300_cshi
+正在循环第 227 个元素, 组装 alpha 表达式: group_rank((fnd6_newa1v1300_cshi)/cap, subindustry)
+index: 228
+datafield: fnd6_newa1v1300_csho
+正在循环第 228 个元素, 组装 alpha 表达式: group_rank((fnd6_newa1v1300_csho)/cap, subindustry)
+index: 229
+datafield: fnd6_newa1v1300_cstk
+正在循环第 229 个元素, 组装 alpha 表达式: group_rank((fnd6_newa1v1300_cstk)/cap, subindustry)
+index: 230
+datafield: fnd6_newa1v1300_dcom
+正在循环第 230 个元素, 组装 alpha 表达式: group_rank((fnd6_newa1v1300_dcom)/cap, subindustry)
+index: 231
+datafield: fnd6_newa1v1300_dlc
+正在循环第 231 个元素, 组装 alpha 表达式: group_rank((fnd6_newa1v1300_dlc)/cap, subindustry)
+index: 232
+datafield: fnd6_newa1v1300_dltt
+正在循环第 232 个元素, 组装 alpha 表达式: group_rank((fnd6_newa1v1300_dltt)/cap, subindustry)
+index: 233
+datafield: fnd6_newa1v1300_dp
+正在循环第 233 个元素, 组装 alpha 表达式: group_rank((fnd6_newa1v1300_dp)/cap, subindustry)
+index: 234
+datafield: fnd6_newa1v1300_dpact
+正在循环第 234 个元素, 组装 alpha 表达式: group_rank((fnd6_newa1v1300_dpact)/cap, subindustry)
+index: 235
+datafield: fnd6_newa1v1300_dpc
+正在循环第 235 个元素, 组装 alpha 表达式: group_rank((fnd6_newa1v1300_dpc)/cap, subindustry)
+index: 236
+datafield: fnd6_newa1v1300_dv
+正在循环第 236 个元素, 组装 alpha 表达式: group_rank((fnd6_newa1v1300_dv)/cap, subindustry)
+index: 237
+datafield: fnd6_newa1v1300_dvc
+正在循环第 237 个元素, 组装 alpha 表达式: group_rank((fnd6_newa1v1300_dvc)/cap, subindustry)
+index: 238
+datafield: fnd6_newa1v1300_dvt
+正在循环第 238 个元素, 组装 alpha 表达式: group_rank((fnd6_newa1v1300_dvt)/cap, subindustry)
+index: 239
+datafield: fnd6_newa1v1300_ebit
+正在循环第 239 个元素, 组装 alpha 表达式: group_rank((fnd6_newa1v1300_ebit)/cap, subindustry)
+index: 240
+datafield: fnd6_newa1v1300_ebitda
+正在循环第 240 个元素, 组装 alpha 表达式: group_rank((fnd6_newa1v1300_ebitda)/cap, subindustry)
+index: 241
+datafield: fnd6_newa1v1300_emp
+正在循环第 241 个元素, 组装 alpha 表达式: group_rank((fnd6_newa1v1300_emp)/cap, subindustry)
+index: 242
+datafield: fnd6_newa1v1300_epsfi
+正在循环第 242 个元素, 组装 alpha 表达式: group_rank((fnd6_newa1v1300_epsfi)/cap, subindustry)
+index: 243
+datafield: fnd6_newa1v1300_epsfx
+正在循环第 243 个元素, 组装 alpha 表达式: group_rank((fnd6_newa1v1300_epsfx)/cap, subindustry)
+index: 244
+datafield: fnd6_newa1v1300_epspi
+正在循环第 244 个元素, 组装 alpha 表达式: group_rank((fnd6_newa1v1300_epspi)/cap, subindustry)
+index: 245
+datafield: fnd6_newa1v1300_epspx
+正在循环第 245 个元素, 组装 alpha 表达式: group_rank((fnd6_newa1v1300_epspx)/cap, subindustry)
+index: 246
+datafield: fnd6_newa1v1300_fca
+正在循环第 246 个元素, 组装 alpha 表达式: group_rank((fnd6_newa1v1300_fca)/cap, subindustry)
+index: 247
+datafield: fnd6_newa1v1300_fincf
+正在循环第 247 个元素, 组装 alpha 表达式: group_rank((fnd6_newa1v1300_fincf)/cap, subindustry)
+index: 248
+datafield: fnd6_newa1v1300_gdwl
+正在循环第 248 个元素, 组装 alpha 表达式: group_rank((fnd6_newa1v1300_gdwl)/cap, subindustry)
+index: 249
+datafield: fnd6_newa1v1300_gp
+正在循环第 249 个元素, 组装 alpha 表达式: group_rank((fnd6_newa1v1300_gp)/cap, subindustry)
+index: 250
+datafield: fnd6_newa1v1300_ib
+正在循环第 250 个元素, 组装 alpha 表达式: group_rank((fnd6_newa1v1300_ib)/cap, subindustry)
+index: 251
+datafield: fnd6_newa1v1300_ibadj
+正在循环第 251 个元素, 组装 alpha 表达式: group_rank((fnd6_newa1v1300_ibadj)/cap, subindustry)
+index: 252
+datafield: fnd6_newa1v1300_ibc
+正在循环第 252 个元素, 组装 alpha 表达式: group_rank((fnd6_newa1v1300_ibc)/cap, subindustry)
+index: 253
+datafield: fnd6_newa1v1300_ibcom
+正在循环第 253 个元素, 组装 alpha 表达式: group_rank((fnd6_newa1v1300_ibcom)/cap, subindustry)
+index: 254
+datafield: fnd6_newa1v1300_icapt
+正在循环第 254 个元素, 组装 alpha 表达式: group_rank((fnd6_newa1v1300_icapt)/cap, subindustry)
+index: 255
+datafield: fnd6_newa1v1300_intano
+正在循环第 255 个元素, 组装 alpha 表达式: group_rank((fnd6_newa1v1300_intano)/cap, subindustry)
+index: 256
+datafield: fnd6_newa1v1300_invch
+正在循环第 256 个元素, 组装 alpha 表达式: group_rank((fnd6_newa1v1300_invch)/cap, subindustry)
+index: 257
+datafield: fnd6_newa1v1300_invt
+正在循环第 257 个元素, 组装 alpha 表达式: group_rank((fnd6_newa1v1300_invt)/cap, subindustry)
+index: 258
+datafield: fnd6_newa1v1300_ivncf
+正在循环第 258 个元素, 组装 alpha 表达式: group_rank((fnd6_newa1v1300_ivncf)/cap, subindustry)
+index: 259
+datafield: fnd6_newa1v1300_lco
+正在循环第 259 个元素, 组装 alpha 表达式: group_rank((fnd6_newa1v1300_lco)/cap, subindustry)
+index: 260
+datafield: fnd6_newa1v1300_lct
+正在循环第 260 个元素, 组装 alpha 表达式: group_rank((fnd6_newa1v1300_lct)/cap, subindustry)
+index: 261
+datafield: fnd6_newa1v1300_lo
+正在循环第 261 个元素, 组装 alpha 表达式: group_rank((fnd6_newa1v1300_lo)/cap, subindustry)
+index: 262
+datafield: fnd6_newa1v1300_lse
+正在循环第 262 个元素, 组装 alpha 表达式: group_rank((fnd6_newa1v1300_lse)/cap, subindustry)
+index: 263
+datafield: fnd6_newa1v1300_lt
+正在循环第 263 个元素, 组装 alpha 表达式: group_rank((fnd6_newa1v1300_lt)/cap, subindustry)
+index: 264
+datafield: fnd6_newa2v1300_mib
+正在循环第 264 个元素, 组装 alpha 表达式: group_rank((fnd6_newa2v1300_mib)/cap, subindustry)
+index: 265
+datafield: fnd6_newa2v1300_mii
+正在循环第 265 个元素, 组装 alpha 表达式: group_rank((fnd6_newa2v1300_mii)/cap, subindustry)
+index: 266
+datafield: fnd6_newa2v1300_ni
+正在循环第 266 个元素, 组装 alpha 表达式: group_rank((fnd6_newa2v1300_ni)/cap, subindustry)
+index: 267
+datafield: fnd6_newa2v1300_nopi
+正在循环第 267 个元素, 组装 alpha 表达式: group_rank((fnd6_newa2v1300_nopi)/cap, subindustry)
+index: 268
+datafield: fnd6_newa2v1300_oancf
+正在循环第 268 个元素, 组装 alpha 表达式: group_rank((fnd6_newa2v1300_oancf)/cap, subindustry)
+index: 269
+datafield: fnd6_newa2v1300_oiadp
+正在循环第 269 个元素, 组装 alpha 表达式: group_rank((fnd6_newa2v1300_oiadp)/cap, subindustry)
+index: 270
+datafield: fnd6_newa2v1300_oibdp
+正在循环第 270 个元素, 组装 alpha 表达式: group_rank((fnd6_newa2v1300_oibdp)/cap, subindustry)
+index: 271
+datafield: fnd6_newa2v1300_opeps
+正在循环第 271 个元素, 组装 alpha 表达式: group_rank((fnd6_newa2v1300_opeps)/cap, subindustry)
+index: 272
+datafield: fnd6_newa2v1300_optexd
+正在循环第 272 个元素, 组装 alpha 表达式: group_rank((fnd6_newa2v1300_optexd)/cap, subindustry)
+index: 273
+datafield: fnd6_newa2v1300_pi
+正在循环第 273 个元素, 组装 alpha 表达式: group_rank((fnd6_newa2v1300_pi)/cap, subindustry)
+index: 274
+datafield: fnd6_newa2v1300_ppegt
+正在循环第 274 个元素, 组装 alpha 表达式: group_rank((fnd6_newa2v1300_ppegt)/cap, subindustry)
+index: 275
+datafield: fnd6_newa2v1300_ppent
+正在循环第 275 个元素, 组装 alpha 表达式: group_rank((fnd6_newa2v1300_ppent)/cap, subindustry)
+index: 276
+datafield: fnd6_newa2v1300_prsho
+正在循环第 276 个元素, 组装 alpha 表达式: group_rank((fnd6_newa2v1300_prsho)/cap, subindustry)
+index: 277
+datafield: fnd6_newa2v1300_rdip
+正在循环第 277 个元素, 组装 alpha 表达式: group_rank((fnd6_newa2v1300_rdip)/cap, subindustry)
+index: 278
+datafield: fnd6_newa2v1300_rdipa
+正在循环第 278 个元素, 组装 alpha 表达式: group_rank((fnd6_newa2v1300_rdipa)/cap, subindustry)
+index: 279
+datafield: fnd6_newa2v1300_rdipd
+正在循环第 279 个元素, 组装 alpha 表达式: group_rank((fnd6_newa2v1300_rdipd)/cap, subindustry)
+index: 280
+datafield: fnd6_newa2v1300_rdipeps
+正在循环第 280 个元素, 组装 alpha 表达式: group_rank((fnd6_newa2v1300_rdipeps)/cap, subindustry)
+index: 281
+datafield: fnd6_newa2v1300_re
+正在循环第 281 个元素, 组装 alpha 表达式: group_rank((fnd6_newa2v1300_re)/cap, subindustry)
+index: 282
+datafield: fnd6_newa2v1300_recch
+正在循环第 282 个元素, 组装 alpha 表达式: group_rank((fnd6_newa2v1300_recch)/cap, subindustry)
+index: 283
+datafield: fnd6_newa2v1300_rect
+正在循环第 283 个元素, 组装 alpha 表达式: group_rank((fnd6_newa2v1300_rect)/cap, subindustry)
+index: 284
+datafield: fnd6_newa2v1300_reuna
+正在循环第 284 个元素, 组装 alpha 表达式: group_rank((fnd6_newa2v1300_reuna)/cap, subindustry)
+index: 285
+datafield: fnd6_newa2v1300_revt
+正在循环第 285 个元素, 组装 alpha 表达式: group_rank((fnd6_newa2v1300_revt)/cap, subindustry)
+index: 286
+datafield: fnd6_newa2v1300_sale
+正在循环第 286 个元素, 组装 alpha 表达式: group_rank((fnd6_newa2v1300_sale)/cap, subindustry)
+index: 287
+datafield: fnd6_newa2v1300_seq
+正在循环第 287 个元素, 组装 alpha 表达式: group_rank((fnd6_newa2v1300_seq)/cap, subindustry)
+index: 288
+datafield: fnd6_newa2v1300_seqo
+正在循环第 288 个元素, 组装 alpha 表达式: group_rank((fnd6_newa2v1300_seqo)/cap, subindustry)
+index: 289
+datafield: fnd6_newa2v1300_spced
+正在循环第 289 个元素, 组装 alpha 表达式: group_rank((fnd6_newa2v1300_spced)/cap, subindustry)
+index: 290
+datafield: fnd6_newa2v1300_spceeps
+正在循环第 290 个元素, 组装 alpha 表达式: group_rank((fnd6_newa2v1300_spceeps)/cap, subindustry)
+index: 291
+datafield: fnd6_newa2v1300_spi
+正在循环第 291 个元素, 组装 alpha 表达式: group_rank((fnd6_newa2v1300_spi)/cap, subindustry)
+index: 292
+datafield: fnd6_newa2v1300_stkco
+正在循环第 292 个元素, 组装 alpha 表达式: group_rank((fnd6_newa2v1300_stkco)/cap, subindustry)
+index: 293
+datafield: fnd6_newa2v1300_tstk
+正在循环第 293 个元素, 组装 alpha 表达式: group_rank((fnd6_newa2v1300_tstk)/cap, subindustry)
+index: 294
+datafield: fnd6_newa2v1300_tstkn
+正在循环第 294 个元素, 组装 alpha 表达式: group_rank((fnd6_newa2v1300_tstkn)/cap, subindustry)
+index: 295
+datafield: fnd6_newa2v1300_txach
+正在循环第 295 个元素, 组装 alpha 表达式: group_rank((fnd6_newa2v1300_txach)/cap, subindustry)
+index: 296
+datafield: fnd6_newa2v1300_txdb
+正在循环第 296 个元素, 组装 alpha 表达式: group_rank((fnd6_newa2v1300_txdb)/cap, subindustry)
+index: 297
+datafield: fnd6_newa2v1300_txditc
+正在循环第 297 个元素, 组装 alpha 表达式: group_rank((fnd6_newa2v1300_txditc)/cap, subindustry)
+index: 298
+datafield: fnd6_newa2v1300_txp
+正在循环第 298 个元素, 组装 alpha 表达式: group_rank((fnd6_newa2v1300_txp)/cap, subindustry)
+index: 299
+datafield: fnd6_newa2v1300_txt
+正在循环第 299 个元素, 组装 alpha 表达式: group_rank((fnd6_newa2v1300_txt)/cap, subindustry)
+index: 300
+datafield: fnd6_newa2v1300_wcap
+正在循环第 300 个元素, 组装 alpha 表达式: group_rank((fnd6_newa2v1300_wcap)/cap, subindustry)
+index: 301
+datafield: fnd6_newa2v1300_xidoc
+正在循环第 301 个元素, 组装 alpha 表达式: group_rank((fnd6_newa2v1300_xidoc)/cap, subindustry)
+index: 302
+datafield: fnd6_newa2v1300_xint
+正在循环第 302 个元素, 组装 alpha 表达式: group_rank((fnd6_newa2v1300_xint)/cap, subindustry)
+index: 303
+datafield: fnd6_newa2v1300_xoptd
+正在循环第 303 个元素, 组装 alpha 表达式: group_rank((fnd6_newa2v1300_xoptd)/cap, subindustry)
+index: 304
+datafield: fnd6_newa2v1300_xopteps
+正在循环第 304 个元素, 组装 alpha 表达式: group_rank((fnd6_newa2v1300_xopteps)/cap, subindustry)
+index: 305
+datafield: fnd6_newa2v1300_xrd
+正在循环第 305 个元素, 组装 alpha 表达式: group_rank((fnd6_newa2v1300_xrd)/cap, subindustry)
+index: 306
+datafield: fnd6_newa2v1300_xsga
+正在循环第 306 个元素, 组装 alpha 表达式: group_rank((fnd6_newa2v1300_xsga)/cap, subindustry)
+index: 307
+datafield: fnd6_newq_xoptdqp
+正在循环第 307 个元素, 组装 alpha 表达式: group_rank((fnd6_newq_xoptdqp)/cap, subindustry)
+index: 308
+datafield: fnd6_newq_xoptepsqp
+正在循环第 308 个元素, 组装 alpha 表达式: group_rank((fnd6_newq_xoptepsqp)/cap, subindustry)
+index: 309
+datafield: fnd6_newq_xoptqp
+正在循环第 309 个元素, 组装 alpha 表达式: group_rank((fnd6_newq_xoptqp)/cap, subindustry)
+index: 310
+datafield: fnd6_newqv1300_acomincq
+正在循环第 310 个元素, 组装 alpha 表达式: group_rank((fnd6_newqv1300_acomincq)/cap, subindustry)
+index: 311
+datafield: fnd6_newqv1300_acoq
+正在循环第 311 个元素, 组装 alpha 表达式: group_rank((fnd6_newqv1300_acoq)/cap, subindustry)
+index: 312
+datafield: fnd6_newqv1300_altoq
+正在循环第 312 个元素, 组装 alpha 表达式: group_rank((fnd6_newqv1300_altoq)/cap, subindustry)
+index: 313
+datafield: fnd6_newqv1300_ancq
+正在循环第 313 个元素, 组装 alpha 表达式: group_rank((fnd6_newqv1300_ancq)/cap, subindustry)
+index: 314
+datafield: fnd6_newqv1300_anoq
+正在循环第 314 个元素, 组装 alpha 表达式: group_rank((fnd6_newqv1300_anoq)/cap, subindustry)
+index: 315
+datafield: fnd6_newqv1300_aociderglq
+正在循环第 315 个元素, 组装 alpha 表达式: group_rank((fnd6_newqv1300_aociderglq)/cap, subindustry)
+index: 316
+datafield: fnd6_newqv1300_aociotherq
+正在循环第 316 个元素, 组装 alpha 表达式: group_rank((fnd6_newqv1300_aociotherq)/cap, subindustry)
+index: 317
+datafield: fnd6_newqv1300_aocipenq
+正在循环第 317 个元素, 组装 alpha 表达式: group_rank((fnd6_newqv1300_aocipenq)/cap, subindustry)
+index: 318
+datafield: fnd6_newqv1300_aocisecglq
+正在循环第 318 个元素, 组装 alpha 表达式: group_rank((fnd6_newqv1300_aocisecglq)/cap, subindustry)
+index: 319
+datafield: fnd6_newqv1300_aol2q
+正在循环第 319 个元素, 组装 alpha 表达式: group_rank((fnd6_newqv1300_aol2q)/cap, subindustry)
+index: 320
+datafield: fnd6_newqv1300_aoq
+正在循环第 320 个元素, 组装 alpha 表达式: group_rank((fnd6_newqv1300_aoq)/cap, subindustry)
+index: 321
+datafield: fnd6_newqv1300_aqpl1q
+正在循环第 321 个元素, 组装 alpha 表达式: group_rank((fnd6_newqv1300_aqpl1q)/cap, subindustry)
+index: 322
+datafield: fnd6_newqv1300_aul3q
+正在循环第 322 个元素, 组装 alpha 表达式: group_rank((fnd6_newqv1300_aul3q)/cap, subindustry)
+index: 323
+datafield: fnd6_newqv1300_capsq
+正在循环第 323 个元素, 组装 alpha 表达式: group_rank((fnd6_newqv1300_capsq)/cap, subindustry)
+index: 324
+datafield: fnd6_newqv1300_chq
+正在循环第 324 个元素, 组装 alpha 表达式: group_rank((fnd6_newqv1300_chq)/cap, subindustry)
+index: 325
+datafield: fnd6_newqv1300_cibegniq
+正在循环第 325 个元素, 组装 alpha 表达式: group_rank((fnd6_newqv1300_cibegniq)/cap, subindustry)
+index: 326
+datafield: fnd6_newqv1300_cicurrq
+正在循环第 326 个元素, 组装 alpha 表达式: group_rank((fnd6_newqv1300_cicurrq)/cap, subindustry)
+index: 327
+datafield: fnd6_newqv1300_ciderglq
+正在循环第 327 个元素, 组装 alpha 表达式: group_rank((fnd6_newqv1300_ciderglq)/cap, subindustry)
+index: 328
+datafield: fnd6_newqv1300_cimiiq
+正在循环第 328 个元素, 组装 alpha 表达式: group_rank((fnd6_newqv1300_cimiiq)/cap, subindustry)
+index: 329
+datafield: fnd6_newqv1300_ciotherq
+正在循环第 329 个元素, 组装 alpha 表达式: group_rank((fnd6_newqv1300_ciotherq)/cap, subindustry)
+index: 330
+datafield: fnd6_newqv1300_cipenq
+正在循环第 330 个元素, 组装 alpha 表达式: group_rank((fnd6_newqv1300_cipenq)/cap, subindustry)
+index: 331
+datafield: fnd6_newqv1300_ciq
+正在循环第 331 个元素, 组装 alpha 表达式: group_rank((fnd6_newqv1300_ciq)/cap, subindustry)
+index: 332
+datafield: fnd6_newqv1300_cisecglq
+正在循环第 332 个元素, 组装 alpha 表达式: group_rank((fnd6_newqv1300_cisecglq)/cap, subindustry)
+index: 333
+datafield: fnd6_newqv1300_citotalq
+正在循环第 333 个元素, 组装 alpha 表达式: group_rank((fnd6_newqv1300_citotalq)/cap, subindustry)
+index: 334
+datafield: fnd6_newqv1300_cogsq
+正在循环第 334 个元素, 组装 alpha 表达式: group_rank((fnd6_newqv1300_cogsq)/cap, subindustry)
+index: 335
+datafield: fnd6_newqv1300_csh12q
+正在循环第 335 个元素, 组装 alpha 表达式: group_rank((fnd6_newqv1300_csh12q)/cap, subindustry)
+index: 336
+datafield: fnd6_newqv1300_cshfdq
+正在循环第 336 个元素, 组装 alpha 表达式: group_rank((fnd6_newqv1300_cshfdq)/cap, subindustry)
+index: 337
+datafield: fnd6_newqv1300_cshiq
+正在循环第 337 个元素, 组装 alpha 表达式: group_rank((fnd6_newqv1300_cshiq)/cap, subindustry)
+index: 338
+datafield: fnd6_newqv1300_cshopq
+正在循环第 338 个元素, 组装 alpha 表达式: group_rank((fnd6_newqv1300_cshopq)/cap, subindustry)
+index: 339
+datafield: fnd6_newqv1300_cshoq
+正在循环第 339 个元素, 组装 alpha 表达式: group_rank((fnd6_newqv1300_cshoq)/cap, subindustry)
+index: 340
+datafield: fnd6_newqv1300_cshprq
+正在循环第 340 个元素, 组装 alpha 表达式: group_rank((fnd6_newqv1300_cshprq)/cap, subindustry)
+index: 341
+datafield: fnd6_newqv1300_cstkq
+正在循环第 341 个元素, 组装 alpha 表达式: group_rank((fnd6_newqv1300_cstkq)/cap, subindustry)
+index: 342
+datafield: fnd6_newqv1300_dcomq
+正在循环第 342 个元素, 组装 alpha 表达式: group_rank((fnd6_newqv1300_dcomq)/cap, subindustry)
+index: 343
+datafield: fnd6_newqv1300_dilavq
+正在循环第 343 个元素, 组装 alpha 表达式: group_rank((fnd6_newqv1300_dilavq)/cap, subindustry)
+index: 344
+datafield: fnd6_newqv1300_dlcq
+正在循环第 344 个元素, 组装 alpha 表达式: group_rank((fnd6_newqv1300_dlcq)/cap, subindustry)
+index: 345
+datafield: fnd6_newqv1300_dpactq
+正在循环第 345 个元素, 组装 alpha 表达式: group_rank((fnd6_newqv1300_dpactq)/cap, subindustry)
+index: 346
+datafield: fnd6_newqv1300_drcq
+正在循环第 346 个元素, 组装 alpha 表达式: group_rank((fnd6_newqv1300_drcq)/cap, subindustry)
+index: 347
+datafield: fnd6_newqv1300_drltq
+正在循环第 347 个元素, 组装 alpha 表达式: group_rank((fnd6_newqv1300_drltq)/cap, subindustry)
+index: 348
+datafield: fnd6_newqv1300_epsfiq
+正在循环第 348 个元素, 组装 alpha 表达式: group_rank((fnd6_newqv1300_epsfiq)/cap, subindustry)
+index: 349
+datafield: fnd6_newqv1300_epspiq
+正在循环第 349 个元素, 组装 alpha 表达式: group_rank((fnd6_newqv1300_epspiq)/cap, subindustry)
+index: 350
+datafield: fnd6_newqv1300_epspxq
+正在循环第 350 个元素, 组装 alpha 表达式: group_rank((fnd6_newqv1300_epspxq)/cap, subindustry)
+index: 351
+datafield: fnd6_newqv1300_esopnrq
+正在循环第 351 个元素, 组装 alpha 表达式: group_rank((fnd6_newqv1300_esopnrq)/cap, subindustry)
+index: 352
+datafield: fnd6_newqv1300_esoprq
+正在循环第 352 个元素, 组装 alpha 表达式: group_rank((fnd6_newqv1300_esoprq)/cap, subindustry)
+index: 353
+datafield: fnd6_newqv1300_fcaq
+正在循环第 353 个元素, 组装 alpha 表达式: group_rank((fnd6_newqv1300_fcaq)/cap, subindustry)
+index: 354
+datafield: fnd6_newqv1300_gdwlq
+正在循环第 354 个元素, 组装 alpha 表达式: group_rank((fnd6_newqv1300_gdwlq)/cap, subindustry)
+index: 355
+datafield: fnd6_newqv1300_glcea12
+正在循环第 355 个元素, 组装 alpha 表达式: group_rank((fnd6_newqv1300_glcea12)/cap, subindustry)
+index: 356
+datafield: fnd6_newqv1300_glced12
+正在循环第 356 个元素, 组装 alpha 表达式: group_rank((fnd6_newqv1300_glced12)/cap, subindustry)
+index: 357
+datafield: fnd6_newqv1300_glceeps12
+正在循环第 357 个元素, 组装 alpha 表达式: group_rank((fnd6_newqv1300_glceeps12)/cap, subindustry)
+index: 358
+datafield: fnd6_newqv1300_ibadj12
+正在循环第 358 个元素, 组装 alpha 表达式: group_rank((fnd6_newqv1300_ibadj12)/cap, subindustry)
+index: 359
+datafield: fnd6_newqv1300_ibadjq
+正在循环第 359 个元素, 组装 alpha 表达式: group_rank((fnd6_newqv1300_ibadjq)/cap, subindustry)
+index: 360
+datafield: fnd6_newqv1300_ibcomq
+正在循环第 360 个元素, 组装 alpha 表达式: group_rank((fnd6_newqv1300_ibcomq)/cap, subindustry)
+index: 361
+datafield: fnd6_newqv1300_ibmiiq
+正在循环第 361 个元素, 组装 alpha 表达式: group_rank((fnd6_newqv1300_ibmiiq)/cap, subindustry)
+index: 362
+datafield: fnd6_newqv1300_ibq
+正在循环第 362 个元素, 组装 alpha 表达式: group_rank((fnd6_newqv1300_ibq)/cap, subindustry)
+index: 363
+datafield: fnd6_newqv1300_icaptq
+正在循环第 363 个元素, 组装 alpha 表达式: group_rank((fnd6_newqv1300_icaptq)/cap, subindustry)
+index: 364
+datafield: fnd6_newqv1300_intanoq
+正在循环第 364 个元素, 组装 alpha 表达式: group_rank((fnd6_newqv1300_intanoq)/cap, subindustry)
+index: 365
+datafield: fnd6_newqv1300_intanq
+正在循环第 365 个元素, 组装 alpha 表达式: group_rank((fnd6_newqv1300_intanq)/cap, subindustry)
+index: 366
+datafield: fnd6_newqv1300_invfgq
+正在循环第 366 个元素, 组装 alpha 表达式: group_rank((fnd6_newqv1300_invfgq)/cap, subindustry)
+index: 367
+datafield: fnd6_newqv1300_invoq
+正在循环第 367 个元素, 组装 alpha 表达式: group_rank((fnd6_newqv1300_invoq)/cap, subindustry)
+index: 368
+datafield: fnd6_newqv1300_invrmq
+正在循环第 368 个元素, 组装 alpha 表达式: group_rank((fnd6_newqv1300_invrmq)/cap, subindustry)
+index: 369
+datafield: fnd6_newqv1300_invtq
+正在循环第 369 个元素, 组装 alpha 表达式: group_rank((fnd6_newqv1300_invtq)/cap, subindustry)
+index: 370
+datafield: fnd6_newqv1300_invwipq
+正在循环第 370 个元素, 组装 alpha 表达式: group_rank((fnd6_newqv1300_invwipq)/cap, subindustry)
+index: 371
+datafield: fnd6_newqv1300_ivltq
+正在循环第 371 个元素, 组装 alpha 表达式: group_rank((fnd6_newqv1300_ivltq)/cap, subindustry)
+index: 372
+datafield: fnd6_newqv1300_ivstq
+正在循环第 372 个元素, 组装 alpha 表达式: group_rank((fnd6_newqv1300_ivstq)/cap, subindustry)
+index: 373
+datafield: fnd6_newqv1300_lcoq
+正在循环第 373 个元素, 组装 alpha 表达式: group_rank((fnd6_newqv1300_lcoq)/cap, subindustry)
+index: 374
+datafield: fnd6_newqv1300_lltq
+正在循环第 374 个元素, 组装 alpha 表达式: group_rank((fnd6_newqv1300_lltq)/cap, subindustry)
+index: 375
+datafield: fnd6_newqv1300_lnoq
+正在循环第 375 个元素, 组装 alpha 表达式: group_rank((fnd6_newqv1300_lnoq)/cap, subindustry)
+index: 376
+datafield: fnd6_newqv1300_lol2q
+正在循环第 376 个元素, 组装 alpha 表达式: group_rank((fnd6_newqv1300_lol2q)/cap, subindustry)
+index: 377
+datafield: fnd6_newqv1300_loq
+正在循环第 377 个元素, 组装 alpha 表达式: group_rank((fnd6_newqv1300_loq)/cap, subindustry)
+index: 378
+datafield: fnd6_newqv1300_loxdrq
+正在循环第 378 个元素, 组装 alpha 表达式: group_rank((fnd6_newqv1300_loxdrq)/cap, subindustry)
+index: 379
+datafield: fnd6_newqv1300_lqpl1q
+正在循环第 379 个元素, 组装 alpha 表达式: group_rank((fnd6_newqv1300_lqpl1q)/cap, subindustry)
+index: 380
+datafield: fnd6_newqv1300_lseq
+正在循环第 380 个元素, 组装 alpha 表达式: group_rank((fnd6_newqv1300_lseq)/cap, subindustry)
+index: 381
+datafield: fnd6_newqv1300_ltmibq
+正在循环第 381 个元素, 组装 alpha 表达式: group_rank((fnd6_newqv1300_ltmibq)/cap, subindustry)
+index: 382
+datafield: fnd6_newqv1300_lul3q
+正在循环第 382 个元素, 组装 alpha 表达式: group_rank((fnd6_newqv1300_lul3q)/cap, subindustry)
+index: 383
+datafield: fnd6_newqv1300_mibnq
+正在循环第 383 个元素, 组装 alpha 表达式: group_rank((fnd6_newqv1300_mibnq)/cap, subindustry)
+index: 384
+datafield: fnd6_newqv1300_mibtq
+正在循环第 384 个元素, 组装 alpha 表达式: group_rank((fnd6_newqv1300_mibtq)/cap, subindustry)
+index: 385
+datafield: fnd6_newqv1300_miiq
+正在循环第 385 个元素, 组装 alpha 表达式: group_rank((fnd6_newqv1300_miiq)/cap, subindustry)
+index: 386
+datafield: fnd6_newqv1300_msaq
+正在循环第 386 个元素, 组装 alpha 表达式: group_rank((fnd6_newqv1300_msaq)/cap, subindustry)
+index: 387
+datafield: fnd6_newqv1300_oepf12
+正在循环第 387 个元素, 组装 alpha 表达式: group_rank((fnd6_newqv1300_oepf12)/cap, subindustry)
+index: 388
+datafield: fnd6_newqv1300_oepsxq
+正在循环第 388 个元素, 组装 alpha 表达式: group_rank((fnd6_newqv1300_oepsxq)/cap, subindustry)
+index: 389
+datafield: fnd6_newqv1300_optfvgrq
+正在循环第 389 个元素, 组装 alpha 表达式: group_rank((fnd6_newqv1300_optfvgrq)/cap, subindustry)
+index: 390
+datafield: fnd6_newqv1300_optrfrq
+正在循环第 390 个元素, 组装 alpha 表达式: group_rank((fnd6_newqv1300_optrfrq)/cap, subindustry)
+index: 391
+datafield: fnd6_newqv1300_piq
+正在循环第 391 个元素, 组装 alpha 表达式: group_rank((fnd6_newqv1300_piq)/cap, subindustry)
+index: 392
+datafield: fnd6_newqv1300_pncq
+正在循环第 392 个元素, 组装 alpha 表达式: group_rank((fnd6_newqv1300_pncq)/cap, subindustry)
+index: 393
+datafield: fnd6_newqv1300_ppegtq
+正在循环第 393 个元素, 组装 alpha 表达式: group_rank((fnd6_newqv1300_ppegtq)/cap, subindustry)
+index: 394
+datafield: fnd6_newqv1300_ppentq
+正在循环第 394 个元素, 组装 alpha 表达式: group_rank((fnd6_newqv1300_ppentq)/cap, subindustry)
+index: 395
+datafield: fnd6_newqv1300_prcaq
+正在循环第 395 个元素, 组装 alpha 表达式: group_rank((fnd6_newqv1300_prcaq)/cap, subindustry)
+index: 396
+datafield: fnd6_newqv1300_prcdq
+正在循环第 396 个元素, 组装 alpha 表达式: group_rank((fnd6_newqv1300_prcdq)/cap, subindustry)
+index: 397
+datafield: fnd6_newqv1300_prcepsq
+正在循环第 397 个元素, 组装 alpha 表达式: group_rank((fnd6_newqv1300_prcepsq)/cap, subindustry)
+index: 398
+datafield: fnd6_newqv1300_prcraq
+正在循环第 398 个元素, 组装 alpha 表达式: group_rank((fnd6_newqv1300_prcraq)/cap, subindustry)
+index: 399
+datafield: fnd6_newqv1300_rcpq
+正在循环第 399 个元素, 组装 alpha 表达式: group_rank((fnd6_newqv1300_rcpq)/cap, subindustry)
+index: 400
+datafield: fnd6_newqv1300_rdipaq
+正在循环第 400 个元素, 组装 alpha 表达式: group_rank((fnd6_newqv1300_rdipaq)/cap, subindustry)
+index: 401
+datafield: fnd6_newqv1300_rdipdq
+正在循环第 401 个元素, 组装 alpha 表达式: group_rank((fnd6_newqv1300_rdipdq)/cap, subindustry)
+index: 402
+datafield: fnd6_newqv1300_rdipepsq
+正在循环第 402 个元素, 组装 alpha 表达式: group_rank((fnd6_newqv1300_rdipepsq)/cap, subindustry)
+index: 403
+datafield: fnd6_newqv1300_rdipq
+正在循环第 403 个元素, 组装 alpha 表达式: group_rank((fnd6_newqv1300_rdipq)/cap, subindustry)
+index: 404
+datafield: fnd6_newqv1300_recdq
+正在循环第 404 个元素, 组装 alpha 表达式: group_rank((fnd6_newqv1300_recdq)/cap, subindustry)
+index: 405
+datafield: fnd6_newqv1300_rectaq
+正在循环第 405 个元素, 组装 alpha 表达式: group_rank((fnd6_newqv1300_rectaq)/cap, subindustry)
+index: 406
+datafield: fnd6_newqv1300_rectoq
+正在循环第 406 个元素, 组装 alpha 表达式: group_rank((fnd6_newqv1300_rectoq)/cap, subindustry)
+index: 407
+datafield: fnd6_newqv1300_rectrq
+正在循环第 407 个元素, 组装 alpha 表达式: group_rank((fnd6_newqv1300_rectrq)/cap, subindustry)
+index: 408
+datafield: fnd6_newqv1300_reunaq
+正在循环第 408 个元素, 组装 alpha 表达式: group_rank((fnd6_newqv1300_reunaq)/cap, subindustry)
+index: 409
+datafield: fnd6_newqv1300_revtq
+正在循环第 409 个元素, 组装 alpha 表达式: group_rank((fnd6_newqv1300_revtq)/cap, subindustry)
+index: 410
+datafield: fnd6_newqv1300_seqoq
+正在循环第 410 个元素, 组装 alpha 表达式: group_rank((fnd6_newqv1300_seqoq)/cap, subindustry)
+index: 411
+datafield: fnd6_newqv1300_seqq
+正在循环第 411 个元素, 组装 alpha 表达式: group_rank((fnd6_newqv1300_seqq)/cap, subindustry)
+index: 412
+datafield: fnd6_newqv1300_spcedpq
+正在循环第 412 个元素, 组装 alpha 表达式: group_rank((fnd6_newqv1300_spcedpq)/cap, subindustry)
+index: 413
+datafield: fnd6_newqv1300_spcedq
+正在循环第 413 个元素, 组装 alpha 表达式: group_rank((fnd6_newqv1300_spcedq)/cap, subindustry)
+index: 414
+datafield: fnd6_newqv1300_spceepsp12
+正在循环第 414 个元素, 组装 alpha 表达式: group_rank((fnd6_newqv1300_spceepsp12)/cap, subindustry)
+index: 415
+datafield: fnd6_newqv1300_spceepspq
+正在循环第 415 个元素, 组装 alpha 表达式: group_rank((fnd6_newqv1300_spceepspq)/cap, subindustry)
+index: 416
+datafield: fnd6_newqv1300_spceepsq
+正在循环第 416 个元素, 组装 alpha 表达式: group_rank((fnd6_newqv1300_spceepsq)/cap, subindustry)
+index: 417
+datafield: fnd6_newqv1300_spcep12
+正在循环第 417 个元素, 组装 alpha 表达式: group_rank((fnd6_newqv1300_spcep12)/cap, subindustry)
+index: 418
+datafield: fnd6_newqv1300_spcepd12
+正在循环第 418 个元素, 组装 alpha 表达式: group_rank((fnd6_newqv1300_spcepd12)/cap, subindustry)
+index: 419
+datafield: fnd6_newqv1300_spcepq
+正在循环第 419 个元素, 组装 alpha 表达式: group_rank((fnd6_newqv1300_spcepq)/cap, subindustry)
+index: 420
+datafield: fnd6_newqv1300_spceq
+正在循环第 420 个元素, 组装 alpha 表达式: group_rank((fnd6_newqv1300_spceq)/cap, subindustry)
+index: 421
+datafield: fnd6_newqv1300_spiq
+正在循环第 421 个元素, 组装 alpha 表达式: group_rank((fnd6_newqv1300_spiq)/cap, subindustry)
+index: 422
+datafield: fnd6_newqv1300_stkcoq
+正在循环第 422 个元素, 组装 alpha 表达式: group_rank((fnd6_newqv1300_stkcoq)/cap, subindustry)
+index: 423
+datafield: fnd6_newqv1300_stkcpaq
+正在循环第 423 个元素, 组装 alpha 表达式: group_rank((fnd6_newqv1300_stkcpaq)/cap, subindustry)
+index: 424
+datafield: fnd6_newqv1300_teqq
+正在循环第 424 个元素, 组装 alpha 表达式: group_rank((fnd6_newqv1300_teqq)/cap, subindustry)
+index: 425
+datafield: fnd6_newqv1300_tfvaq
+正在循环第 425 个元素, 组装 alpha 表达式: group_rank((fnd6_newqv1300_tfvaq)/cap, subindustry)
+index: 426
+datafield: fnd6_newqv1300_tfvceq
+正在循环第 426 个元素, 组装 alpha 表达式: group_rank((fnd6_newqv1300_tfvceq)/cap, subindustry)
+index: 427
+datafield: fnd6_newqv1300_tfvlq
+正在循环第 427 个元素, 组装 alpha 表达式: group_rank((fnd6_newqv1300_tfvlq)/cap, subindustry)
+index: 428
+datafield: fnd6_newqv1300_tstknq
+正在循环第 428 个元素, 组装 alpha 表达式: group_rank((fnd6_newqv1300_tstknq)/cap, subindustry)
+index: 429
+datafield: fnd6_newqv1300_tstkq
+正在循环第 429 个元素, 组装 alpha 表达式: group_rank((fnd6_newqv1300_tstkq)/cap, subindustry)
+index: 430
+datafield: fnd6_newqv1300_txdbaq
+正在循环第 430 个元素, 组装 alpha 表达式: group_rank((fnd6_newqv1300_txdbaq)/cap, subindustry)
+index: 431
+datafield: fnd6_newqv1300_txdbq
+正在循环第 431 个元素, 组装 alpha 表达式: group_rank((fnd6_newqv1300_txdbq)/cap, subindustry)
+index: 432
+datafield: fnd6_newqv1300_txdiq
+正在循环第 432 个元素, 组装 alpha 表达式: group_rank((fnd6_newqv1300_txdiq)/cap, subindustry)
+index: 433
+datafield: fnd6_newqv1300_txditcq
+正在循环第 433 个元素, 组装 alpha 表达式: group_rank((fnd6_newqv1300_txditcq)/cap, subindustry)
+index: 434
+datafield: fnd6_newqv1300_txpq
+正在循环第 434 个元素, 组装 alpha 表达式: group_rank((fnd6_newqv1300_txpq)/cap, subindustry)
+index: 435
+datafield: fnd6_newqv1300_txtq
+正在循环第 435 个元素, 组装 alpha 表达式: group_rank((fnd6_newqv1300_txtq)/cap, subindustry)
+index: 436
+datafield: fnd6_newqv1300_txwq
+正在循环第 436 个元素, 组装 alpha 表达式: group_rank((fnd6_newqv1300_txwq)/cap, subindustry)
+index: 437
+datafield: fnd6_newqv1300_wcapq
+正在循环第 437 个元素, 组装 alpha 表达式: group_rank((fnd6_newqv1300_wcapq)/cap, subindustry)
+index: 438
+datafield: fnd6_newqv1300_xintq
+正在循环第 438 个元素, 组装 alpha 表达式: group_rank((fnd6_newqv1300_xintq)/cap, subindustry)
+index: 439
+datafield: fnd6_newqv1300_xoprq
+正在循环第 439 个元素, 组装 alpha 表达式: group_rank((fnd6_newqv1300_xoprq)/cap, subindustry)
+index: 440
+datafield: fnd6_newqv1300_xoptdq
+正在循环第 440 个元素, 组装 alpha 表达式: group_rank((fnd6_newqv1300_xoptdq)/cap, subindustry)
+index: 441
+datafield: fnd6_newqv1300_xoptepsq
+正在循环第 441 个元素, 组装 alpha 表达式: group_rank((fnd6_newqv1300_xoptepsq)/cap, subindustry)
+index: 442
+datafield: fnd6_newqv1300_xoptq
+正在循环第 442 个元素, 组装 alpha 表达式: group_rank((fnd6_newqv1300_xoptq)/cap, subindustry)
+index: 443
+datafield: fnd6_newqv1300_xrdq
+正在循环第 443 个元素, 组装 alpha 表达式: group_rank((fnd6_newqv1300_xrdq)/cap, subindustry)
+index: 444
+datafield: fnd6_newqv1300_xsgaq
+正在循环第 444 个元素, 组装 alpha 表达式: group_rank((fnd6_newqv1300_xsgaq)/cap, subindustry)
+index: 445
+datafield: fnd6_niadj
+正在循环第 445 个元素, 组装 alpha 表达式: group_rank((fnd6_niadj)/cap, subindustry)
+index: 446
+datafield: fnd6_nopio
+正在循环第 446 个元素, 组装 alpha 表达式: group_rank((fnd6_nopio)/cap, subindustry)
+index: 447
+datafield: fnd6_np
+正在循环第 447 个元素, 组装 alpha 表达式: group_rank((fnd6_np)/cap, subindustry)
+index: 448
+datafield: fnd6_npq
+正在循环第 448 个元素, 组装 alpha 表达式: group_rank((fnd6_npq)/cap, subindustry)
+index: 449
+datafield: fnd6_oprepsx
+正在循环第 449 个元素, 组装 alpha 表达式: group_rank((fnd6_oprepsx)/cap, subindustry)
+index: 450
+datafield: fnd6_optca
+正在循环第 450 个元素, 组装 alpha 表达式: group_rank((fnd6_optca)/cap, subindustry)
+index: 451
+datafield: fnd6_optdr
+正在循环第 451 个元素, 组装 alpha 表达式: group_rank((fnd6_optdr)/cap, subindustry)
+index: 452
+datafield: fnd6_optdrq
+正在循环第 452 个元素, 组装 alpha 表达式: group_rank((fnd6_optdrq)/cap, subindustry)
+index: 453
+datafield: fnd6_optex
+正在循环第 453 个元素, 组装 alpha 表达式: group_rank((fnd6_optex)/cap, subindustry)
+index: 454
+datafield: fnd6_optfvgr
+正在循环第 454 个元素, 组装 alpha 表达式: group_rank((fnd6_optfvgr)/cap, subindustry)
+index: 455
+datafield: fnd6_optgr
+正在循环第 455 个元素, 组装 alpha 表达式: group_rank((fnd6_optgr)/cap, subindustry)
+index: 456
+datafield: fnd6_optlife
+正在循环第 456 个元素, 组装 alpha 表达式: group_rank((fnd6_optlife)/cap, subindustry)
+index: 457
+datafield: fnd6_optlifeq
+正在循环第 457 个元素, 组装 alpha 表达式: group_rank((fnd6_optlifeq)/cap, subindustry)
+index: 458
+datafield: fnd6_optosby
+正在循环第 458 个元素, 组装 alpha 表达式: group_rank((fnd6_optosby)/cap, subindustry)
+index: 459
+datafield: fnd6_optosey
+正在循环第 459 个元素, 组装 alpha 表达式: group_rank((fnd6_optosey)/cap, subindustry)
+index: 460
+datafield: fnd6_optprcby
+正在循环第 460 个元素, 组装 alpha 表达式: group_rank((fnd6_optprcby)/cap, subindustry)
+index: 461
+datafield: fnd6_optprcca
+正在循环第 461 个元素, 组装 alpha 表达式: group_rank((fnd6_optprcca)/cap, subindustry)
+index: 462
+datafield: fnd6_optprcex
+正在循环第 462 个元素, 组装 alpha 表达式: group_rank((fnd6_optprcex)/cap, subindustry)
+index: 463
+datafield: fnd6_optprcey
+正在循环第 463 个元素, 组装 alpha 表达式: group_rank((fnd6_optprcey)/cap, subindustry)
+index: 464
+datafield: fnd6_optprcgr
+正在循环第 464 个元素, 组装 alpha 表达式: group_rank((fnd6_optprcgr)/cap, subindustry)
+index: 465
+datafield: fnd6_optprcwa
+正在循环第 465 个元素, 组装 alpha 表达式: group_rank((fnd6_optprcwa)/cap, subindustry)
+index: 466
+datafield: fnd6_optrfr
+正在循环第 466 个元素, 组装 alpha 表达式: group_rank((fnd6_optrfr)/cap, subindustry)
+index: 467
+datafield: fnd6_optvol
+正在循环第 467 个元素, 组装 alpha 表达式: group_rank((fnd6_optvol)/cap, subindustry)
+index: 468
+datafield: fnd6_optvolq
+正在循环第 468 个元素, 组装 alpha 表达式: group_rank((fnd6_optvolq)/cap, subindustry)
+index: 469
+datafield: fnd6_pidom
+正在循环第 469 个元素, 组装 alpha 表达式: group_rank((fnd6_pidom)/cap, subindustry)
+index: 470
+datafield: fnd6_pifo
+正在循环第 470 个元素, 组装 alpha 表达式: group_rank((fnd6_pifo)/cap, subindustry)
+index: 471
+datafield: fnd6_pncdq
+正在循环第 471 个元素, 组装 alpha 表达式: group_rank((fnd6_pncdq)/cap, subindustry)
+index: 472
+datafield: fnd6_pncepsq
+正在循环第 472 个元素, 组装 alpha 表达式: group_rank((fnd6_pncepsq)/cap, subindustry)
+index: 473
+datafield: fnd6_pnrsho
+正在循环第 473 个元素, 组装 alpha 表达式: group_rank((fnd6_pnrsho)/cap, subindustry)
+index: 474
+datafield: fnd6_ppeveb
+正在循环第 474 个元素, 组装 alpha 表达式: group_rank((fnd6_ppeveb)/cap, subindustry)
+index: 475
+datafield: fnd6_prcc
+正在循环第 475 个元素, 组装 alpha 表达式: group_rank((fnd6_prcc)/cap, subindustry)
+index: 476
+datafield: fnd6_prccq
+正在循环第 476 个元素, 组装 alpha 表达式: group_rank((fnd6_prccq)/cap, subindustry)
+index: 477
+datafield: fnd6_prch
+正在循环第 477 个元素, 组装 alpha 表达式: group_rank((fnd6_prch)/cap, subindustry)
+index: 478
+datafield: fnd6_prchq
+正在循环第 478 个元素, 组装 alpha 表达式: group_rank((fnd6_prchq)/cap, subindustry)
+index: 479
+datafield: fnd6_prcl
+正在循环第 479 个元素, 组装 alpha 表达式: group_rank((fnd6_prcl)/cap, subindustry)
+index: 480
+datafield: fnd6_prclq
+正在循环第 480 个元素, 组装 alpha 表达式: group_rank((fnd6_prclq)/cap, subindustry)
+index: 481
+datafield: fnd6_prstkc
+正在循环第 481 个元素, 组装 alpha 表达式: group_rank((fnd6_prstkc)/cap, subindustry)
+index: 482
+datafield: fnd6_pstkc
+正在循环第 482 个元素, 组装 alpha 表达式: group_rank((fnd6_pstkc)/cap, subindustry)
+index: 483
+datafield: fnd6_pstkl
+正在循环第 483 个元素, 组装 alpha 表达式: group_rank((fnd6_pstkl)/cap, subindustry)
+index: 484
+datafield: fnd6_pstkrv
+正在循环第 484 个元素, 组装 alpha 表达式: group_rank((fnd6_pstkrv)/cap, subindustry)
+index: 485
+datafield: fnd6_rank
+正在循环第 485 个元素, 组装 alpha 表达式: group_rank((fnd6_rank)/cap, subindustry)
+index: 486
+datafield: fnd6_rea
+正在循环第 486 个元素, 组装 alpha 表达式: group_rank((fnd6_rea)/cap, subindustry)
+index: 487
+datafield: fnd6_reajo
+正在循环第 487 个元素, 组装 alpha 表达式: group_rank((fnd6_reajo)/cap, subindustry)
+index: 488
+datafield: fnd6_recco
+正在循环第 488 个元素, 组装 alpha 表达式: group_rank((fnd6_recco)/cap, subindustry)
+index: 489
+datafield: fnd6_recd
+正在循环第 489 个元素, 组装 alpha 表达式: group_rank((fnd6_recd)/cap, subindustry)
+index: 490
+datafield: fnd6_recta
+正在循环第 490 个元素, 组装 alpha 表达式: group_rank((fnd6_recta)/cap, subindustry)
+index: 491
+datafield: fnd6_rectr
+正在循环第 491 个元素, 组装 alpha 表达式: group_rank((fnd6_rectr)/cap, subindustry)
+index: 492
+datafield: fnd6_siv
+正在循环第 492 个元素, 组装 alpha 表达式: group_rank((fnd6_siv)/cap, subindustry)
+index: 493
+datafield: fnd6_spce
+正在循环第 493 个元素, 组装 alpha 表达式: group_rank((fnd6_spce)/cap, subindustry)
+index: 494
+datafield: fnd6_sppe
+正在循环第 494 个元素, 组装 alpha 表达式: group_rank((fnd6_sppe)/cap, subindustry)
+index: 495
+datafield: fnd6_sppiv
+正在循环第 495 个元素, 组装 alpha 表达式: group_rank((fnd6_sppiv)/cap, subindustry)
+index: 496
+datafield: fnd6_sstk
+正在循环第 496 个元素, 组装 alpha 表达式: group_rank((fnd6_sstk)/cap, subindustry)
+index: 497
+datafield: fnd6_state
+正在循环第 497 个元素, 组装 alpha 表达式: group_rank((fnd6_state)/cap, subindustry)
+index: 498
+datafield: fnd6_stkcpa
+正在循环第 498 个元素, 组装 alpha 表达式: group_rank((fnd6_stkcpa)/cap, subindustry)
+index: 499
+datafield: fnd6_teq
+正在循环第 499 个元素, 组装 alpha 表达式: group_rank((fnd6_teq)/cap, subindustry)
+index: 500
+datafield: fnd6_tfva
+正在循环第 500 个元素, 组装 alpha 表达式: group_rank((fnd6_tfva)/cap, subindustry)
+index: 501
+datafield: fnd6_tfvce
+正在循环第 501 个元素, 组装 alpha 表达式: group_rank((fnd6_tfvce)/cap, subindustry)
+index: 502
+datafield: fnd6_tfvl
+正在循环第 502 个元素, 组装 alpha 表达式: group_rank((fnd6_tfvl)/cap, subindustry)
+index: 503
+datafield: fnd6_tlcf
+正在循环第 503 个元素, 组装 alpha 表达式: group_rank((fnd6_tlcf)/cap, subindustry)
+index: 504
+datafield: fnd6_tstkc
+正在循环第 504 个元素, 组装 alpha 表达式: group_rank((fnd6_tstkc)/cap, subindustry)
+index: 505
+datafield: fnd6_txbco
+正在循环第 505 个元素, 组装 alpha 表达式: group_rank((fnd6_txbco)/cap, subindustry)
+index: 506
+datafield: fnd6_txbcof
+正在循环第 506 个元素, 组装 alpha 表达式: group_rank((fnd6_txbcof)/cap, subindustry)
+index: 507
+datafield: fnd6_txc
+正在循环第 507 个元素, 组装 alpha 表达式: group_rank((fnd6_txc)/cap, subindustry)
+index: 508
+datafield: fnd6_txdba
+正在循环第 508 个元素, 组装 alpha 表达式: group_rank((fnd6_txdba)/cap, subindustry)
+index: 509
+datafield: fnd6_txdbca
+正在循环第 509 个元素, 组装 alpha 表达式: group_rank((fnd6_txdbca)/cap, subindustry)
+index: 510
+datafield: fnd6_txdbcl
+正在循环第 510 个元素, 组装 alpha 表达式: group_rank((fnd6_txdbcl)/cap, subindustry)
+index: 511
+datafield: fnd6_txdbclq
+正在循环第 511 个元素, 组装 alpha 表达式: group_rank((fnd6_txdbclq)/cap, subindustry)
+index: 512
+datafield: fnd6_txdc
+正在循环第 512 个元素, 组装 alpha 表达式: group_rank((fnd6_txdc)/cap, subindustry)
+index: 513
+datafield: fnd6_txdfed
+正在循环第 513 个元素, 组装 alpha 表达式: group_rank((fnd6_txdfed)/cap, subindustry)
+index: 514
+datafield: fnd6_txdfo
+正在循环第 514 个元素, 组装 alpha 表达式: group_rank((fnd6_txdfo)/cap, subindustry)
+index: 515
+datafield: fnd6_txdi
+正在循环第 515 个元素, 组装 alpha 表达式: group_rank((fnd6_txdi)/cap, subindustry)
+index: 516
+datafield: fnd6_txds
+正在循环第 516 个元素, 组装 alpha 表达式: group_rank((fnd6_txds)/cap, subindustry)
+index: 517
+datafield: fnd6_txfed
+正在循环第 517 个元素, 组装 alpha 表达式: group_rank((fnd6_txfed)/cap, subindustry)
+index: 518
+datafield: fnd6_txfo
+正在循环第 518 个元素, 组装 alpha 表达式: group_rank((fnd6_txfo)/cap, subindustry)
+index: 519
+datafield: fnd6_txndb
+正在循环第 519 个元素, 组装 alpha 表达式: group_rank((fnd6_txndb)/cap, subindustry)
+index: 520
+datafield: fnd6_txndba
+正在循环第 520 个元素, 组装 alpha 表达式: group_rank((fnd6_txndba)/cap, subindustry)
+index: 521
+datafield: fnd6_txndbl
+正在循环第 521 个元素, 组装 alpha 表达式: group_rank((fnd6_txndbl)/cap, subindustry)
+index: 522
+datafield: fnd6_txndbr
+正在循环第 522 个元素, 组装 alpha 表达式: group_rank((fnd6_txndbr)/cap, subindustry)
+index: 523
+datafield: fnd6_txo
+正在循环第 523 个元素, 组装 alpha 表达式: group_rank((fnd6_txo)/cap, subindustry)
+index: 524
+datafield: fnd6_txpd
+正在循环第 524 个元素, 组装 alpha 表达式: group_rank((fnd6_txpd)/cap, subindustry)
+index: 525
+datafield: fnd6_txr
+正在循环第 525 个元素, 组装 alpha 表达式: group_rank((fnd6_txr)/cap, subindustry)
+index: 526
+datafield: fnd6_txs
+正在循环第 526 个元素, 组装 alpha 表达式: group_rank((fnd6_txs)/cap, subindustry)
+index: 527
+datafield: fnd6_txtubadjust
+正在循环第 527 个元素, 组装 alpha 表达式: group_rank((fnd6_txtubadjust)/cap, subindustry)
+index: 528
+datafield: fnd6_txtubbegin
+正在循环第 528 个元素, 组装 alpha 表达式: group_rank((fnd6_txtubbegin)/cap, subindustry)
+index: 529
+datafield: fnd6_txtubend
+正在循环第 529 个元素, 组装 alpha 表达式: group_rank((fnd6_txtubend)/cap, subindustry)
+index: 530
+datafield: fnd6_txtubposdec
+正在循环第 530 个元素, 组装 alpha 表达式: group_rank((fnd6_txtubposdec)/cap, subindustry)
+index: 531
+datafield: fnd6_txtubposinc
+正在循环第 531 个元素, 组装 alpha 表达式: group_rank((fnd6_txtubposinc)/cap, subindustry)
+index: 532
+datafield: fnd6_txtubpospdec
+正在循环第 532 个元素, 组装 alpha 表达式: group_rank((fnd6_txtubpospdec)/cap, subindustry)
+index: 533
+datafield: fnd6_txtubpospinc
+正在循环第 533 个元素, 组装 alpha 表达式: group_rank((fnd6_txtubpospinc)/cap, subindustry)
+index: 534
+datafield: fnd6_txtubsettle
+正在循环第 534 个元素, 组装 alpha 表达式: group_rank((fnd6_txtubsettle)/cap, subindustry)
+index: 535
+datafield: fnd6_txtubsoflimit
+正在循环第 535 个元素, 组装 alpha 表达式: group_rank((fnd6_txtubsoflimit)/cap, subindustry)
+index: 536
+datafield: fnd6_txtubtxtr
+正在循环第 536 个元素, 组装 alpha 表达式: group_rank((fnd6_txtubtxtr)/cap, subindustry)
+index: 537
+datafield: fnd6_txtubxintbs
+正在循环第 537 个元素, 组装 alpha 表达式: group_rank((fnd6_txtubxintbs)/cap, subindustry)
+index: 538
+datafield: fnd6_txtubxintis
+正在循环第 538 个元素, 组装 alpha 表达式: group_rank((fnd6_txtubxintis)/cap, subindustry)
+index: 539
+datafield: fnd6_txw
+正在循环第 539 个元素, 组装 alpha 表达式: group_rank((fnd6_txw)/cap, subindustry)
+index: 540
+datafield: fnd6_weburl
+正在循环第 540 个元素, 组装 alpha 表达式: group_rank((fnd6_weburl)/cap, subindustry)
+index: 541
+datafield: fnd6_xacc
+正在循环第 541 个元素, 组装 alpha 表达式: group_rank((fnd6_xacc)/cap, subindustry)
+index: 542
+datafield: fnd6_xaccq
+正在循环第 542 个元素, 组装 alpha 表达式: group_rank((fnd6_xaccq)/cap, subindustry)
+index: 543
+datafield: fnd6_xad
+正在循环第 543 个元素, 组装 alpha 表达式: group_rank((fnd6_xad)/cap, subindustry)
+index: 544
+datafield: fnd6_xintopt
+正在循环第 544 个元素, 组装 alpha 表达式: group_rank((fnd6_xintopt)/cap, subindustry)
+index: 545
+datafield: fnd6_xopr
+正在循环第 545 个元素, 组装 alpha 表达式: group_rank((fnd6_xopr)/cap, subindustry)
+index: 546
+datafield: fnd6_xpp
+正在循环第 546 个元素, 组装 alpha 表达式: group_rank((fnd6_xpp)/cap, subindustry)
+index: 547
+datafield: fnd6_xpr
+正在循环第 547 个元素, 组装 alpha 表达式: group_rank((fnd6_xpr)/cap, subindustry)
+index: 548
+datafield: fnd6_xrent
+正在循环第 548 个元素, 组装 alpha 表达式: group_rank((fnd6_xrent)/cap, subindustry)
+index: 549
+datafield: fnd6_zipcode
+正在循环第 549 个元素, 组装 alpha 表达式: group_rank((fnd6_zipcode)/cap, subindustry)
+index: 550
+datafield: goodwill
+正在循环第 550 个元素, 组装 alpha 表达式: group_rank((goodwill)/cap, subindustry)
+index: 551
+datafield: income
+正在循环第 551 个元素, 组装 alpha 表达式: group_rank((income)/cap, subindustry)
+index: 552
+datafield: income_beforeextra
+正在循环第 552 个元素, 组装 alpha 表达式: group_rank((income_beforeextra)/cap, subindustry)
+index: 553
+datafield: income_tax
+正在循环第 553 个元素, 组装 alpha 表达式: group_rank((income_tax)/cap, subindustry)
+index: 554
+datafield: interest_expense
+正在循环第 554 个元素, 组装 alpha 表达式: group_rank((interest_expense)/cap, subindustry)
+index: 555
+datafield: inventory
+正在循环第 555 个元素, 组装 alpha 表达式: group_rank((inventory)/cap, subindustry)
+index: 556
+datafield: inventory_turnover
+正在循环第 556 个元素, 组装 alpha 表达式: group_rank((inventory_turnover)/cap, subindustry)
+index: 557
+datafield: invested_capital
+正在循环第 557 个元素, 组装 alpha 表达式: group_rank((invested_capital)/cap, subindustry)
+index: 558
+datafield: liabilities
+正在循环第 558 个元素, 组装 alpha 表达式: group_rank((liabilities)/cap, subindustry)
+index: 559
+datafield: liabilities_curr
+正在循环第 559 个元素, 组装 alpha 表达式: group_rank((liabilities_curr)/cap, subindustry)
+index: 560
+datafield: operating_expense
+正在循环第 560 个元素, 组装 alpha 表达式: group_rank((operating_expense)/cap, subindustry)
+index: 561
+datafield: operating_income
+正在循环第 561 个元素, 组装 alpha 表达式: group_rank((operating_income)/cap, subindustry)
+index: 562
+datafield: ppent
+正在循环第 562 个元素, 组装 alpha 表达式: group_rank((ppent)/cap, subindustry)
+index: 563
+datafield: pretax_income
+正在循环第 563 个元素, 组装 alpha 表达式: group_rank((pretax_income)/cap, subindustry)
+index: 564
+datafield: rd_expense
+正在循环第 564 个元素, 组装 alpha 表达式: group_rank((rd_expense)/cap, subindustry)
+index: 565
+datafield: receivable
+正在循环第 565 个元素, 组装 alpha 表达式: group_rank((receivable)/cap, subindustry)
+index: 566
+datafield: retained_earnings
+正在循环第 566 个元素, 组装 alpha 表达式: group_rank((retained_earnings)/cap, subindustry)
+index: 567
+datafield: return_assets
+正在循环第 567 个元素, 组装 alpha 表达式: group_rank((return_assets)/cap, subindustry)
+index: 568
+datafield: return_equity
+正在循环第 568 个元素, 组装 alpha 表达式: group_rank((return_equity)/cap, subindustry)
+index: 569
+datafield: revenue
+正在循环第 569 个元素, 组装 alpha 表达式: group_rank((revenue)/cap, subindustry)
+index: 570
+datafield: sales
+正在循环第 570 个元素, 组装 alpha 表达式: group_rank((sales)/cap, subindustry)
+index: 571
+datafield: sales_growth
+正在循环第 571 个元素, 组装 alpha 表达式: group_rank((sales_growth)/cap, subindustry)
+index: 572
+datafield: sales_ps
+正在循环第 572 个元素, 组装 alpha 表达式: group_rank((sales_ps)/cap, subindustry)
+index: 573
+datafield: sga_expense
+正在循环第 573 个元素, 组装 alpha 表达式: group_rank((sga_expense)/cap, subindustry)
+index: 574
+datafield: working_capital
+正在循环第 574 个元素, 组装 alpha 表达式: group_rank((working_capital)/cap, subindustry)
+there are 574 Alphas to simulate
+{'type': 'REGULAR', 'settings': {'instrumentType': 'EQUITY', 'region': 'USA', 'universe': 'TOP3000', 'delay': 1, 'decay': 6, 'neutralization': 'SUBINDUSTRY', 'truncation': 0.08, 'pasteurization': 'ON', 'unitHandling': 'VERIFY', 'nanHandling': 'ON', 'language': 'FASTEXPR', 'visualization': False}, 'regular': 'group_rank((assets)/cap, subindustry)'}
+index: 1
+alpha: group_rank((assets)/cap, subindustry)
+index: 2
+alpha: group_rank((assets_curr)/cap, subindustry)
+index: 3
+alpha: group_rank((bookvalue_ps)/cap, subindustry)
+index: 4
+alpha: group_rank((capex)/cap, subindustry)
+index: 5
+alpha: group_rank((cash)/cap, subindustry)
+index: 6
+alpha: group_rank((cash_st)/cap, subindustry)
+index: 7
+alpha: group_rank((cashflow)/cap, subindustry)
+index: 8
+alpha: group_rank((cashflow_dividends)/cap, subindustry)
+index: 9
+alpha: group_rank((cashflow_fin)/cap, subindustry)
+index: 10
+alpha: group_rank((cashflow_invst)/cap, subindustry)
+index: 11
+alpha: group_rank((cashflow_op)/cap, subindustry)
+index: 12
+alpha: group_rank((cogs)/cap, subindustry)
+index: 13
+alpha: group_rank((current_ratio)/cap, subindustry)
+index: 14
+alpha: group_rank((debt)/cap, subindustry)
+index: 15
+alpha: group_rank((debt_lt)/cap, subindustry)
+index: 16
+alpha: group_rank((debt_st)/cap, subindustry)
+index: 17
+alpha: group_rank((depre_amort)/cap, subindustry)
+index: 18
+alpha: group_rank((ebit)/cap, subindustry)
+index: 19
+alpha: group_rank((ebitda)/cap, subindustry)
+index: 20
+alpha: group_rank((employee)/cap, subindustry)
+index: 21
+alpha: group_rank((enterprise_value)/cap, subindustry)
+index: 22
+alpha: group_rank((eps)/cap, subindustry)
+index: 23
+alpha: group_rank((equity)/cap, subindustry)
+index: 24
+alpha: group_rank((fnd6_acdo)/cap, subindustry)
+index: 25
+alpha: group_rank((fnd6_acodo)/cap, subindustry)
+index: 26
+alpha: group_rank((fnd6_acox)/cap, subindustry)
+index: 27
+alpha: group_rank((fnd6_acqgdwl)/cap, subindustry)
+index: 28
+alpha: group_rank((fnd6_acqintan)/cap, subindustry)
+index: 29
+alpha: group_rank((fnd6_adesinda_curcd)/cap, subindustry)
+index: 30
+alpha: group_rank((fnd6_aldo)/cap, subindustry)
+index: 31
+alpha: group_rank((fnd6_am)/cap, subindustry)
+index: 32
+alpha: group_rank((fnd6_aodo)/cap, subindustry)
+index: 33
+alpha: group_rank((fnd6_aox)/cap, subindustry)
+index: 34
+alpha: group_rank((fnd6_aqc)/cap, subindustry)
+index: 35
+alpha: group_rank((fnd6_aqi)/cap, subindustry)
+index: 36
+alpha: group_rank((fnd6_aqs)/cap, subindustry)
+index: 37
+alpha: group_rank((fnd6_beta)/cap, subindustry)
+index: 38
+alpha: group_rank((fnd6_capxv)/cap, subindustry)
+index: 39
+alpha: group_rank((fnd6_ceql)/cap, subindustry)
+index: 40
+alpha: group_rank((fnd6_ch)/cap, subindustry)
+index: 41
+alpha: group_rank((fnd6_ci)/cap, subindustry)
+index: 42
+alpha: group_rank((fnd6_cibegni)/cap, subindustry)
+index: 43
+alpha: group_rank((fnd6_cicurr)/cap, subindustry)
+index: 44
+alpha: group_rank((fnd6_cidergl)/cap, subindustry)
+index: 45
+alpha: group_rank((fnd6_cik)/cap, subindustry)
+index: 46
+alpha: group_rank((fnd6_cimii)/cap, subindustry)
+index: 47
+alpha: group_rank((fnd6_ciother)/cap, subindustry)
+index: 48
+alpha: group_rank((fnd6_cipen)/cap, subindustry)
+index: 49
+alpha: group_rank((fnd6_cisecgl)/cap, subindustry)
+index: 50
+alpha: group_rank((fnd6_citotal)/cap, subindustry)
+index: 51
+alpha: group_rank((fnd6_city)/cap, subindustry)
+index: 52
+alpha: group_rank((fnd6_cld2)/cap, subindustry)
+index: 53
+alpha: group_rank((fnd6_cld3)/cap, subindustry)
+index: 54
+alpha: group_rank((fnd6_cld4)/cap, subindustry)
+index: 55
+alpha: group_rank((fnd6_cld5)/cap, subindustry)
+index: 56
+alpha: group_rank((fnd6_cptmfmq_actq)/cap, subindustry)
+index: 57
+alpha: group_rank((fnd6_cptmfmq_atq)/cap, subindustry)
+index: 58
+alpha: group_rank((fnd6_cptmfmq_ceqq)/cap, subindustry)
+index: 59
+alpha: group_rank((fnd6_cptmfmq_dlttq)/cap, subindustry)
+index: 60
+alpha: group_rank((fnd6_cptmfmq_dpq)/cap, subindustry)
+index: 61
+alpha: group_rank((fnd6_cptmfmq_lctq)/cap, subindustry)
+index: 62
+alpha: group_rank((fnd6_cptmfmq_oibdpq)/cap, subindustry)
+index: 63
+alpha: group_rank((fnd6_cptmfmq_opepsq)/cap, subindustry)
+index: 64
+alpha: group_rank((fnd6_cptmfmq_saleq)/cap, subindustry)
+index: 65
+alpha: group_rank((fnd6_cptnewqv1300_actq)/cap, subindustry)
+index: 66
+alpha: group_rank((fnd6_cptnewqv1300_apq)/cap, subindustry)
+index: 67
+alpha: group_rank((fnd6_cptnewqv1300_atq)/cap, subindustry)
+index: 68
+alpha: group_rank((fnd6_cptnewqv1300_ceqq)/cap, subindustry)
+index: 69
+alpha: group_rank((fnd6_cptnewqv1300_dlttq)/cap, subindustry)
+index: 70
+alpha: group_rank((fnd6_cptnewqv1300_dpq)/cap, subindustry)
+index: 71
+alpha: group_rank((fnd6_cptnewqv1300_epsf12)/cap, subindustry)
+index: 72
+alpha: group_rank((fnd6_cptnewqv1300_epsfxq)/cap, subindustry)
+index: 73
+alpha: group_rank((fnd6_cptnewqv1300_epsx12)/cap, subindustry)
+index: 74
+alpha: group_rank((fnd6_cptnewqv1300_lctq)/cap, subindustry)
+index: 75
+alpha: group_rank((fnd6_cptnewqv1300_ltq)/cap, subindustry)
+index: 76
+alpha: group_rank((fnd6_cptnewqv1300_nopiq)/cap, subindustry)
+index: 77
+alpha: group_rank((fnd6_cptnewqv1300_oeps12)/cap, subindustry)
+index: 78
+alpha: group_rank((fnd6_cptnewqv1300_oiadpq)/cap, subindustry)
+index: 79
+alpha: group_rank((fnd6_cptnewqv1300_oibdpq)/cap, subindustry)
+index: 80
+alpha: group_rank((fnd6_cptnewqv1300_opepsq)/cap, subindustry)
+index: 81
+alpha: group_rank((fnd6_cptnewqv1300_rectq)/cap, subindustry)
+index: 82
+alpha: group_rank((fnd6_cptnewqv1300_req)/cap, subindustry)
+index: 83
+alpha: group_rank((fnd6_cptnewqv1300_saleq)/cap, subindustry)
+index: 84
+alpha: group_rank((fnd6_cptrank_gvkeymap)/cap, subindustry)
+index: 85
+alpha: group_rank((fnd6_cshpri)/cap, subindustry)
+index: 86
+alpha: group_rank((fnd6_cshr)/cap, subindustry)
+index: 87
+alpha: group_rank((fnd6_cshtr)/cap, subindustry)
+index: 88
+alpha: group_rank((fnd6_cshtrq)/cap, subindustry)
+index: 89
+alpha: group_rank((fnd6_cstkcv)/cap, subindustry)
+index: 90
+alpha: group_rank((fnd6_cstkcvq)/cap, subindustry)
+index: 91
+alpha: group_rank((fnd6_currencya_curcd)/cap, subindustry)
+index: 92
+alpha: group_rank((fnd6_currencyqv1300_curcd)/cap, subindustry)
+index: 93
+alpha: group_rank((fnd6_dc)/cap, subindustry)
+index: 94
+alpha: group_rank((fnd6_dclo)/cap, subindustry)
+index: 95
+alpha: group_rank((fnd6_dcpstk)/cap, subindustry)
+index: 96
+alpha: group_rank((fnd6_dcvsr)/cap, subindustry)
+index: 97
+alpha: group_rank((fnd6_dcvsub)/cap, subindustry)
+index: 98
+alpha: group_rank((fnd6_dcvt)/cap, subindustry)
+index: 99
+alpha: group_rank((fnd6_dd)/cap, subindustry)
+index: 100
+alpha: group_rank((fnd6_dd1)/cap, subindustry)
+index: 101
+alpha: group_rank((fnd6_dd1q)/cap, subindustry)
+index: 102
+alpha: group_rank((fnd6_dd2)/cap, subindustry)
+index: 103
+alpha: group_rank((fnd6_dd3)/cap, subindustry)
+index: 104
+alpha: group_rank((fnd6_dd4)/cap, subindustry)
+index: 105
+alpha: group_rank((fnd6_dd5)/cap, subindustry)
+index: 106
+alpha: group_rank((fnd6_dilavx)/cap, subindustry)
+index: 107
+alpha: group_rank((fnd6_dlcch)/cap, subindustry)
+index: 108
+alpha: group_rank((fnd6_dltis)/cap, subindustry)
+index: 109
+alpha: group_rank((fnd6_dlto)/cap, subindustry)
+index: 110
+alpha: group_rank((fnd6_dltp)/cap, subindustry)
+index: 111
+alpha: group_rank((fnd6_dltr)/cap, subindustry)
+index: 112
+alpha: group_rank((fnd6_dm)/cap, subindustry)
+index: 113
+alpha: group_rank((fnd6_dn)/cap, subindustry)
+index: 114
+alpha: group_rank((fnd6_donr)/cap, subindustry)
+index: 115
+alpha: group_rank((fnd6_dpvieb)/cap, subindustry)
+index: 116
+alpha: group_rank((fnd6_drc)/cap, subindustry)
+index: 117
+alpha: group_rank((fnd6_drlt)/cap, subindustry)
+index: 118
+alpha: group_rank((fnd6_ds)/cap, subindustry)
+index: 119
+alpha: group_rank((fnd6_dudd)/cap, subindustry)
+index: 120
+alpha: group_rank((fnd6_dvpa)/cap, subindustry)
+index: 121
+alpha: group_rank((fnd6_dxd2)/cap, subindustry)
+index: 122
+alpha: group_rank((fnd6_dxd3)/cap, subindustry)
+index: 123
+alpha: group_rank((fnd6_dxd4)/cap, subindustry)
+index: 124
+alpha: group_rank((fnd6_dxd5)/cap, subindustry)
+index: 125
+alpha: group_rank((fnd6_ein)/cap, subindustry)
+index: 126
+alpha: group_rank((fnd6_esopct)/cap, subindustry)
+index: 127
+alpha: group_rank((fnd6_esopnr)/cap, subindustry)
+index: 128
+alpha: group_rank((fnd6_esopr)/cap, subindustry)
+index: 129
+alpha: group_rank((fnd6_esubc)/cap, subindustry)
+index: 130
+alpha: group_rank((fnd6_exre)/cap, subindustry)
+index: 131
+alpha: group_rank((fnd6_fatb)/cap, subindustry)
+index: 132
+alpha: group_rank((fnd6_fatc)/cap, subindustry)
+index: 133
+alpha: group_rank((fnd6_fate)/cap, subindustry)
+index: 134
+alpha: group_rank((fnd6_fatl)/cap, subindustry)
+index: 135
+alpha: group_rank((fnd6_fatn)/cap, subindustry)
+index: 136
+alpha: group_rank((fnd6_fato)/cap, subindustry)
+index: 137
+alpha: group_rank((fnd6_fatp)/cap, subindustry)
+index: 138
+alpha: group_rank((fnd6_fiao)/cap, subindustry)
+index: 139
+alpha: group_rank((fnd6_fic)/cap, subindustry)
+index: 140
+alpha: group_rank((fnd6_fopo)/cap, subindustry)
+index: 141
+alpha: group_rank((fnd6_fopox)/cap, subindustry)
+index: 142
+alpha: group_rank((fnd6_fyrc)/cap, subindustry)
+index: 143
+alpha: group_rank((fnd6_ibmii)/cap, subindustry)
+index: 144
+alpha: group_rank((fnd6_idesindq_curcd)/cap, subindustry)
+index: 145
+alpha: group_rank((fnd6_idit)/cap, subindustry)
+index: 146
+alpha: group_rank((fnd6_incorp)/cap, subindustry)
+index: 147
+alpha: group_rank((fnd6_intan)/cap, subindustry)
+index: 148
+alpha: group_rank((fnd6_intc)/cap, subindustry)
+index: 149
+alpha: group_rank((fnd6_intpn)/cap, subindustry)
+index: 150
+alpha: group_rank((fnd6_invfg)/cap, subindustry)
+index: 151
+alpha: group_rank((fnd6_invo)/cap, subindustry)
+index: 152
+alpha: group_rank((fnd6_invrm)/cap, subindustry)
+index: 153
+alpha: group_rank((fnd6_invwip)/cap, subindustry)
+index: 154
+alpha: group_rank((fnd6_itcb)/cap, subindustry)
+index: 155
+alpha: group_rank((fnd6_itci)/cap, subindustry)
+index: 156
+alpha: group_rank((fnd6_ivaco)/cap, subindustry)
+index: 157
+alpha: group_rank((fnd6_ivaeq)/cap, subindustry)
+index: 158
+alpha: group_rank((fnd6_ivao)/cap, subindustry)
+index: 159
+alpha: group_rank((fnd6_ivch)/cap, subindustry)
+index: 160
+alpha: group_rank((fnd6_ivst)/cap, subindustry)
+index: 161
+alpha: group_rank((fnd6_ivstch)/cap, subindustry)
+index: 162
+alpha: group_rank((fnd6_lcox)/cap, subindustry)
+index: 163
+alpha: group_rank((fnd6_lcoxdr)/cap, subindustry)
+index: 164
+alpha: group_rank((fnd6_lifr)/cap, subindustry)
+index: 165
+alpha: group_rank((fnd6_lno)/cap, subindustry)
+index: 166
+alpha: group_rank((fnd6_loc)/cap, subindustry)
+index: 167
+alpha: group_rank((fnd6_lol2)/cap, subindustry)
+index: 168
+alpha: group_rank((fnd6_loxdr)/cap, subindustry)
+index: 169
+alpha: group_rank((fnd6_lqpl1)/cap, subindustry)
+index: 170
+alpha: group_rank((fnd6_lul3)/cap, subindustry)
+index: 171
+alpha: group_rank((fnd6_mfma1_aoloch)/cap, subindustry)
+index: 172
+alpha: group_rank((fnd6_mfma1_apalch)/cap, subindustry)
+index: 173
+alpha: group_rank((fnd6_mfma1_at)/cap, subindustry)
+index: 174
+alpha: group_rank((fnd6_mfma1_capx)/cap, subindustry)
+index: 175
+alpha: group_rank((fnd6_mfma1_csho)/cap, subindustry)
+index: 176
+alpha: group_rank((fnd6_mfma1_dp)/cap, subindustry)
+index: 177
+alpha: group_rank((fnd6_mfma1_dpc)/cap, subindustry)
+index: 178
+alpha: group_rank((fnd6_mfma1_invch)/cap, subindustry)
+index: 179
+alpha: group_rank((fnd6_mfma2_oancf)/cap, subindustry)
+index: 180
+alpha: group_rank((fnd6_mfma2_opeps)/cap, subindustry)
+index: 181
+alpha: group_rank((fnd6_mfma2_recch)/cap, subindustry)
+index: 182
+alpha: group_rank((fnd6_mfma2_revt)/cap, subindustry)
+index: 183
+alpha: group_rank((fnd6_mfma2_txach)/cap, subindustry)
+index: 184
+alpha: group_rank((fnd6_mfmq_cheq)/cap, subindustry)
+index: 185
+alpha: group_rank((fnd6_mfmq_cogsq)/cap, subindustry)
+index: 186
+alpha: group_rank((fnd6_mfmq_cshprq)/cap, subindustry)
+index: 187
+alpha: group_rank((fnd6_mfmq_dlcq)/cap, subindustry)
+index: 188
+alpha: group_rank((fnd6_mfmq_ibcomq)/cap, subindustry)
+index: 189
+alpha: group_rank((fnd6_mfmq_mibtq)/cap, subindustry)
+index: 190
+alpha: group_rank((fnd6_mfmq_piq)/cap, subindustry)
+index: 191
+alpha: group_rank((fnd6_mibn)/cap, subindustry)
+index: 192
+alpha: group_rank((fnd6_mibt)/cap, subindustry)
+index: 193
+alpha: group_rank((fnd6_mkvalt)/cap, subindustry)
+index: 194
+alpha: group_rank((fnd6_mkvaltq)/cap, subindustry)
+index: 195
+alpha: group_rank((fnd6_mrc1)/cap, subindustry)
+index: 196
+alpha: group_rank((fnd6_mrc2)/cap, subindustry)
+index: 197
+alpha: group_rank((fnd6_mrc3)/cap, subindustry)
+index: 198
+alpha: group_rank((fnd6_mrc4)/cap, subindustry)
+index: 199
+alpha: group_rank((fnd6_mrc5)/cap, subindustry)
+index: 200
+alpha: group_rank((fnd6_mrct)/cap, subindustry)
+index: 201
+alpha: group_rank((fnd6_mrcta)/cap, subindustry)
+index: 202
+alpha: group_rank((fnd6_msa)/cap, subindustry)
+index: 203
+alpha: group_rank((fnd6_newa1v1300_aco)/cap, subindustry)
+index: 204
+alpha: group_rank((fnd6_newa1v1300_acominc)/cap, subindustry)
+index: 205
+alpha: group_rank((fnd6_newa1v1300_act)/cap, subindustry)
+index: 206
+alpha: group_rank((fnd6_newa1v1300_ano)/cap, subindustry)
+index: 207
+alpha: group_rank((fnd6_newa1v1300_ao)/cap, subindustry)
+index: 208
+alpha: group_rank((fnd6_newa1v1300_aocidergl)/cap, subindustry)
+index: 209
+alpha: group_rank((fnd6_newa1v1300_aociother)/cap, subindustry)
+index: 210
+alpha: group_rank((fnd6_newa1v1300_aocipen)/cap, subindustry)
+index: 211
+alpha: group_rank((fnd6_newa1v1300_aol2)/cap, subindustry)
+index: 212
+alpha: group_rank((fnd6_newa1v1300_aoloch)/cap, subindustry)
+index: 213
+alpha: group_rank((fnd6_newa1v1300_ap)/cap, subindustry)
+index: 214
+alpha: group_rank((fnd6_newa1v1300_apalch)/cap, subindustry)
+index: 215
+alpha: group_rank((fnd6_newa1v1300_aqpl1)/cap, subindustry)
+index: 216
+alpha: group_rank((fnd6_newa1v1300_at)/cap, subindustry)
+index: 217
+alpha: group_rank((fnd6_newa1v1300_aul3)/cap, subindustry)
+index: 218
+alpha: group_rank((fnd6_newa1v1300_bkvlps)/cap, subindustry)
+index: 219
+alpha: group_rank((fnd6_newa1v1300_caps)/cap, subindustry)
+index: 220
+alpha: group_rank((fnd6_newa1v1300_capx)/cap, subindustry)
+index: 221
+alpha: group_rank((fnd6_newa1v1300_ceq)/cap, subindustry)
+index: 222
+alpha: group_rank((fnd6_newa1v1300_ceqt)/cap, subindustry)
+index: 223
+alpha: group_rank((fnd6_newa1v1300_che)/cap, subindustry)
+index: 224
+alpha: group_rank((fnd6_newa1v1300_chech)/cap, subindustry)
+index: 225
+alpha: group_rank((fnd6_newa1v1300_cogs)/cap, subindustry)
+index: 226
+alpha: group_rank((fnd6_newa1v1300_cshfd)/cap, subindustry)
+index: 227
+alpha: group_rank((fnd6_newa1v1300_cshi)/cap, subindustry)
+index: 228
+alpha: group_rank((fnd6_newa1v1300_csho)/cap, subindustry)
+index: 229
+alpha: group_rank((fnd6_newa1v1300_cstk)/cap, subindustry)
+index: 230
+alpha: group_rank((fnd6_newa1v1300_dcom)/cap, subindustry)
+index: 231
+alpha: group_rank((fnd6_newa1v1300_dlc)/cap, subindustry)
+index: 232
+alpha: group_rank((fnd6_newa1v1300_dltt)/cap, subindustry)
+index: 233
+alpha: group_rank((fnd6_newa1v1300_dp)/cap, subindustry)
+index: 234
+alpha: group_rank((fnd6_newa1v1300_dpact)/cap, subindustry)
+index: 235
+alpha: group_rank((fnd6_newa1v1300_dpc)/cap, subindustry)
+index: 236
+alpha: group_rank((fnd6_newa1v1300_dv)/cap, subindustry)
+index: 237
+alpha: group_rank((fnd6_newa1v1300_dvc)/cap, subindustry)
+index: 238
+alpha: group_rank((fnd6_newa1v1300_dvt)/cap, subindustry)
+index: 239
+alpha: group_rank((fnd6_newa1v1300_ebit)/cap, subindustry)
+index: 240
+alpha: group_rank((fnd6_newa1v1300_ebitda)/cap, subindustry)
+index: 241
+alpha: group_rank((fnd6_newa1v1300_emp)/cap, subindustry)
+index: 242
+alpha: group_rank((fnd6_newa1v1300_epsfi)/cap, subindustry)
+index: 243
+alpha: group_rank((fnd6_newa1v1300_epsfx)/cap, subindustry)
+index: 244
+alpha: group_rank((fnd6_newa1v1300_epspi)/cap, subindustry)
+index: 245
+alpha: group_rank((fnd6_newa1v1300_epspx)/cap, subindustry)
+index: 246
+alpha: group_rank((fnd6_newa1v1300_fca)/cap, subindustry)
+index: 247
+alpha: group_rank((fnd6_newa1v1300_fincf)/cap, subindustry)
+index: 248
+alpha: group_rank((fnd6_newa1v1300_gdwl)/cap, subindustry)
+index: 249
+alpha: group_rank((fnd6_newa1v1300_gp)/cap, subindustry)
+index: 250
+alpha: group_rank((fnd6_newa1v1300_ib)/cap, subindustry)
+index: 251
+alpha: group_rank((fnd6_newa1v1300_ibadj)/cap, subindustry)
+index: 252
+alpha: group_rank((fnd6_newa1v1300_ibc)/cap, subindustry)
+index: 253
+alpha: group_rank((fnd6_newa1v1300_ibcom)/cap, subindustry)
+index: 254
+alpha: group_rank((fnd6_newa1v1300_icapt)/cap, subindustry)
+index: 255
+alpha: group_rank((fnd6_newa1v1300_intano)/cap, subindustry)
+index: 256
+alpha: group_rank((fnd6_newa1v1300_invch)/cap, subindustry)
+index: 257
+alpha: group_rank((fnd6_newa1v1300_invt)/cap, subindustry)
+index: 258
+alpha: group_rank((fnd6_newa1v1300_ivncf)/cap, subindustry)
+index: 259
+alpha: group_rank((fnd6_newa1v1300_lco)/cap, subindustry)
+index: 260
+alpha: group_rank((fnd6_newa1v1300_lct)/cap, subindustry)
+index: 261
+alpha: group_rank((fnd6_newa1v1300_lo)/cap, subindustry)
+index: 262
+alpha: group_rank((fnd6_newa1v1300_lse)/cap, subindustry)
+index: 263
+alpha: group_rank((fnd6_newa1v1300_lt)/cap, subindustry)
+index: 264
+alpha: group_rank((fnd6_newa2v1300_mib)/cap, subindustry)
+index: 265
+alpha: group_rank((fnd6_newa2v1300_mii)/cap, subindustry)
+index: 266
+alpha: group_rank((fnd6_newa2v1300_ni)/cap, subindustry)
+index: 267
+alpha: group_rank((fnd6_newa2v1300_nopi)/cap, subindustry)
+index: 268
+alpha: group_rank((fnd6_newa2v1300_oancf)/cap, subindustry)
+index: 269
+alpha: group_rank((fnd6_newa2v1300_oiadp)/cap, subindustry)
+index: 270
+alpha: group_rank((fnd6_newa2v1300_oibdp)/cap, subindustry)
+index: 271
+alpha: group_rank((fnd6_newa2v1300_opeps)/cap, subindustry)
+index: 272
+alpha: group_rank((fnd6_newa2v1300_optexd)/cap, subindustry)
+index: 273
+alpha: group_rank((fnd6_newa2v1300_pi)/cap, subindustry)
+index: 274
+alpha: group_rank((fnd6_newa2v1300_ppegt)/cap, subindustry)
+index: 275
+alpha: group_rank((fnd6_newa2v1300_ppent)/cap, subindustry)
+index: 276
+alpha: group_rank((fnd6_newa2v1300_prsho)/cap, subindustry)
+index: 277
+alpha: group_rank((fnd6_newa2v1300_rdip)/cap, subindustry)
+index: 278
+alpha: group_rank((fnd6_newa2v1300_rdipa)/cap, subindustry)
+index: 279
+alpha: group_rank((fnd6_newa2v1300_rdipd)/cap, subindustry)
+index: 280
+alpha: group_rank((fnd6_newa2v1300_rdipeps)/cap, subindustry)
+index: 281
+alpha: group_rank((fnd6_newa2v1300_re)/cap, subindustry)
+index: 282
+alpha: group_rank((fnd6_newa2v1300_recch)/cap, subindustry)
+index: 283
+alpha: group_rank((fnd6_newa2v1300_rect)/cap, subindustry)
+index: 284
+alpha: group_rank((fnd6_newa2v1300_reuna)/cap, subindustry)
+index: 285
+alpha: group_rank((fnd6_newa2v1300_revt)/cap, subindustry)
+index: 286
+alpha: group_rank((fnd6_newa2v1300_sale)/cap, subindustry)
+index: 287
+alpha: group_rank((fnd6_newa2v1300_seq)/cap, subindustry)
+index: 288
+alpha: group_rank((fnd6_newa2v1300_seqo)/cap, subindustry)
+index: 289
+alpha: group_rank((fnd6_newa2v1300_spced)/cap, subindustry)
+index: 290
+alpha: group_rank((fnd6_newa2v1300_spceeps)/cap, subindustry)
+index: 291
+alpha: group_rank((fnd6_newa2v1300_spi)/cap, subindustry)
+index: 292
+alpha: group_rank((fnd6_newa2v1300_stkco)/cap, subindustry)
+index: 293
+alpha: group_rank((fnd6_newa2v1300_tstk)/cap, subindustry)
+index: 294
+alpha: group_rank((fnd6_newa2v1300_tstkn)/cap, subindustry)
+index: 295
+alpha: group_rank((fnd6_newa2v1300_txach)/cap, subindustry)
+index: 296
+alpha: group_rank((fnd6_newa2v1300_txdb)/cap, subindustry)
+index: 297
+alpha: group_rank((fnd6_newa2v1300_txditc)/cap, subindustry)
+index: 298
+alpha: group_rank((fnd6_newa2v1300_txp)/cap, subindustry)
+index: 299
+alpha: group_rank((fnd6_newa2v1300_txt)/cap, subindustry)
+index: 300
+alpha: group_rank((fnd6_newa2v1300_wcap)/cap, subindustry)
+index: 301
+alpha: group_rank((fnd6_newa2v1300_xidoc)/cap, subindustry)
+index: 302
+alpha: group_rank((fnd6_newa2v1300_xint)/cap, subindustry)
+index: 303
+alpha: group_rank((fnd6_newa2v1300_xoptd)/cap, subindustry)
+index: 304
+alpha: group_rank((fnd6_newa2v1300_xopteps)/cap, subindustry)
+index: 305
+alpha: group_rank((fnd6_newa2v1300_xrd)/cap, subindustry)
+index: 306
+alpha: group_rank((fnd6_newa2v1300_xsga)/cap, subindustry)
+index: 307
+alpha: group_rank((fnd6_newq_xoptdqp)/cap, subindustry)
+index: 308
+alpha: group_rank((fnd6_newq_xoptepsqp)/cap, subindustry)
+index: 309
+alpha: group_rank((fnd6_newq_xoptqp)/cap, subindustry)
+index: 310
+alpha: group_rank((fnd6_newqv1300_acomincq)/cap, subindustry)
+index: 311
+alpha: group_rank((fnd6_newqv1300_acoq)/cap, subindustry)
+index: 312
+alpha: group_rank((fnd6_newqv1300_altoq)/cap, subindustry)
+index: 313
+alpha: group_rank((fnd6_newqv1300_ancq)/cap, subindustry)
+index: 314
+alpha: group_rank((fnd6_newqv1300_anoq)/cap, subindustry)
+index: 315
+alpha: group_rank((fnd6_newqv1300_aociderglq)/cap, subindustry)
+index: 316
+alpha: group_rank((fnd6_newqv1300_aociotherq)/cap, subindustry)
+index: 317
+alpha: group_rank((fnd6_newqv1300_aocipenq)/cap, subindustry)
+index: 318
+alpha: group_rank((fnd6_newqv1300_aocisecglq)/cap, subindustry)
+index: 319
+alpha: group_rank((fnd6_newqv1300_aol2q)/cap, subindustry)
+index: 320
+alpha: group_rank((fnd6_newqv1300_aoq)/cap, subindustry)
+index: 321
+alpha: group_rank((fnd6_newqv1300_aqpl1q)/cap, subindustry)
+index: 322
+alpha: group_rank((fnd6_newqv1300_aul3q)/cap, subindustry)
+index: 323
+alpha: group_rank((fnd6_newqv1300_capsq)/cap, subindustry)
+index: 324
+alpha: group_rank((fnd6_newqv1300_chq)/cap, subindustry)
+index: 325
+alpha: group_rank((fnd6_newqv1300_cibegniq)/cap, subindustry)
+index: 326
+alpha: group_rank((fnd6_newqv1300_cicurrq)/cap, subindustry)
+index: 327
+alpha: group_rank((fnd6_newqv1300_ciderglq)/cap, subindustry)
+index: 328
+alpha: group_rank((fnd6_newqv1300_cimiiq)/cap, subindustry)
+index: 329
+alpha: group_rank((fnd6_newqv1300_ciotherq)/cap, subindustry)
+index: 330
+alpha: group_rank((fnd6_newqv1300_cipenq)/cap, subindustry)
+index: 331
+alpha: group_rank((fnd6_newqv1300_ciq)/cap, subindustry)
+index: 332
+alpha: group_rank((fnd6_newqv1300_cisecglq)/cap, subindustry)
+index: 333
+alpha: group_rank((fnd6_newqv1300_citotalq)/cap, subindustry)
+index: 334
+alpha: group_rank((fnd6_newqv1300_cogsq)/cap, subindustry)
+index: 335
+alpha: group_rank((fnd6_newqv1300_csh12q)/cap, subindustry)
+index: 336
+alpha: group_rank((fnd6_newqv1300_cshfdq)/cap, subindustry)
+index: 337
+alpha: group_rank((fnd6_newqv1300_cshiq)/cap, subindustry)
+index: 338
+alpha: group_rank((fnd6_newqv1300_cshopq)/cap, subindustry)
+index: 339
+alpha: group_rank((fnd6_newqv1300_cshoq)/cap, subindustry)
+index: 340
+alpha: group_rank((fnd6_newqv1300_cshprq)/cap, subindustry)
+index: 341
+alpha: group_rank((fnd6_newqv1300_cstkq)/cap, subindustry)
+index: 342
+alpha: group_rank((fnd6_newqv1300_dcomq)/cap, subindustry)
+index: 343
+alpha: group_rank((fnd6_newqv1300_dilavq)/cap, subindustry)
+index: 344
+alpha: group_rank((fnd6_newqv1300_dlcq)/cap, subindustry)
+index: 345
+alpha: group_rank((fnd6_newqv1300_dpactq)/cap, subindustry)
+index: 346
+alpha: group_rank((fnd6_newqv1300_drcq)/cap, subindustry)
+index: 347
+alpha: group_rank((fnd6_newqv1300_drltq)/cap, subindustry)
+index: 348
+alpha: group_rank((fnd6_newqv1300_epsfiq)/cap, subindustry)
+index: 349
+alpha: group_rank((fnd6_newqv1300_epspiq)/cap, subindustry)
+index: 350
+alpha: group_rank((fnd6_newqv1300_epspxq)/cap, subindustry)
+index: 351
+alpha: group_rank((fnd6_newqv1300_esopnrq)/cap, subindustry)
+index: 352
+alpha: group_rank((fnd6_newqv1300_esoprq)/cap, subindustry)
+index: 353
+alpha: group_rank((fnd6_newqv1300_fcaq)/cap, subindustry)
+index: 354
+alpha: group_rank((fnd6_newqv1300_gdwlq)/cap, subindustry)
+index: 355
+alpha: group_rank((fnd6_newqv1300_glcea12)/cap, subindustry)
+index: 356
+alpha: group_rank((fnd6_newqv1300_glced12)/cap, subindustry)
+index: 357
+alpha: group_rank((fnd6_newqv1300_glceeps12)/cap, subindustry)
+index: 358
+alpha: group_rank((fnd6_newqv1300_ibadj12)/cap, subindustry)
+index: 359
+alpha: group_rank((fnd6_newqv1300_ibadjq)/cap, subindustry)
+index: 360
+alpha: group_rank((fnd6_newqv1300_ibcomq)/cap, subindustry)
+index: 361
+alpha: group_rank((fnd6_newqv1300_ibmiiq)/cap, subindustry)
+index: 362
+alpha: group_rank((fnd6_newqv1300_ibq)/cap, subindustry)
+index: 363
+alpha: group_rank((fnd6_newqv1300_icaptq)/cap, subindustry)
+index: 364
+alpha: group_rank((fnd6_newqv1300_intanoq)/cap, subindustry)
+index: 365
+alpha: group_rank((fnd6_newqv1300_intanq)/cap, subindustry)
+index: 366
+alpha: group_rank((fnd6_newqv1300_invfgq)/cap, subindustry)
+index: 367
+alpha: group_rank((fnd6_newqv1300_invoq)/cap, subindustry)
+index: 368
+alpha: group_rank((fnd6_newqv1300_invrmq)/cap, subindustry)
+index: 369
+alpha: group_rank((fnd6_newqv1300_invtq)/cap, subindustry)
+index: 370
+alpha: group_rank((fnd6_newqv1300_invwipq)/cap, subindustry)
+index: 371
+alpha: group_rank((fnd6_newqv1300_ivltq)/cap, subindustry)
+index: 372
+alpha: group_rank((fnd6_newqv1300_ivstq)/cap, subindustry)
+index: 373
+alpha: group_rank((fnd6_newqv1300_lcoq)/cap, subindustry)
+index: 374
+alpha: group_rank((fnd6_newqv1300_lltq)/cap, subindustry)
+index: 375
+alpha: group_rank((fnd6_newqv1300_lnoq)/cap, subindustry)
+index: 376
+alpha: group_rank((fnd6_newqv1300_lol2q)/cap, subindustry)
+index: 377
+alpha: group_rank((fnd6_newqv1300_loq)/cap, subindustry)
+index: 378
+alpha: group_rank((fnd6_newqv1300_loxdrq)/cap, subindustry)
+index: 379
+alpha: group_rank((fnd6_newqv1300_lqpl1q)/cap, subindustry)
+index: 380
+alpha: group_rank((fnd6_newqv1300_lseq)/cap, subindustry)
+index: 381
+alpha: group_rank((fnd6_newqv1300_ltmibq)/cap, subindustry)
+index: 382
+alpha: group_rank((fnd6_newqv1300_lul3q)/cap, subindustry)
+index: 383
+alpha: group_rank((fnd6_newqv1300_mibnq)/cap, subindustry)
+index: 384
+alpha: group_rank((fnd6_newqv1300_mibtq)/cap, subindustry)
+index: 385
+alpha: group_rank((fnd6_newqv1300_miiq)/cap, subindustry)
+index: 386
+alpha: group_rank((fnd6_newqv1300_msaq)/cap, subindustry)
+index: 387
+alpha: group_rank((fnd6_newqv1300_oepf12)/cap, subindustry)
+index: 388
+alpha: group_rank((fnd6_newqv1300_oepsxq)/cap, subindustry)
+index: 389
+alpha: group_rank((fnd6_newqv1300_optfvgrq)/cap, subindustry)
+index: 390
+alpha: group_rank((fnd6_newqv1300_optrfrq)/cap, subindustry)
+index: 391
+alpha: group_rank((fnd6_newqv1300_piq)/cap, subindustry)
+index: 392
+alpha: group_rank((fnd6_newqv1300_pncq)/cap, subindustry)
+index: 393
+alpha: group_rank((fnd6_newqv1300_ppegtq)/cap, subindustry)
+index: 394
+alpha: group_rank((fnd6_newqv1300_ppentq)/cap, subindustry)
+index: 395
+alpha: group_rank((fnd6_newqv1300_prcaq)/cap, subindustry)
+index: 396
+alpha: group_rank((fnd6_newqv1300_prcdq)/cap, subindustry)
+index: 397
+alpha: group_rank((fnd6_newqv1300_prcepsq)/cap, subindustry)
+index: 398
+alpha: group_rank((fnd6_newqv1300_prcraq)/cap, subindustry)
+index: 399
+alpha: group_rank((fnd6_newqv1300_rcpq)/cap, subindustry)
+index: 400
+alpha: group_rank((fnd6_newqv1300_rdipaq)/cap, subindustry)
+index: 401
+alpha: group_rank((fnd6_newqv1300_rdipdq)/cap, subindustry)
+index: 402
+alpha: group_rank((fnd6_newqv1300_rdipepsq)/cap, subindustry)
+index: 403
+alpha: group_rank((fnd6_newqv1300_rdipq)/cap, subindustry)
+index: 404
+alpha: group_rank((fnd6_newqv1300_recdq)/cap, subindustry)
+index: 405
+alpha: group_rank((fnd6_newqv1300_rectaq)/cap, subindustry)
+index: 406
+alpha: group_rank((fnd6_newqv1300_rectoq)/cap, subindustry)
+index: 407
+alpha: group_rank((fnd6_newqv1300_rectrq)/cap, subindustry)
+index: 408
+alpha: group_rank((fnd6_newqv1300_reunaq)/cap, subindustry)
+index: 409
+alpha: group_rank((fnd6_newqv1300_revtq)/cap, subindustry)
+index: 410
+alpha: group_rank((fnd6_newqv1300_seqoq)/cap, subindustry)
+index: 411
+alpha: group_rank((fnd6_newqv1300_seqq)/cap, subindustry)
+index: 412
+alpha: group_rank((fnd6_newqv1300_spcedpq)/cap, subindustry)
+index: 413
+alpha: group_rank((fnd6_newqv1300_spcedq)/cap, subindustry)
+index: 414
+alpha: group_rank((fnd6_newqv1300_spceepsp12)/cap, subindustry)
+index: 415
+alpha: group_rank((fnd6_newqv1300_spceepspq)/cap, subindustry)
+index: 416
+alpha: group_rank((fnd6_newqv1300_spceepsq)/cap, subindustry)
+index: 417
+alpha: group_rank((fnd6_newqv1300_spcep12)/cap, subindustry)
+index: 418
+alpha: group_rank((fnd6_newqv1300_spcepd12)/cap, subindustry)
+index: 419
+alpha: group_rank((fnd6_newqv1300_spcepq)/cap, subindustry)
+index: 420
+alpha: group_rank((fnd6_newqv1300_spceq)/cap, subindustry)
+index: 421
+alpha: group_rank((fnd6_newqv1300_spiq)/cap, subindustry)
+index: 422
+alpha: group_rank((fnd6_newqv1300_stkcoq)/cap, subindustry)
+index: 423
+alpha: group_rank((fnd6_newqv1300_stkcpaq)/cap, subindustry)
+index: 424
+alpha: group_rank((fnd6_newqv1300_teqq)/cap, subindustry)
+index: 425
+alpha: group_rank((fnd6_newqv1300_tfvaq)/cap, subindustry)
+index: 426
+alpha: group_rank((fnd6_newqv1300_tfvceq)/cap, subindustry)
+index: 427
+alpha: group_rank((fnd6_newqv1300_tfvlq)/cap, subindustry)
+index: 428
+alpha: group_rank((fnd6_newqv1300_tstknq)/cap, subindustry)
+index: 429
+alpha: group_rank((fnd6_newqv1300_tstkq)/cap, subindustry)
+index: 430
+alpha: group_rank((fnd6_newqv1300_txdbaq)/cap, subindustry)
+index: 431
+alpha: group_rank((fnd6_newqv1300_txdbq)/cap, subindustry)
+index: 432
+alpha: group_rank((fnd6_newqv1300_txdiq)/cap, subindustry)
+index: 433
+alpha: group_rank((fnd6_newqv1300_txditcq)/cap, subindustry)
+index: 434
+alpha: group_rank((fnd6_newqv1300_txpq)/cap, subindustry)
+index: 435
+alpha: group_rank((fnd6_newqv1300_txtq)/cap, subindustry)
+index: 436
+alpha: group_rank((fnd6_newqv1300_txwq)/cap, subindustry)
+index: 437
+alpha: group_rank((fnd6_newqv1300_wcapq)/cap, subindustry)
+index: 438
+alpha: group_rank((fnd6_newqv1300_xintq)/cap, subindustry)
+index: 439
+alpha: group_rank((fnd6_newqv1300_xoprq)/cap, subindustry)
+index: 440
+alpha: group_rank((fnd6_newqv1300_xoptdq)/cap, subindustry)
+index: 441
+alpha: group_rank((fnd6_newqv1300_xoptepsq)/cap, subindustry)
+index: 442
+alpha: group_rank((fnd6_newqv1300_xoptq)/cap, subindustry)
+index: 443
+alpha: group_rank((fnd6_newqv1300_xrdq)/cap, subindustry)
+index: 444
+alpha: group_rank((fnd6_newqv1300_xsgaq)/cap, subindustry)
+index: 445
+alpha: group_rank((fnd6_niadj)/cap, subindustry)
+index: 446
+alpha: group_rank((fnd6_nopio)/cap, subindustry)
+index: 447
+alpha: group_rank((fnd6_np)/cap, subindustry)
+index: 448
+alpha: group_rank((fnd6_npq)/cap, subindustry)
+index: 449
+alpha: group_rank((fnd6_oprepsx)/cap, subindustry)
+index: 450
+alpha: group_rank((fnd6_optca)/cap, subindustry)
+index: 451
+alpha: group_rank((fnd6_optdr)/cap, subindustry)
+index: 452
+alpha: group_rank((fnd6_optdrq)/cap, subindustry)
+index: 453
+alpha: group_rank((fnd6_optex)/cap, subindustry)
+index: 454
+alpha: group_rank((fnd6_optfvgr)/cap, subindustry)
+index: 455
+alpha: group_rank((fnd6_optgr)/cap, subindustry)
+index: 456
+alpha: group_rank((fnd6_optlife)/cap, subindustry)
+index: 457
+alpha: group_rank((fnd6_optlifeq)/cap, subindustry)
+index: 458
+alpha: group_rank((fnd6_optosby)/cap, subindustry)
+index: 459
+alpha: group_rank((fnd6_optosey)/cap, subindustry)
+index: 460
+alpha: group_rank((fnd6_optprcby)/cap, subindustry)
+index: 461
+alpha: group_rank((fnd6_optprcca)/cap, subindustry)
+index: 462
+alpha: group_rank((fnd6_optprcex)/cap, subindustry)
+index: 463
+alpha: group_rank((fnd6_optprcey)/cap, subindustry)
+index: 464
+alpha: group_rank((fnd6_optprcgr)/cap, subindustry)
+index: 465
+alpha: group_rank((fnd6_optprcwa)/cap, subindustry)
+index: 466
+alpha: group_rank((fnd6_optrfr)/cap, subindustry)
+index: 467
+alpha: group_rank((fnd6_optvol)/cap, subindustry)
+index: 468
+alpha: group_rank((fnd6_optvolq)/cap, subindustry)
+index: 469
+alpha: group_rank((fnd6_pidom)/cap, subindustry)
+index: 470
+alpha: group_rank((fnd6_pifo)/cap, subindustry)
+index: 471
+alpha: group_rank((fnd6_pncdq)/cap, subindustry)
+index: 472
+alpha: group_rank((fnd6_pncepsq)/cap, subindustry)
+index: 473
+alpha: group_rank((fnd6_pnrsho)/cap, subindustry)
+index: 474
+alpha: group_rank((fnd6_ppeveb)/cap, subindustry)
+index: 475
+alpha: group_rank((fnd6_prcc)/cap, subindustry)
+index: 476
+alpha: group_rank((fnd6_prccq)/cap, subindustry)
+index: 477
+alpha: group_rank((fnd6_prch)/cap, subindustry)
+index: 478
+alpha: group_rank((fnd6_prchq)/cap, subindustry)
+index: 479
+alpha: group_rank((fnd6_prcl)/cap, subindustry)
+index: 480
+alpha: group_rank((fnd6_prclq)/cap, subindustry)
+index: 481
+alpha: group_rank((fnd6_prstkc)/cap, subindustry)
+index: 482
+alpha: group_rank((fnd6_pstkc)/cap, subindustry)
+index: 483
+alpha: group_rank((fnd6_pstkl)/cap, subindustry)
+index: 484
+alpha: group_rank((fnd6_pstkrv)/cap, subindustry)
+index: 485
+alpha: group_rank((fnd6_rank)/cap, subindustry)
+index: 486
+alpha: group_rank((fnd6_rea)/cap, subindustry)
+index: 487
+alpha: group_rank((fnd6_reajo)/cap, subindustry)
+index: 488
+alpha: group_rank((fnd6_recco)/cap, subindustry)
+index: 489
+alpha: group_rank((fnd6_recd)/cap, subindustry)
+index: 490
+alpha: group_rank((fnd6_recta)/cap, subindustry)
+index: 491
+alpha: group_rank((fnd6_rectr)/cap, subindustry)
+index: 492
+alpha: group_rank((fnd6_siv)/cap, subindustry)
+index: 493
+alpha: group_rank((fnd6_spce)/cap, subindustry)
+index: 494
+alpha: group_rank((fnd6_sppe)/cap, subindustry)
+index: 495
+alpha: group_rank((fnd6_sppiv)/cap, subindustry)
+index: 496
+alpha: group_rank((fnd6_sstk)/cap, subindustry)
+index: 497
+alpha: group_rank((fnd6_state)/cap, subindustry)
+index: 498
+alpha: group_rank((fnd6_stkcpa)/cap, subindustry)
+index: 499
+alpha: group_rank((fnd6_teq)/cap, subindustry)
+index: 500
+alpha: group_rank((fnd6_tfva)/cap, subindustry)
+index: 501
+alpha: group_rank((fnd6_tfvce)/cap, subindustry)
+index: 502
+alpha: group_rank((fnd6_tfvl)/cap, subindustry)
+index: 503
+alpha: group_rank((fnd6_tlcf)/cap, subindustry)
+index: 504
+alpha: group_rank((fnd6_tstkc)/cap, subindustry)
+index: 505
+alpha: group_rank((fnd6_txbco)/cap, subindustry)
+index: 506
+alpha: group_rank((fnd6_txbcof)/cap, subindustry)
+index: 507
+alpha: group_rank((fnd6_txc)/cap, subindustry)
+index: 508
+alpha: group_rank((fnd6_txdba)/cap, subindustry)
+index: 509
+alpha: group_rank((fnd6_txdbca)/cap, subindustry)
+index: 510
+alpha: group_rank((fnd6_txdbcl)/cap, subindustry)
+index: 511
+alpha: group_rank((fnd6_txdbclq)/cap, subindustry)
+index: 512
+alpha: group_rank((fnd6_txdc)/cap, subindustry)
+index: 513
+alpha: group_rank((fnd6_txdfed)/cap, subindustry)
+index: 514
+alpha: group_rank((fnd6_txdfo)/cap, subindustry)
+index: 515
+alpha: group_rank((fnd6_txdi)/cap, subindustry)
+index: 516
+alpha: group_rank((fnd6_txds)/cap, subindustry)
+index: 517
+alpha: group_rank((fnd6_txfed)/cap, subindustry)
+index: 518
+alpha: group_rank((fnd6_txfo)/cap, subindustry)
+index: 519
+alpha: group_rank((fnd6_txndb)/cap, subindustry)
+index: 520
+alpha: group_rank((fnd6_txndba)/cap, subindustry)
+index: 521
+alpha: group_rank((fnd6_txndbl)/cap, subindustry)
+index: 522
+alpha: group_rank((fnd6_txndbr)/cap, subindustry)
+index: 523
+alpha: group_rank((fnd6_txo)/cap, subindustry)
+index: 524
+alpha: group_rank((fnd6_txpd)/cap, subindustry)
+index: 525
+alpha: group_rank((fnd6_txr)/cap, subindustry)
+index: 526
+alpha: group_rank((fnd6_txs)/cap, subindustry)
+index: 527
+alpha: group_rank((fnd6_txtubadjust)/cap, subindustry)
+index: 528
+alpha: group_rank((fnd6_txtubbegin)/cap, subindustry)
+index: 529
+alpha: group_rank((fnd6_txtubend)/cap, subindustry)
+index: 530
+alpha: group_rank((fnd6_txtubposdec)/cap, subindustry)
+index: 531
+alpha: group_rank((fnd6_txtubposinc)/cap, subindustry)
+index: 532
+alpha: group_rank((fnd6_txtubpospdec)/cap, subindustry)
+index: 533
+alpha: group_rank((fnd6_txtubpospinc)/cap, subindustry)
+index: 534
+alpha: group_rank((fnd6_txtubsettle)/cap, subindustry)
+index: 535
+alpha: group_rank((fnd6_txtubsoflimit)/cap, subindustry)
+index: 536
+alpha: group_rank((fnd6_txtubtxtr)/cap, subindustry)
+index: 537
+alpha: group_rank((fnd6_txtubxintbs)/cap, subindustry)
+index: 538
+alpha: group_rank((fnd6_txtubxintis)/cap, subindustry)
+index: 539
+alpha: group_rank((fnd6_txw)/cap, subindustry)
+index: 540
+alpha: group_rank((fnd6_weburl)/cap, subindustry)
+index: 541
+alpha: group_rank((fnd6_xacc)/cap, subindustry)
+index: 542
+alpha: group_rank((fnd6_xaccq)/cap, subindustry)
+index: 543
+alpha: group_rank((fnd6_xad)/cap, subindustry)
+index: 544
+alpha: group_rank((fnd6_xintopt)/cap, subindustry)
+index: 545
+alpha: group_rank((fnd6_xopr)/cap, subindustry)
+index: 546
+alpha: group_rank((fnd6_xpp)/cap, subindustry)
+index: 547
+alpha: group_rank((fnd6_xpr)/cap, subindustry)
+index: 548
+alpha: group_rank((fnd6_xrent)/cap, subindustry)
+index: 549
+alpha: group_rank((fnd6_zipcode)/cap, subindustry)
+index: 550
+alpha: group_rank((goodwill)/cap, subindustry)
+index: 551
+alpha: group_rank((income)/cap, subindustry)
+index: 552
+alpha: group_rank((income_beforeextra)/cap, subindustry)
+index: 553
+alpha: group_rank((income_tax)/cap, subindustry)
+index: 554
+alpha: group_rank((interest_expense)/cap, subindustry)
+index: 555
+alpha: group_rank((inventory)/cap, subindustry)
+index: 556
+alpha: group_rank((inventory_turnover)/cap, subindustry)
+index: 557
+alpha: group_rank((invested_capital)/cap, subindustry)
+index: 558
+alpha: group_rank((liabilities)/cap, subindustry)
+index: 559
+alpha: group_rank((liabilities_curr)/cap, subindustry)
+index: 560
+alpha: group_rank((operating_expense)/cap, subindustry)
+index: 561
+alpha: group_rank((operating_income)/cap, subindustry)
+index: 562
+alpha: group_rank((ppent)/cap, subindustry)
+index: 563
+alpha: group_rank((pretax_income)/cap, subindustry)
+index: 564
+alpha: group_rank((rd_expense)/cap, subindustry)
+index: 565
+alpha: group_rank((receivable)/cap, subindustry)
+index: 566
+alpha: group_rank((retained_earnings)/cap, subindustry)
+index: 567
+alpha: group_rank((return_assets)/cap, subindustry)
+index: 568
+alpha: group_rank((return_equity)/cap, subindustry)
+index: 569
+alpha: group_rank((revenue)/cap, subindustry)
+index: 570
+alpha: group_rank((sales)/cap, subindustry)
+index: 571
+alpha: group_rank((sales_growth)/cap, subindustry)
+index: 572
+alpha: group_rank((sales_ps)/cap, subindustry)
+index: 573
+alpha: group_rank((sga_expense)/cap, subindustry)
+index: 574
+alpha: group_rank((working_capital)/cap, subindustry)
