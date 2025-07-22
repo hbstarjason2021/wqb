@@ -1,0 +1,12 @@
+{
+"user": "your_email@example.com",
+"password": "your_password",
+"email_config": {
+"sender_email": "sender@example.com",
+"recipient_email": "recipient@example.com",
+"smtp_server": "smtp.example.com",
+"smtp_port": 465,
+"password": "your_email_password"
+ }
+}
+
