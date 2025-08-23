@@ -27,9 +27,26 @@ def sign_in():
     print(response.json())
     return sess
 
-
 sess = sign_in()
 
+
+##########################
+def get_datasets(
+    s,
+    instrument_type: str = 'EQUITY',
+    region: str = 'USA',
+    delay: int = 1,
+    universe: str = 'TOP3000'
+):
+    url = "https://api.worldquantbrain.com/data-sets?" +\
+        f"instrumentType={instrument_type}&region={region}&delay={str(delay)}&universe={universe}"
+    result = s.get(url)
+    datasets_df = pd.DataFrame(result.json()['results'])
+    return datasets_df
+
+
+
+##########################
 
 # 获取数据集ID为fundamental6（Company Fundamental Data for Equity）下的所有数据字段
 ### Get Data_fields like Data Explorer 获取所有满足条件的数据字段及其ID
@@ -85,3 +102,24 @@ datafields_list_fnd6 = fnd6['id'].values
 print(datafields_list_fnd6)
 print(len(datafields_list_fnd6))
 
+
+### df = get_datafields(s, dataset_id = 'analyst4', region='USA', universe='TOP3000', delay=1)
+### df
+
+############# 
+
+def get_ops(s):
+    # s=s_ll
+    # 获取ops
+    url="https://api.worldquantbrain.com/operators"
+    res=s.get(url)
+    # print(res.json())
+    df = pd.DataFrame(res.json())
+    return df
+
+# 获取账号可用的ops
+ops_lst=get_ops(s)['name'].to_list()   
+ops=intersection_of_lists(ops_lst,ts_ops)
+
+
+############
