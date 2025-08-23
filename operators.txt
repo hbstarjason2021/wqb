@@ -1,0 +1,72 @@
+abs(x)
+add(x, y, filter = false)
+densify(x)
+divide(x, y)
+inverse(x)
+log(x)
+max(x, y, ..)
+min(x, y, ..) 
+multiply(x ,y, ... , filter=false)
+power(x, y)
+reverse(x)
+sign(x)
+signed_power(x, y)
+sqrt(x)
+subtract(x, y, filter=false)
+
+and(input1, input2)
+if_else(input1, input2, input 3)
+input1 < input2
+input1 <= input2
+input1 == input2
+input1 > input2
+input1 >= input2
+input1!= input2
+is_nan(input)
+not(x)
+or(input1, input2)
+
+days_from_last_change(x)
+hump(x, hump = 0.01)
+kth_element(x, d, k)
+last_diff_value(x, d)
+ts_arg_max(x, d)
+ts_arg_min(x, d)
+ts_av_diff(x, d)
+ts_backfill(x,lookback = d, k=1, ignore="NAN")
+ts_corr(x, y, d)
+ts_count_nans(x ,d)
+ts_decay_linear(x, d, dense = false)
+ts_delay(x, d)
+ts_delta(x, d)
+ts_mean(x, d)
+ts_product(x, d)
+ts_quantile(x,d, driver="gaussian" )
+ts_rank(x, d, constant = 0)
+ts_regression(y, x, d, lag = 0, rettype = 0)
+ts_scale(x, d, constant = 0)
+ts_std_dev(x, d)
+ts_step(1)
+ts_sum(x, d)
+ts_zscore(x, d)
+
+
+normalize(x, useStd = false, limit = 0.0)
+quantile(x, driver = gaussian, sigma = 1.0)
+rank(x, rate=2)
+scale(x, scale=1, longscale=1, shortscale=1)
+winsorize(x, std=4)
+zscore(x)
+
+vec_avg(x)
+vec_sum(x)
+
+bucket(rank(x), range="0, 1, 0.1" or buckets = "2,5,6,7,10")
+trade_when(x, y, z)
+
+group_backfill(x, group, d, std = 4.0)
+group_mean(x, weight, group)
+group_neutralize(x, group)
+group_rank(x, group)
+group_scale(x, group)
+group_zscore(x, group)
