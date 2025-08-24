@@ -123,3 +123,80 @@ ops=intersection_of_lists(ops_lst,ts_ops)
 
 
 ############
+
+ def locate_alpha(self, alpha_id):
+        alpha = self.sess.get("https://api.worldquantbrain.com/alphas/" + alpha_id)
+        string = alpha.content.decode('utf-8')
+        metrics = json.loads(string)
+        
+        sharpe = metrics["is"]["sharpe"]
+        turnover = metrics["is"]["turnover"]
+        fitness = metrics["is"]["fitness"]
+        returns=metrics["is"]["returns"]
+        drawdown=metrics["is"]["drawdown"]
+        margin = metrics["is"]["margin"]
+        settings=str(metrics['settings'])
+        
+        triple = [sharpe, turnover,fitness,returns,drawdown,margin,settings]
+        triple = [ i if i != 'None' else None for i in triple]
+        return triple
+
+    def get_corr(self, alpha_id):
+        start_time = time.time()
+        timeout = 30
+
+        while True:
+            corr_respond = self.sess.get(f"https://api.worldquantbrain.com/alphas/{alpha_id}/correlations/self")
+            corr = corr_respond.content.decode('utf-8')
+            if corr:
+                corr = json.loads(corr)
+                if corr.get('min'):
+                    min_corr = corr['min']
+                    max_corr = corr['max']
+                    return [min_corr, max_corr]
+
+            if time.time() - start_time > timeout:
+                return [None, None]
+
+            sleep(5)
+
+    def get_score(self, alpha_id):
+        start_time = time.time()
+        timeout = 30
+
+        while True:
+            performance_response = self.sess.get(f'https://api.worldquantbrain.com/competitions/IQC2025S2/alphas/{alpha_id}/before-and-after-performance')
+            performance = performance_response.content.decode('utf-8')
+            if performance:
+                performance = json.loads(performance)
+                if performance.get('score'):
+                    before_score = performance['score']['before']
+                    after_score = performance['score']['after']
+                    score = after_score - before_score
+                    return [score]
+
+            if time.time() - start_time > timeout:
+                return [None]
+
+            sleep(5)
+
+    def get_pl(self, alpha_id):
+        while True:
+            pl_obj = self.sess.get(f'https://api.worldquantbrain.com/alphas/{alpha_id}/recordsets/pnl')
+            if pl_obj.content:
+                pl = pl_obj.json()
+                pl = pl.get('records')
+                pl_df = pd.DataFrame(pl, columns=['date', 'returns'])
+                pl_df['returns'] = pl_df['returns'] - pl_df['returns'].shift(1)
+                pl_df.dropna(inplace=True)
+                return pl_df
+
+    def get_turnover(self, alpha_id):
+        while True:
+            turnover_obj = self.sess.get(f'https://api.worldquantbrain.com/alphas/{alpha_id}/recordsets/turnover')
+            if turnover_obj.content:
+                turnover = turnover_obj.json()
+                turnover = turnover.get('records')
+                turnover_df = pd.DataFrame(turnover, columns=['date', 'turnover'])
+                turnover_df.dropna(inplace=True)
+                return turnover_df
