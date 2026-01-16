@@ -24,7 +24,8 @@ from email.header import Header
 RUN_MODE = 1
 
 # 支持多个Alpha ID的列表
-TARGET_ALPHA_IDS = ['AlphaID','AlphaID']
+##TARGET_ALPHA_IDS = ['AlphaID','AlphaID']
+TARGET_ALPHA_IDS = ['AX3mZ7Q']
 
 # 从配置文件中读取邮箱配置
 try:
