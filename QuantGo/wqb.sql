@@ -1,4 +1,4 @@
---------------------------------------------  operator信息表 ---------------------------------------------
+-- --------------------------------------------  operator信息表 ---------------------------------------------
 CREATE TABLE `operators` (
   `id` INT NOT NULL AUTO_INCREMENT COMMENT '主键ID，自增长',
   `name` VARCHAR(255) NOT NULL COMMENT '运算符名称',
@@ -29,7 +29,7 @@ CREATE TABLE `operators` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='运算符信息表';
 
 
------------------------------------------- alpha信息表 -----------------------------------------------------
+-- ------------------------------------------ alpha信息表 -----------------------------------------------------
 CREATE TABLE `active_alpha_list` (
   `id` VARCHAR(50) NOT NULL COMMENT 'Alpha ID，如E5AknWGK、vRVdVmKz',
   `type` VARCHAR(20) NOT NULL COMMENT 'Alpha类型：SUPER/REGULAR',
@@ -176,7 +176,7 @@ CREATE TABLE `active_alpha_list` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='活跃Alpha列表信息表';
 
 
------------------------------------------- 顾问 weight | value_factor 数据表 -----------------------------------------------------
+-- ------------------------------------------ 顾问 weight | value_factor 数据表 -----------------------------------------------------
 
 CREATE TABLE `weight_value_factor` (
   `id` INT NOT NULL AUTO_INCREMENT COMMENT '主键ID，自增长',
@@ -229,7 +229,7 @@ CREATE TABLE `weight_value_factor` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='研究顾问wf|vf每日统计表';
 
 
-------------------------------------------------- 金字塔优先推塔表 -------------------------------------------
+-- ------------------------------------------------- 金字塔优先推塔表 -------------------------------------------
 
 CREATE TABLE `pyramid_alphas` (
   `id` INT NOT NULL AUTO_INCREMENT COMMENT '主键ID，自增长',
@@ -268,7 +268,7 @@ CREATE TABLE `pyramid_alphas` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='用户金字塔Alpha活动统计表';
 
 
-------------------------------------------------------- alpha的Combin表现表 ----------------------------------------------
+-- ------------------------------------------------------- alpha的Combin表现表 ----------------------------------------------
 
 CREATE TABLE combined_alpha_performance (
     id INT PRIMARY KEY AUTO_INCREMENT,
