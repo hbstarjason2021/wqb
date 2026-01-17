@@ -30,4 +30,3 @@ go version
 # 检查 Go 环境配置
 go env | grep -E "GOPATH|GOROOT|GO111MODULE"
 
-go  version 
