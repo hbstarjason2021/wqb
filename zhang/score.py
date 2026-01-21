@@ -288,6 +288,15 @@ if __name__ == "__main__":
     test_gold_bag = [
         "your_alpha_id_1",  # 纯 Alpha ID
         ("your_alpha_id_2", 0.123),  # Alpha ID + 自相关系数
+        "bl7NpzZp",
+        "KPxnpapk",
+        "78gxRGY8",
+        "GrEn5WYP",
+        "MP9kaPvL",
+        "O0Ko8Zvv",
+        "zqXOrErX",
+        "78gJv0Ox",
+        "YPXQE96w",    
     ]
     
     # 生成带时间戳的 CSV 文件名（避免覆盖），示例：alpha_result_20260120_1530.csv
