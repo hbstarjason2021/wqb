@@ -286,8 +286,8 @@ if __name__ == "__main__":
     # 第一步：先在 login() 函数中填写你的 WQB 账号和密码
     # 第二步：修改测试用的 Alpha ID 为实际需要查询的 ID
     test_gold_bag = [
-        "your_alpha_id_1",  # 纯 Alpha ID
-        ("your_alpha_id_2", 0.123),  # Alpha ID + 自相关系数
+        ## "your_alpha_id_1",  # 纯 Alpha ID
+        ## ("your_alpha_id_2", 0.123),  # Alpha ID + 自相关系数
         "bl7NpzZp",
         "KPxnpapk",
         "78gxRGY8",
