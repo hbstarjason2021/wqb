@@ -663,7 +663,7 @@ region = "GLB"
 
 # 获取初始Alpha列表
 th_tracker = get_alphas(
-    s, 
+    sess, 
     "2026-01-20", 
     "2026-01-23", 
     1.3, 
