@@ -669,13 +669,7 @@ th_tracker = get_alphas(
     1.3, 
     0.7, 
     100,
-    100, 
-    region, 
-    "MINVOL1M", 
-    1, 
-    "EQUITY", 
-    1000, 
-    "track"
+    region
     
 )
 
