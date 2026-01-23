@@ -675,8 +675,8 @@ th_tracker = get_alphas(
     1, 
     "EQUITY", 
     1000, 
-    "track", 
-    color_exclude='RED'
+    "track"
+    
 )
 
 ## 将get的alpha的id取出至stone_bag
