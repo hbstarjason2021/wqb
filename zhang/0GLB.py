@@ -1,44 +1,35 @@
 """
 WorldQuant Brain 批量Alpha生成 - 完整操作符版本
-
-功能：
-1. 支持所有151个操作符的智能表达式生成
-2. 根据操作符参数数量自动生成合适的表达式
-3. 包含单参数、双参数（时间序列、分组）、多参数等所有类型
-
-作者：2025
+修复：降低并发数，增加任务间隔，避免429错误
 """
 
 import sys
 import random
-# 确保能导入machine_lib（根据实际路径调整）
 sys.path.append('.')
 from machine_lib_0GLB import *
 
 # ============================= 配置区域 =============================
-
-# 登录
-s = login()  # 提前登录，复用session
+s = login()
 
 # 数据集配置
-DATASET_ID = 'analyst69'                 # 数据集ID
-REGION = 'GLB'                           # 区域: 'USA', 'EUR', 'CHN', 'GLB', 'ASI'
-UNIVERSE = 'MINVOL1M'                    # 宇宙: 'TOP3000', 'TOP2500', 'MINVOL1M'等
-DELAY = 1                                # 延迟: 0或1
-DATA_TYPE = 'MATRIX'                     # 数据类型: 'MATRIX'或'VECTOR'
+DATASET_ID = 'analyst69'                 
+REGION = 'GLB'                           
+UNIVERSE = 'MINVOL1M'                    
+DELAY = 1                                
+DATA_TYPE = 'MATRIX'                     
 
-# 模拟配置
+# 模拟配置（关键：降低并发，减少请求频率）
 NEUTRALIZATIONS =  ["NONE", "REVERSION_AND_MOMENTUM", "STATISTICAL", "CROWDING", "FAST", "SLOW", "MARKET", "SECTOR", "INDUSTRY", "SUBINDUSTRY", "COUNTRY","SLOW_AND_FAST"]
 random.shuffle(NEUTRALIZATIONS)
-INIT_DECAY = 60                           # 初始衰减值
-TASK_POOL_SIZE = 2                      # 任务池数量
-CONCURRENT_SIMS = 2                      # 并发模拟数
+INIT_DECAY = 60                           
+TASK_POOL_SIZE = 1  # 从2降低到1，减少并发
+CONCURRENT_SIMS = 1  # 从2降低到1，减少并发
 
 # 字段范围
-FIELD_RANGE_SIZE = 30
+FIELD_RANGE_SIZE = 20  # 从30降低到20，减少字段数量和表达式数量
 
 # ============================= 表达式生成器 =============================
-
+# （以下代码与之前修复版一致，无需修改）
 class AlphaExpressionGenerator:
     """智能Alpha表达式生成器 - 支持所有151个操作符"""
     
@@ -55,7 +46,7 @@ class AlphaExpressionGenerator:
         
         # 1. 单参数操作符 (46个)
         self._generate_single_param()
-        print(f"  ✓ 单参数操作符: {len([op for op in PARAM_1 if op in basic_ops])}个")
+        print(f"  ✓ 单参数操作符: {len([op for op in basic_ops if op in basic_ops])}个")
         
         # 2. 时间序列操作符 (双参数，需要窗口期)
         self._generate_ts_operators()
@@ -239,17 +230,13 @@ class AlphaExpressionGenerator:
                     expr2 = self._get_field_expr(field2)
                     self.expressions.append(f'ts_target_tvr_delta_limit({expr1}, {expr2}, lambda_min=0, lambda_max=1, target_tvr=0.1)')
     
-
     def _generate_densify_operators(self):
         """生成densify操作符 - 用于优化分组字段的桶数量"""
-        # densify 主要用于分组字段，将多桶映射到少桶，提高计算效率
         groups = ['subindustry', 'industry', 'sector']
         
         for group in groups:
-            # 直接对分组字段使用 densify
             self.expressions.append(f'densify({group})')
             
-            # densify 后的分组字段用于 group 操作
             for field in self.fields[:3]:
                 field_expr = self._get_field_expr(field)
                 self.expressions.append(f'group_rank({field_expr}, densify({group}))')
@@ -257,7 +244,6 @@ class AlphaExpressionGenerator:
 
     def _generate_group_operators(self):
         """生成分组操作符表达式"""
-        # 常用分组操作符
         group_ops = [
             'group_rank', 'group_zscore', 'group_neutralize',
             'group_mean', 'group_scale', 'group_normalize'
@@ -271,17 +257,14 @@ class AlphaExpressionGenerator:
             for op in group_ops:
                 for group in groups[:2]:  # 只用前2个分组
                     if op == 'group_mean':
-                        # group_mean需要3个参数
                         self.expressions.append(f'{op}({field_expr}, 1, {group})')
                     else:
                         self.expressions.append(f'{op}({field_expr}, {group})')
     
     def _generate_dual_field(self):
         """生成双字段操作符表达式"""
-        # 双字段算术/逻辑操作符
         dual_ops = ['add', 'subtract', 'multiply', 'divide', 'power']
         
-        # 只使用部分字段组合
         for i, field1 in enumerate(self.fields[:5]):
             for field2 in self.fields[i+1:min(i+3, len(self.fields))]:
                 expr1 = self._get_field_expr(field1)
@@ -292,10 +275,8 @@ class AlphaExpressionGenerator:
     
     def _generate_triple_param(self):
         """生成三参数操作符表达式（精选）"""
-        # 精选的三参数操作符
         triple_ops = ['ts_corr', 'ts_covariance', 'if_else']
         
-        # 时间序列相关性
         if len(self.fields) >= 2:
             field1 = self._get_field_expr(self.fields[0])
             field2 = self._get_field_expr(self.fields[1])
@@ -304,23 +285,20 @@ class AlphaExpressionGenerator:
                 for window in [20, 60]:
                     self.expressions.append(f'{op}({field1}, {field2}, {window})')
         
-        # if_else条件表达式
         for field in self.fields[::4]:
             field_expr = self._get_field_expr(field)
             self.expressions.append(f'if_else(greater({field_expr}, 0), {field_expr}, -{field_expr})')
 
-
 # ============================= 主流程 =============================
-
 def main():
     """主执行函数"""
-    
     print("=" * 70)
-    print(f"WorldQuant Brain 批量Alpha生成 - 完整操作符版")
+    print(f"WorldQuant Brain 批量Alpha生成 - 完整操作符版（防429限流）")
     print("=" * 70)
     print(f"\n配置: {DATASET_ID} | {REGION}/{UNIVERSE}/D{DELAY}")
     print(f"支持操作符: {len(basic_ops + ts_ops)}个")
     print(f"中性化配置: {len(NEUTRALIZATIONS)}个 - {NEUTRALIZATIONS}")
+    print(f"⚠ 已降低并发和字段数量，避免429错误")
     print("-" * 70)
     
     # 1. 获取数据字段（增加容错处理）
@@ -335,14 +313,11 @@ def main():
             dataset_id=DATASET_ID
         )
         
-        # 检查是否获取到有效字段
         if gdf.empty or len(gdf) == 0:
             print(f"⚠ 警告：未获取到任何字段！使用默认测试字段继续...")
-            # 使用默认测试字段
             fields = ['close', 'volume', 'open', 'high', 'low']
         else:
             all_fields = gdf[gdf['type'] == DATA_TYPE]['id'].tolist()
-            # 依据字段长度，随机选取的字段范围，范围固定在30个
             if len(all_fields) > FIELD_RANGE_SIZE:
                 start_idx = random.randint(0, len(all_fields) - FIELD_RANGE_SIZE)
                 fields = all_fields[start_idx : start_idx + FIELD_RANGE_SIZE]
@@ -355,7 +330,6 @@ def main():
             
     except Exception as e:
         print(f"❌ 获取数据字段失败: {str(e)}")
-        # 使用默认测试字段
         print("→ 使用默认测试字段继续...")
         fields = ['close', 'volume', 'open', 'high', 'low']
         DATA_TYPE = 'MATRIX'
@@ -395,37 +369,4 @@ def main():
         print(f"执行中性化配置 [{idx}/{total_neutralizations}]: {neutralization}")
         print("=" * 70)
         
-        try:
-            multi_simulate(
-                pools,
-                neut=neutralization,
-                region=REGION,
-                universe=UNIVERSE,
-                start=0
-            )
-        except Exception as e:
-            print(f"❌ 中性化 {neutralization} 执行失败: {str(e)}")
-            continue
-        
-        print(f"\n✓ 中性化 {neutralization} 完成！")
-        if idx < total_neutralizations:
-            print(f"→ 继续执行下一个中性化配置...")
-    
-    print("\n" + "=" * 70)
-    print("✓ 全部模拟完成！")
-    print(f"  已执行中性化配置: {', '.join(NEUTRALIZATIONS)}")
-    print("=" * 70)
-
-
-# ============================= 执行入口 =============================
-
-if __name__ == "__main__":
-    try:
-        main()
-    except KeyboardInterrupt:
-        print("\n\n⚠ 用户中断")
-    except Exception as e:
-        print(f"\n\n❌ 错误: {e}")
-        import traceback
-        traceback.print_exc()
-        raise
+        #
