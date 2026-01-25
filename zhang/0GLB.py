@@ -1,6 +1,6 @@
 """
 WorldQuant Brain 批量Alpha生成 - 完整操作符版本
-修复：降低并发数，增加任务间隔，避免429错误
+修复：登录成功后代码不执行的问题，补充完整执行逻辑和入口
 """
 
 import sys
@@ -9,7 +9,8 @@ sys.path.append('.')
 from machine_lib_0GLB import *
 
 # ============================= 配置区域 =============================
-s = login()
+# 全局登录Session（确保整个程序使用同一个Session）
+s = None
 
 # 数据集配置
 DATASET_ID = 'analyst69'                 
@@ -29,7 +30,6 @@ CONCURRENT_SIMS = 1  # 从2降低到1，减少并发
 FIELD_RANGE_SIZE = 20  # 从30降低到20，减少字段数量和表达式数量
 
 # ============================= 表达式生成器 =============================
-# （以下代码与之前修复版一致，无需修改）
 class AlphaExpressionGenerator:
     """智能Alpha表达式生成器 - 支持所有151个操作符"""
     
@@ -291,7 +291,9 @@ class AlphaExpressionGenerator:
 
 # ============================= 主流程 =============================
 def main():
-    """主执行函数"""
+    """主执行函数 - 完整的执行流程"""
+    global s  # 使用全局Session
+    
     print("=" * 70)
     print(f"WorldQuant Brain 批量Alpha生成 - 完整操作符版（防429限流）")
     print("=" * 70)
@@ -301,8 +303,20 @@ def main():
     print(f"⚠ 已降低并发和字段数量，避免429错误")
     print("-" * 70)
     
-    # 1. 获取数据字段（增加容错处理）
-    print(f"\n[1/5] 获取数据字段...")
+    # 1. 确保登录成功
+    print(f"\n[1/6] 验证登录状态...")
+    if s is None:
+        print(f"  → 正在登录...")
+        s = login()
+    
+    if s is None:
+        print(f"❌ 登录失败，程序退出")
+        return
+    
+    print(f"  ✓ 登录状态正常")
+    
+    # 2. 获取数据字段（增加容错处理）
+    print(f"\n[2/6] 获取数据字段...")
     try:
         gdf = get_datafields(
             s=s,
@@ -334,39 +348,108 @@ def main():
         fields = ['close', 'volume', 'open', 'high', 'low']
         DATA_TYPE = 'MATRIX'
     
-    # 2. 生成表达式
-    print(f"\n[2/5] 生成Alpha表达式...")
-    generator = AlphaExpressionGenerator(fields, DATA_TYPE)
-    expressions = generator.generate_all()
+    # 3. 生成表达式
+    print(f"\n[3/6] 生成Alpha表达式...")
+    try:
+        generator = AlphaExpressionGenerator(fields, DATA_TYPE)
+        expressions = generator.generate_all()
+        
+        print(f"  ✓ 表达式总数: {len(expressions)}")
+        print(f"  预计批次: {int(len(expressions) / 65) if expressions else 0}")
+        if expressions:
+            print(f"  示例: {expressions[0]}")
+    except Exception as e:
+        print(f"❌ 生成表达式失败: {str(e)}")
+        expressions = [f"rank(ts_returns({field}, 5))" for field in fields[:3]]
+        print(f"→ 使用简化表达式继续: {expressions}")
     
-    print(f"\n  表达式总数: {len(expressions)}")
-    print(f"  预计批次: {int(len(expressions) / 65) if expressions else 0}")
-    print(f"  示例: {expressions[0] if expressions else 'N/A'}")
+    # 4. 生成First Order
+    print(f"\n[4/6] 生成First Order...")
+    try:
+        first_order = first_order_factory(expressions, ops_set)
+        print(f"  ✓ First Order: {len(first_order)}")
+    except Exception as e:
+        print(f"❌ 生成First Order失败: {str(e)}")
+        first_order = expressions[:10]  # 使用前10个表达式
+        print(f"→ 使用简化First Order继续: {len(first_order)}个")
     
-    # 3. 生成First Order
-    print(f"\n[3/5] 生成First Order...")
-    first_order = first_order_factory(expressions, ops_set)
-    print(f"  ✓ First Order: {len(first_order)}")
+    # 5. 准备任务
+    print(f"\n[5/6] 准备任务...")
+    try:
+        tasks = [(expr, INIT_DECAY) for expr in first_order]
+        random.shuffle(tasks)
+        pools = load_task_pool(tasks, TASK_POOL_SIZE, CONCURRENT_SIMS)
+        
+        print(f"  ✓ 任务数: {len(tasks)}")
+        print(f"  任务池: {TASK_POOL_SIZE} | 并发: {CONCURRENT_SIMS}")
+        print(f"  衰减: {INIT_DECAY}")
+        
+        if pools:
+            print(f"  示例任务: {pools[0][0] if pools[0] else 'N/A'}")
+    except Exception as e:
+        print(f"❌ 准备任务失败: {str(e)}")
+        print("→ 程序无法继续，退出")
+        return
     
-    # 4. 准备任务
-    print(f"\n[4/5] 准备任务...")
-    tasks = [(expr, INIT_DECAY) for expr in first_order]
-    random.shuffle(tasks)
-    pools = load_task_pool(tasks, TASK_POOL_SIZE, CONCURRENT_SIMS)
-    
-    print(f"  ✓ 任务数: {len(tasks)}")
-    print(f"  任务池: {TASK_POOL_SIZE} | 并发: {CONCURRENT_SIMS}")
-    print(f"  衰减: {INIT_DECAY}")
-    
-    # 5. 批量模拟 - 循环执行每个中性化配置
-    print(f"\n[5/5] 批量模拟...")
-    print(f"  示例任务: {pools[0][0] if pools else 'N/A'}")
-    
+    # 6. 批量模拟 - 循环执行每个中性化配置
+    print(f"\n[6/6] 批量模拟...")
     total_neutralizations = len(NEUTRALIZATIONS)
+    
+    if total_neutralizations == 0:
+        print(f"⚠ 没有中性化配置，程序退出")
+        return
     
     for idx, neutralization in enumerate(NEUTRALIZATIONS, 1):
         print("\n" + "=" * 70)
         print(f"执行中性化配置 [{idx}/{total_neutralizations}]: {neutralization}")
         print("=" * 70)
         
-        #
+        try:
+            # 执行多模拟任务
+            multi_simulate(
+                alpha_pools=pools,
+                neut=neutralization,
+                region=REGION,
+                universe=UNIVERSE,
+                start=0
+            )
+            print(f"  ✓ 中性化配置 {neutralization} 执行完成")
+        except Exception as e:
+            print(f"❌ 执行中性化配置 {neutralization} 失败: {str(e)}")
+            print(f"→ 继续执行下一个配置...")
+            continue
+    
+    print("\n" + "=" * 70)
+    print(f"✅ 所有配置执行完成！")
+    print("=" * 70)
+
+# ============================= 程序入口 =============================
+if __name__ == "__main__":
+    """程序执行入口 - 关键：确保main函数被调用"""
+    try:
+        # 先登录
+        s = login()
+        # 执行主函数
+        main()
+    except KeyboardInterrupt:
+        print(f"\n\n⚠ 用户中断程序执行")
+    except Exception as e:
+        print(f"\n\n❌ 程序执行出错: {str(e)}")
+        import traceback
+        traceback.print_exc()
+
+# 补充缺失的基础操作符定义（防止导入失败）
+basic_ops = ["reverse", "inverse", "rank", "zscore", "quantile", "normalize",
+             "right_tail", "left_tail", "tail", "bucket", "truncate", "winsorize",
+             "clamp", "ts_target_tvr_decay", "ts_target_tvr_hump", "densify",
+             "group_rank", "group_zscore", "group_neutralize", "group_mean",
+             "group_scale", "group_normalize", "add", "subtract", "multiply",
+             "divide", "power", "ts_corr", "ts_covariance", "if_else", "greater"]
+ 
+ts_ops = ["ts_rank", "ts_zscore", "ts_delta",  "ts_sum", "ts_delay", 
+          "ts_std_dev", "ts_mean",  "ts_arg_min", "ts_arg_max","ts_scale", 
+          "ts_quantile", "ts_backfill", "ts_av_diff", "ts_returns", "ts_product",
+          "ts_ir", "ts_decay_linear", "ts_max", "ts_min", "ts_median",
+          "ts_kurtosis", "ts_skewness", "ts_target_tvr_delta_limit"]
+ 
+ops_set = basic_ops + ts_ops
