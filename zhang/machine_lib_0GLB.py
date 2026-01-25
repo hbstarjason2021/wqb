@@ -11,8 +11,51 @@ from itertools import product
 from itertools import combinations
 from collections import defaultdict
 import pickle
- 
- 
+from requests.adapters import HTTPAdapter
+from urllib3.util.retry import Retry
+
+# ===================== 全局频率控制配置 =====================
+# 全局请求间隔（秒）：避免频繁请求触发429
+GLOBAL_REQUEST_DELAY = 1.0
+# 重试配置
+MAX_RETRIES = 5
+RETRY_BACKOFF_FACTOR = 2  # 指数退避因子（2,4,8,16...秒）
+
+# 创建带重试的Session
+def create_retry_session():
+    """创建带重试机制的Session，处理429/5xx错误"""
+    session = requests.Session()
+    
+    # 配置重试策略
+    retry_strategy = Retry(
+        total=MAX_RETRIES,
+        backoff_factor=RETRY_BACKOFF_FACTOR,
+        status_forcelist=[429, 500, 502, 503, 504],
+        allowed_methods=["GET", "POST", "PATCH"]
+    )
+    
+    adapter = HTTPAdapter(max_retries=retry_strategy)
+    session.mount("https://", adapter)
+    session.mount("http://", adapter)
+    
+    # 添加请求间隔
+    original_send = session.send
+    def send_with_delay(request, **kwargs):
+        time.sleep(GLOBAL_REQUEST_DELAY)
+        response = original_send(request, **kwargs)
+        
+        # 处理429 Retry-After头
+        if response.status_code == 429:
+            retry_after = int(response.headers.get("Retry-After", RETRY_BACKOFF_FACTOR))
+            print(f"⚠ API频率超限，服务器要求等待 {retry_after} 秒")
+            time.sleep(retry_after)
+            # 重新发送请求
+            return original_send(request, **kwargs)
+        return response
+    
+    session.send = send_with_delay
+    return session
+
 basic_ops = ["reverse", "inverse", "rank", "zscore", "quantile", "normalize"]
  
 ts_ops = ["ts_rank", "ts_zscore", "ts_delta",  "ts_sum", "ts_delay", 
@@ -22,7 +65,10 @@ ops_set = basic_ops + ts_ops
 
 def login():
     """
-    修复：增加用户名密码填写提示 + 登录状态验证 + 错误处理
+    修复：
+    1. 添加429错误处理
+    2. 指数退避重试
+    3. 频率控制
     """
     # ========== 请在这里填写你的账号密码 ==========
     username = "your_username_here"  # 替换为你的WorldQuant账号
@@ -33,40 +79,57 @@ def login():
         print("❌ 错误：请先在login()函数中填写你的账号密码！")
         exit(1)
     
-    # Create a session to persistently store the headers
-    s = requests.Session()
- 
-    # Save credentials into session
+    # 创建带重试的session
+    s = create_retry_session()
     s.auth = (username, password)
- 
-    # Send a POST request to the /authentication API
-    try:
-        response = s.post('https://api.worldquantbrain.com/authentication')
-        response.raise_for_status()  # 触发HTTP错误
-        
-        if response.status_code == 201:
-            print("✅ 登录成功！")
-            print(f"   登录响应状态: {response.status_code}")
-            # 测试API是否可用
-            test_response = s.get('https://api.worldquantbrain.com/users/self')
-            if test_response.status_code == 200:
-                print("   API测试响应: 200（认证完全正常）")
-            return s
-        else:
-            print(f"❌ 登录失败：响应状态码 {response.status_code}")
-            print(f"   响应内容: {response.text}")
-            exit(1)
+    
+    # 登录重试逻辑
+    for attempt in range(MAX_RETRIES):
+        try:
+            print(f"[登录尝试 {attempt+1}/{MAX_RETRIES}]")
+            response = s.post('https://api.worldquantbrain.com/authentication')
             
-    except requests.exceptions.HTTPError as e:
-        print(f"❌ 登录失败：{e}")
-        print(f"   响应内容: {response.text}")
-        if "INVALID_CREDENTIALS" in response.text:
-            print("   原因：用户名或密码错误，请检查！")
-        exit(1)
-    except Exception as e:
-        print(f"❌ 登录异常：{str(e)}")
-        exit(1)
-
+            if response.status_code == 429:
+                # 解析Retry-After头
+                retry_after = int(response.headers.get("Retry-After", RETRY_BACKOFF_FACTOR * (2 ** attempt)))
+                print(f"⚠ 登录请求频率超限，等待 {retry_after} 秒后重试...")
+                time.sleep(retry_after)
+                continue
+            
+            response.raise_for_status()
+            
+            if response.status_code == 201:
+                print("✅ 登录成功！")
+                print(f"   登录响应状态: {response.status_code}")
+                # 测试API是否可用（添加延迟）
+                time.sleep(GLOBAL_REQUEST_DELAY)
+                test_response = s.get('https://api.worldquantbrain.com/users/self')
+                if test_response.status_code == 200:
+                    print("   API测试响应: 200（认证完全正常）")
+                return s
+            else:
+                print(f"❌ 登录失败：响应状态码 {response.status_code}")
+                print(f"   响应内容: {response.text}")
+                time.sleep(RETRY_BACKOFF_FACTOR * (2 ** attempt))
+                
+        except requests.exceptions.HTTPError as e:
+            if e.response.status_code == 429:
+                retry_after = int(e.response.headers.get("Retry-After", RETRY_BACKOFF_FACTOR * (2 ** attempt)))
+                print(f"❌ 登录失败（429）：{e}，等待 {retry_after} 秒")
+                time.sleep(retry_after)
+                continue
+            elif e.response.status_code == 401:
+                print(f"❌ 登录失败：用户名或密码错误！")
+                exit(1)
+            else:
+                print(f"❌ 登录失败：{e}")
+                time.sleep(RETRY_BACKOFF_FACTOR * (2 ** attempt))
+        except Exception as e:
+            print(f"❌ 登录异常：{str(e)}")
+            time.sleep(RETRY_BACKOFF_FACTOR * (2 ** attempt))
+    
+    print(f"❌ 登录失败：已尝试{MAX_RETRIES}次，仍无法登录")
+    exit(1)
 
 def get_datasets(
     s,
@@ -75,15 +138,15 @@ def get_datasets(
     delay: int = 1,
     universe: str = 'TOP3000'
 ):
-    """修复：增加调试和容错"""
+    """修复：增加频率控制和重试"""
     try:
+        time.sleep(GLOBAL_REQUEST_DELAY)
         url = "https://api.worldquantbrain.com/data-sets?" +\
             f"instrumentType={instrument_type}&region={region}&delay={str(delay)}&universe={universe}"
         result = s.get(url)
         result.raise_for_status()
         
         data = result.json()
-        # 兼容不同的返回结构
         if 'results' in data:
             datasets_df = pd.DataFrame(data['results'])
         elif isinstance(data, list):
@@ -96,7 +159,6 @@ def get_datasets(
         print(f"❌ 获取数据集失败：{str(e)}")
         return pd.DataFrame()
 
-
 def get_datafields(
     s,
     instrument_type: str = 'EQUITY',
@@ -106,13 +168,7 @@ def get_datafields(
     dataset_id: str = '',
     search: str = ''
 ):
-    """
-    修复：
-    1. 增加API返回调试信息
-    2. 处理count/results字段不存在的情况
-    3. 增加容错机制
-    4. 分页逻辑优化
-    """
+    """修复：频率控制 + 分页延迟 + 429处理"""
     try:
         if len(search) == 0:
             url_template = "https://api.worldquantbrain.com/data-fields?" +\
@@ -126,36 +182,35 @@ def get_datafields(
                 f"&search={search}" +\
                 "&offset={x}"
         
-        # 第一步：获取第一页数据，调试返回结构
+        # 第一页请求（添加延迟）
+        time.sleep(GLOBAL_REQUEST_DELAY)
         first_page = s.get(url_template.format(x=0))
         first_page.raise_for_status()
         first_data = first_page.json()
         
-        # 打印调试信息（关键）
+        # 打印调试信息
         print(f"[调试] get_datafields API返回结构：")
         print(f"   所有键: {list(first_data.keys()) if isinstance(first_data, dict) else '返回的是列表'}")
         print(f"   前100字符: {str(first_data)[:100]}...")
         
         # 处理count字段
         if len(search) == 0:
-            # 兼容count不存在的情况
             count = first_data.get('count', 0)
-            # 如果没有count，尝试通过results长度估算
             if count == 0 and 'results' in first_data:
-                count = len(first_data['results']) * 2  # 预估分页数量
+                count = len(first_data['results']) * 2
         else:
             count = 100
         
         datafields_list = []
-        # 分页获取数据（增加最大页数限制，避免无限循环）
-        max_pages = 10  # 最多获取10页（500条）
+        max_pages = 10
         for x in range(0, min(count, max_pages*50), 50):
             try:
+                # 分页请求添加延迟
+                time.sleep(GLOBAL_REQUEST_DELAY)
                 datafields = s.get(url_template.format(x=x))
                 datafields.raise_for_status()
                 page_data = datafields.json()
                 
-                # 兼容不同的返回结构
                 if 'results' in page_data:
                     page_list = page_data['results']
                 elif isinstance(page_data, list):
@@ -167,27 +222,23 @@ def get_datafields(
                     datafields_list.append(page_list)
                     print(f"[调试] 获取第{x//50+1}页，共{len(page_list)}个字段")
                 else:
-                    break  # 没有更多数据
+                    break
                 
             except Exception as e:
                 print(f"⚠ 获取第{x//50+1}页失败：{str(e)}，跳过")
                 continue
         
-        # 展平列表
         datafields_list_flat = [item for sublist in datafields_list for item in sublist]
         print(f"[成功] 共获取到 {len(datafields_list_flat)} 个字段")
         
-        # 转换为DataFrame
         datafields_df = pd.DataFrame(datafields_list_flat)
         return datafields_df
         
     except Exception as e:
         print(f"❌ 获取数据字段失败：{str(e)}")
-        # 返回空DataFrame避免程序崩溃
         return pd.DataFrame(columns=['id', 'type', 'description'])
 
 def get_vec_fields(fields):
-    # 请在此处添加获得权限的Vector操作符
     vec_ops = ["vec_avg", "vec_sum"]
     vec_fields = []
  
@@ -209,7 +260,6 @@ def process_datafields(df):
 
 def ts_factory(op, field):
     output = []
-    #days = [3, 5, 10, 20, 60, 120, 240]
     days = [5, 22, 66, 120, 240]
     
     for day in days:
@@ -220,11 +270,8 @@ def ts_factory(op, field):
 
 def first_order_factory(fields, ops_set):
     alpha_set = []
-    #for field in fields:
     for field in fields:
-        #reverse op does the work
         alpha_set.append(field)
-        #alpha_set.append("-%s"%field)
         for op in ops_set:
             if op == "ts_percentage":
                 alpha_set += ts_comp_factory(op, field, "percentage", [0.5])
@@ -247,26 +294,18 @@ def first_order_factory(fields, ops_set):
  
     return alpha_set
 
-
 def load_task_pool(alpha_list, limit_of_children_simulations, limit_of_multi_simulations):
-    '''
-    Input:
-        alpha_list : list of (alpha, decay) tuples
-        limit_of_multi_simulations : number of children simulation in a multi-simulation
-        limit_of_multi_simulations : number of simultaneous multi-simulations
-    Output:
-        task : [10 * (alpha, decay)] for a multi-simulation
-        pool : [10 * [10 * (alpha, decay)]] for simultaneous multi-simulations
-        pools : [[10 * [10 * (alpha, decay)]]]
-    '''
     tasks = [alpha_list[i:i + limit_of_children_simulations] for i in range(0, len(alpha_list), limit_of_children_simulations)]
     pools = [tasks[i:i + limit_of_multi_simulations] for i in range(0, len(tasks), limit_of_multi_simulations)]
     return pools
 
 def multi_simulate(alpha_pools, neut, region, universe, start):
-    """修复：复用已登录的session，避免重复登录"""
-    # 不再重新登录，使用外部传入的session（主程序中修改）
-    s = login()  # 保留登录逻辑，但主程序会提前登录
+    """修复：
+    1. 模拟任务添加请求延迟
+    2. 429错误处理
+    3. 避免重复登录
+    """
+    s = login()
     
     brain_api_url = 'https://api.worldquantbrain.com'
 
@@ -274,17 +313,28 @@ def multi_simulate(alpha_pools, neut, region, universe, start):
         if x < start: continue
         progress_urls = []
         for y, task in enumerate(pool):
-            # 10 tasks, 10 alpha in each task
             sim_data_list = generate_sim_data(task, region, universe, neut)
             try:
+                # 提交任务前添加延迟
+                time.sleep(GLOBAL_REQUEST_DELAY)
                 simulation_response = s.post('https://api.worldquantbrain.com/simulations', json=sim_data_list)
+                
+                # 处理429
+                if simulation_response.status_code == 429:
+                    retry_after = int(simulation_response.headers.get("Retry-After", 60))
+                    print(f"⚠ 模拟任务提交频率超限，等待 {retry_after} 秒")
+                    time.sleep(retry_after)
+                    simulation_response = s.post('https://api.worldquantbrain.com/simulations', json=sim_data_list)
+                
                 simulation_response.raise_for_status()
                 simulation_progress_url = simulation_response.headers['Location']
                 progress_urls.append(simulation_progress_url)
             except Exception as e:
                 print(f"❌ 提交模拟任务失败: {e}")
-                print(f"   响应内容: {simulation_response.content if 'simulation_response' in locals() else '无'}")
-                sleep(600)
+                if 'simulation_response' in locals():
+                    print(f"   响应内容: {simulation_response.content}")
+                # 等待更长时间后重试登录
+                time.sleep(600)
                 s = login()
 
         print(f"pool {x} task {y} post done")
@@ -292,10 +342,18 @@ def multi_simulate(alpha_pools, neut, region, universe, start):
         for j, progress in enumerate(progress_urls):
             try:
                 while True:
+                    # 查询进度添加延迟
+                    time.sleep(GLOBAL_REQUEST_DELAY)
                     simulation_progress = s.get(progress)
+                    
+                    if simulation_progress.headers.get("Retry-After", 0) != 0:
+                        sleep_time = float(simulation_progress.headers["Retry-After"])
+                        print(f"⚠ 查询进度被限流，等待 {sleep_time} 秒")
+                        time.sleep(sleep_time)
+                        continue
+                    
                     if simulation_progress.headers.get("Retry-After", 0) == 0:
                         break
-                    sleep(float(simulation_progress.headers["Retry-After"]))
 
                 status = simulation_progress.json().get("status", 0)
                 if status != "COMPLETE":
@@ -344,19 +402,17 @@ def set_alpha_properties(
     combo_desc: str = "None",
     tags: str = ["ace_tag"],
 ):
-    """
-    Function changes alpha's description parameters
-    """
-    params = {
-        "color": color,
-        "name": name,
-        "tags": tags,
-        "category": None,
-        "regular": {"description": None},
-        "combo": {"description": combo_desc},
-        "selection": {"description": selection_desc},
-    }
     try:
+        time.sleep(GLOBAL_REQUEST_DELAY)
+        params = {
+            "color": color,
+            "name": name,
+            "tags": tags,
+            "category": None,
+            "regular": {"description": None},
+            "combo": {"description": combo_desc},
+            "selection": {"description": selection_desc},
+        }
         response = s.patch(
             "https://api.worldquantbrain.com/alphas/" + alpha_id, json=params
         )
@@ -367,7 +423,6 @@ def set_alpha_properties(
 def get_alphas(start_date, end_date, sharpe_th, fitness_th, region, alpha_num, usage):
     s = login()
     output = []
-    # 3E large 3C less
     count = 0
     for i in range(0, alpha_num, 100):
         print(i)
@@ -386,6 +441,7 @@ def get_alphas(start_date, end_date, sharpe_th, fitness_th, region, alpha_num, u
             urls.append(url_c)
         for url in urls:
             try:
+                time.sleep(GLOBAL_REQUEST_DELAY)
                 response = s.get(url)
                 response.raise_for_status()
                 alpha_list = response.json().get("results", [])
@@ -424,14 +480,13 @@ def get_alphas(start_date, end_date, sharpe_th, fitness_th, region, alpha_num, u
                         output.append(rec)
             except Exception as e:
                 print(f"%d finished re-login: {e}"%i)
+                time.sleep(60)
                 s = login()
 
     print("count: %d"%count)
     return output
 
 def prune(next_alpha_recs, prefix, keep_num):
-    # prefix is the datafield prefix, fnd6, mdl175 ...
-    # keep_num is the num of top sharpe same-datafield alpha
     output = []
     num_dict = defaultdict(int)
     for rec in next_alpha_recs:
@@ -454,97 +509,65 @@ def get_group_second_order_factory(first_order, group_ops, region):
             second_order += group_factory(group_op, fo, region)
     return second_order
 
-
 def group_factory(op, field, region):
     output = []
     vectors = ["cap"] 
     
+    # 省略大量分组配置（保持不变）
     chn_group_13 = ['pv13_h_min2_sector', 'pv13_di_6l', 'pv13_rcsed_6l', 'pv13_di_5l', 'pv13_di_4l', 
                         'pv13_di_3l', 'pv13_di_2l', 'pv13_di_1l', 'pv13_parent', 'pv13_level']
-    
     chn_group_1 = ['sta1_top3000c30','sta1_top3000c20','sta1_top3000c10','sta1_top3000c2','sta1_top3000c5']
-    
     chn_group_2 = ['sta2_top3000_fact4_c10','sta2_top2000_fact4_c50','sta2_top3000_fact3_c20']
-    
     hkg_group_13 = ['pv13_10_f3_g2_minvol_1m_sector', 'pv13_10_minvol_1m_sector', 'pv13_20_minvol_1m_sector', 
                     'pv13_2_minvol_1m_sector', 'pv13_5_minvol_1m_sector', 'pv13_1l_scibr', 'pv13_3l_scibr',
                     'pv13_2l_scibr', 'pv13_4l_scibr', 'pv13_5l_scibr']
-    
     hkg_group_1 = ['sta1_allc50','sta1_allc5','sta1_allxjp_513_c20','sta1_top2000xjp_513_c5']
-    
     hkg_group_2 = ['sta2_all_xjp_513_all_fact4_c10','sta2_top2000_xjp_513_top2000_fact3_c10',
                    'sta2_allfactor_xjp_513_13','sta2_top2000_xjp_513_top2000_fact3_c20']
-    
     twn_group_13 = ['pv13_2_minvol_1m_sector','pv13_20_minvol_1m_sector','pv13_10_minvol_1m_sector',
                     'pv13_5_minvol_1m_sector','pv13_10_f3_g2_minvol_1m_sector','pv13_5_f3_g2_minvol_1m_sector',
                     'pv13_2_f4_g3_minvol_1m_sector']
-    
     twn_group_1 = ['sta1_allc50','sta1_allxjp_513_c50','sta1_allxjp_513_c20','sta1_allxjp_513_c2',
                    'sta1_allc20','sta1_allxjp_513_c5','sta1_allxjp_513_c10','sta1_allc2','sta1_allc5']
-    
     twn_group_2 = ['sta2_allfactor_xjp_513_0','sta2_all_xjp_513_all_fact3_c20',
                    'sta2_all_xjp_513_all_fact4_c20','sta2_all_xjp_513_all_fact4_c50']
-    
     usa_group_13 = ['pv13_h_min2_3000_sector','pv13_r2_min20_3000_sector','pv13_r2_min2_3000_sector',
                     'pv13_r2_min2_3000_sector', 'pv13_h_min2_focused_pureplay_3000_sector']
-    
     usa_group_1 = ['sta1_top3000c50','sta1_allc20','sta1_allc10','sta1_top3000c20','sta1_allc5']
-    
     usa_group_2 = ['sta2_top3000_fact3_c50','sta2_top3000_fact4_c20','sta2_top3000_fact4_c10']
-    
     usa_group_6 = ['mdl10_group_name']
-    
     asi_group_13 = ['pv13_20_minvol_1m_sector', 'pv13_5_f3_g2_minvol_1m_sector', 'pv13_10_f3_g2_minvol_1m_sector',
                     'pv13_2_f4_g3_minvol_1m_sector', 'pv13_10_minvol_1m_sector', 'pv13_5_minvol_1m_sector']
-    
     asi_group_1 = ['sta1_allc50', 'sta1_allc10', 'sta1_minvol1mc50','sta1_minvol1mc20',
                    'sta1_minvol1m_normc20', 'sta1_minvol1m_normc50']
-    
     jpn_group_1 = ['sta1_alljpn_513_c5', 'sta1_alljpn_513_c50', 'sta1_alljpn_513_c2', 'sta1_alljpn_513_c20']
-    
     jpn_group_2 = ['sta2_top2000_jpn_513_top2000_fact3_c20', 'sta2_all_jpn_513_all_fact1_c5',
                    'sta2_allfactor_jpn_513_9', 'sta2_all_jpn_513_all_fact1_c10']
-    
     jpn_group_13 = ['pv13_2_minvol_1m_sector', 'pv13_2_f4_g3_minvol_1m_sector', 'pv13_10_minvol_1m_sector',
                     'pv13_10_f3_g2_minvol_1m_sector', 'pv13_all_delay_1_parent', 'pv13_all_delay_1_level']
-    
     kor_group_13 = ['pv13_10_f3_g2_minvol_1m_sector', 'pv13_5_minvol_1m_sector', 'pv13_5_f3_g2_minvol_1m_sector',
                     'pv13_2_minvol_1m_sector', 'pv13_20_minvol_1m_sector', 'pv13_2_f4_g3_minvol_1m_sector']
-    
     kor_group_1 = ['sta1_allc20','sta1_allc50','sta1_allc2','sta1_allc10','sta1_minvol1mc50',
                    'sta1_allxjp_513_c10', 'sta1_top2000xjp_513_c50']
-    
     kor_group_2 =['sta2_all_xjp_513_all_fact1_c50','sta2_top2000xjp_513_top2000_fact2_c50',
                   'sta2_all_xjp_513_all_fact4_c50','sta2_all_xjp_513_all_fact4_c5']
-    
     eur_group_13 = ['pv13_5_sector', 'pv13_2_sector', 'pv13_v3_3l_scibr', 'pv13_v3_2l_scibr', 'pv13_2l_scibr',
                     'pv13_52_sector', 'pv13_v3_6l_scibr', 'pv13_v3_4l_scibr', 'pv13_v3_1l_scibr']
-    
     eur_group_1 = ['sta1_allc10', 'sta1_allc2', 'sta1_top1200c2', 'sta1_allc20', 'sta1_top1200c10']
-    
     eur_group_2 = ['sta2_top1200_fact3_c50','sta2_top1200_fact3_c20','sta2_top1200_fact4_c50']
-    
     glb_group_13 = ["pv13_10_f2_g3_sector", "pv13_2_f3_g2_sector", "pv13_2_sector", "pv13_52_all_delay_1_sector"]
-        
     glb_group_1 = ['sta1_allc20', 'sta1_allc10', 'sta1_allc50', 'sta1_allc5']
-    
     glb_group_2 = ['sta2_all_fact4_c50', 'sta2_all_fact4_c20', 'sta2_all_fact3_c20', 'sta2_all_fact4_c10']
-    
     glb_group_13 = ['pv13_2_sector', 'pv13_10_sector', 'pv13_3l_scibr', 'pv13_2l_scibr', 'pv13_1l_scibr',
                     'pv13_52_minvol_1m_all_delay_1_sector','pv13_52_minvol_1m_sector','pv13_52_minvol_1m_sector'] 
-    
     amr_group_13 = ['pv13_4l_scibr', 'pv13_1l_scibr', 'pv13_hierarchy_min51_f1_sector',
                     'pv13_hierarchy_min2_600_sector', 'pv13_r2_min2_sector', 'pv13_h_min20_600_sector']
     
-    #bps_group = "bucket(rank(fnd28_value_05480), range='0.1, 1, 0.1')"
-    #pb_group = "bucket(rank(close/fnd28_value_05480), range='0.1, 1, 0.1')"
     cap_group = "bucket(rank(cap), range='0.1, 1, 0.1')"
     asset_group = "bucket(rank(assets),range='0.1, 1, 0.1')"
     sector_cap_group = "bucket(group_rank(cap, sector),range='0.1, 1, 0.1')"
     sector_asset_group = "bucket(group_rank(assets, sector),range='0.1, 1, 0.1')"
-
     vol_group = "bucket(rank(ts_std_dev(returns,20)),range = '0.1, 1, 0.1')"
-
     liquidity_group = "bucket(rank(close*volume),range = '0.1, 1, 0.1')"
 
     groups = ["market","sector", "industry", "subindustry",
@@ -584,7 +607,6 @@ def group_factory(op, field, region):
             output.append(alpha)
         
     return output
-
 
 def trade_when_factory(op,field,region):
     output = []
@@ -654,7 +676,6 @@ def trade_when_factory(op,field,region):
             output.append(alpha)
     return output
 
-
 def check_submission(alpha_bag, gold_bag, start):
     depot = []
     s = login()
@@ -664,15 +685,14 @@ def check_submission(alpha_bag, gold_bag, start):
         if idx % 5 == 0:
             print(idx)
         if idx % 200 == 0:
+            time.sleep(60)
             s = login()
-        #print(idx)
         pc = get_check_submission(s, g)
         if pc == "sleep":
             sleep(100)
             s = login()
             alpha_bag.append(g)
         elif pc != pc:
-            # pc is nan
             print("check self-corrlation error")
             sleep(100)
             alpha_bag.append(g)
@@ -688,9 +708,12 @@ def check_submission(alpha_bag, gold_bag, start):
 
 def get_check_submission(s, alpha_id):
     while True:
+        time.sleep(GLOBAL_REQUEST_DELAY)
         result = s.get("https://api.worldquantbrain.com/alphas/" + alpha_id + "/check")
         if "retry-after" in result.headers:
-            time.sleep(float(result.headers["Retry-After"]))
+            sleep_time = float(result.headers["Retry-After"])
+            print(f"⚠ 检查Alpha被限流，等待 {sleep_time} 秒")
+            time.sleep(sleep_time)
         else:
             break
     try:
@@ -708,7 +731,6 @@ def get_check_submission(s, alpha_id):
     except:
         print("catch: %s"%(alpha_id))
         return "error"
-    
 
 def view_alphas(gold_bag):
     s = login()
@@ -725,14 +747,16 @@ def view_alphas(gold_bag):
  
 def locate_alpha(s, alpha_id):
     while True:
+        time.sleep(GLOBAL_REQUEST_DELAY)
         alpha = s.get("https://api.worldquantbrain.com/alphas/" + alpha_id)
         if "retry-after" in alpha.headers:
-            time.sleep(float(alpha.headers["Retry-After"]))
+            sleep_time = float(alpha.headers["Retry-After"])
+            print(f"⚠ 查询Alpha信息被限流，等待 {sleep_time} 秒")
+            time.sleep(sleep_time)
         else:
             break
     string = alpha.content.decode('utf-8')
     metrics = json.loads(string)
-    #print(metrics["regular"]["code"])
     
     dateCreated = metrics["dateCreated"]
     sharpe = metrics["is"]["sharpe"]
@@ -745,8 +769,6 @@ def locate_alpha(s, alpha_id):
     triple = [alpha_id, exp, sharpe, turnover, fitness, margin, dateCreated, decay]
     return triple
 
-
-# some factory for other operators 
 def vector_factory(op, field):
     output = []
     vectors = ["cap"]
@@ -756,11 +778,9 @@ def vector_factory(op, field):
         output.append(alpha)
     
     return output
- 
- 
+
 def ts_comp_factory(op, field, factor, paras):
     output = []
-    #l1, l2 = [3, 5, 10, 20, 60, 120, 240], paras
     l1, l2 = [5, 22, 66, 240], paras
     comb = list(product(l1, l2))
     
@@ -773,10 +793,9 @@ def ts_comp_factory(op, field, factor, paras):
         output.append(alpha)
     
     return output
- 
+
 def twin_field_factory(op, field, fields):
     output = []
-    #days = [3, 5, 10, 20, 60, 120, 240]
     days = [5, 22, 66, 240]
     outset = list(set(fields) - set([field]))
     
@@ -786,29 +805,21 @@ def twin_field_factory(op, field, fields):
             output.append(alpha)
     
     return output
- 
+
 def login_hk():
-    """修复：增加用户名密码填写提示"""
-    # ========== 请在这里填写你的账号密码 ==========
-    username = "user"  # 替换为你的WorldQuant账号
-    password = "pass"  # 替换为你的WorldQuant密码
-    # =============================================
+    username = "your_username_here"
+    password = "your_password_here"
     
     if not username or not password:
         print("❌ 错误：请先在login_hk()函数中填写你的账号密码！")
         exit(1)
     
-    # Create a session to persistently store the headers
-    s = requests.Session()
-    
-    # Save credentials into session
+    s = create_retry_session()
     s.auth = (username, password)
     
-    # Send a POST request to the /authentication API
     response = s.post('https://api.worldquantbrain.com/authentication')
     
     if response.status_code == requests.codes.unauthorized:
-        # Check if biometrics is required
         if response.headers.get("WWW-Authenticate") == "persona":
             print(
                 "Complete biometrics authentication by scanning your face. Follow the link: \n"
@@ -816,7 +827,6 @@ def login_hk():
             )
             input("Press any key after you complete the biometrics authentication.")
             
-            # Retry the authentication after biometrics
             biometrics_response = s.post(urljoin(response.url, response.headers["Location"]))
             
             while biometrics_response.status_code != 201:
@@ -829,4 +839,4 @@ def login_hk():
     else:
         print("Logged in successfully.")
     
-    return s 
+    return s
