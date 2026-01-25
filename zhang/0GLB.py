@@ -13,7 +13,7 @@ import sys
 import random
 # 确保能导入machine_lib（根据实际路径调整）
 sys.path.append('.')
-from machine_lib import *
+from machine_lib_0GLB import *
 
 # ============================= 配置区域 =============================
 
