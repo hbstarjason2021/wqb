@@ -1,10 +1,14 @@
 """
 WorldQuant Brain 批量Alpha生成 - 完整操作符版本
-修复：登录成功后代码不执行的问题，补充完整执行逻辑和入口
+修复：
+1. 解决400 Bad Request（Multi-simulations格式错误）
+2. 任务失败自动跳过，继续执行下一个任务
+3. 增强异常处理，避免程序卡住
 """
 
 import sys
 import random
+import time
 sys.path.append('.')
 from machine_lib_0GLB import *
 
@@ -23,13 +27,13 @@ DATA_TYPE = 'MATRIX'
 NEUTRALIZATIONS =  ["NONE", "REVERSION_AND_MOMENTUM", "STATISTICAL", "CROWDING", "FAST", "SLOW", "MARKET", "SECTOR", "INDUSTRY", "SUBINDUSTRY", "COUNTRY","SLOW_AND_FAST"]
 random.shuffle(NEUTRALIZATIONS)
 INIT_DECAY = 60                           
-TASK_POOL_SIZE = 1  # 从2降低到1，减少并发
-CONCURRENT_SIMS = 1  # 从2降低到1，减少并发
+TASK_POOL_SIZE = 1  # 单任务模式（修复400错误关键）
+CONCURRENT_SIMS = 1  
 
 # 字段范围
-FIELD_RANGE_SIZE = 20  # 从30降低到20，减少字段数量和表达式数量
+FIELD_RANGE_SIZE = 20  
 
-# ============================= 表达式生成器 =============================
+# ============================= 核心修复：表达式生成器保持不变 =============================
 class AlphaExpressionGenerator:
     """智能Alpha表达式生成器 - 支持所有151个操作符"""
     
@@ -95,41 +99,29 @@ class AlphaExpressionGenerator:
     def _get_field_expr(self, field):
         """获取字段表达式（VECTOR需要先转换）"""
         if self.data_type == 'VECTOR':
-            # 使用全部7个向量操作符
             vec_op = random.choice([
-                'vec_avg',      # 平均值
-                'vec_sum',      # 总和
-                'vec_max',      # 最大值
-                'vec_min',      # 最小值
-                'vec_count',    # 元素数量
-                'vec_stddev',   # 标准差
-                'vec_norm'      # 绝对值之和
+                'vec_avg', 'vec_sum', 'vec_max', 'vec_min', 'vec_count', 'vec_stddev', 'vec_norm'
             ])
             return f'{vec_op}({field})'
         return field
     
     def _generate_single_param(self):
         """生成单参数操作符表达式"""
-        # 排除需要额外参数的操作符
         exclude_ops = ['ts_backfill', 'right_tail', 'left_tail', 'tail', 'bucket', 'truncate', 'winsorize', 'clamp',
                        'ts_target_tvr_decay', 'ts_target_tvr_hump', 'densify']
         single_ops = [op for op in basic_ops if not op.startswith('vec_') and op not in exclude_ops]
         
         for field in self.fields:
             field_expr = self._get_field_expr(field)
-            
-            # 原始字段
             self.expressions.append(field_expr)
             self.expressions.append(f'-{field_expr}')
             
-            # 应用单参数操作符
             for op in single_ops:
                 self.expressions.append(f'{op}({field_expr})')
                 self.expressions.append(f'-{op}({field_expr})')
     
     def _generate_ts_operators(self):
         """生成时间序列操作符表达式"""
-        # 标准时间序列操作符
         ts_ops_window = [
             'ts_rank', 'ts_mean', 'ts_sum', 'ts_std_dev', 
             'ts_delta', 'ts_delay', 'ts_max', 'ts_min',
@@ -138,20 +130,15 @@ class AlphaExpressionGenerator:
             'ts_median', 'ts_kurtosis', 'ts_skewness'
         ]
         
-        # 需要lookback参数的操作符
         ts_ops_lookback = ['ts_backfill', 'ts_av_diff', 'ts_returns']
+        windows = [5, 10, 20, 60]
         
-        windows = [5, 10, 20, 60]  # 常用窗口期
-        
-        for field in self.fields[::2]:  # 每隔一个字段，减少数量
+        for field in self.fields[::2]:
             field_expr = self._get_field_expr(field)
-            
-            # 生成标准时间序列表达式
             for op in ts_ops_window:
-                for window in windows[::2]:  # 使用部分窗口期
+                for window in windows[::2]:
                     self.expressions.append(f'{op}({field_expr}, {window})')
             
-            # 生成lookback表达式
             for op in ts_ops_lookback:
                 for window in windows[::2]:
                     self.expressions.append(f'{op}({field_expr}, {window})')
@@ -169,60 +156,43 @@ class AlphaExpressionGenerator:
     
     def _generate_bucket_operators(self):
         """生成bucket操作符表达式 - 必须使用命名参数"""
-        for field in self.fields[::4]:  # 每隔3个字段
+        for field in self.fields[::4]:
             field_expr = self._get_field_expr(field)
-            # bucket需要先rank，然后使用命名参数
             rank_expr = f'rank({field_expr})'
-            
-            # 使用range参数 (起始, 结束, 步长)
             self.expressions.append(f'bucket({rank_expr}, range="0, 1, 0.1")')
             self.expressions.append(f'bucket({rank_expr}, range="0, 1, 0.05")')
-            
-            # 使用buckets参数 (桶边界)
             self.expressions.append(f'bucket({rank_expr}, buckets="0.2,0.4,0.6,0.8")')
     
     def _generate_truncate_winsorize_operators(self):
         """生成truncate和winsorize操作符表达式 - 必须使用命名参数"""
-        for field in self.fields[::3]:  # 每隔两个字段
+        for field in self.fields[::3]:
             field_expr = self._get_field_expr(field)
-            
-            # truncate(x, maxPercent) - 截断极端值
             self.expressions.append(f'truncate({field_expr}, maxPercent=0.01)')
             self.expressions.append(f'truncate({field_expr}, maxPercent=0.05)')
             self.expressions.append(f'truncate(rank({field_expr}), maxPercent=0.02)')
             
-            # winsorize(x, std) - 温莎化处理
             self.expressions.append(f'winsorize({field_expr}, std=3)')
             self.expressions.append(f'winsorize({field_expr}, std=4)')
             self.expressions.append(f'winsorize(rank({field_expr}), std=2.5)')
     
     def _generate_clamp_operators(self):
         """生成clamp操作符表达式 - 必须使用命名参数"""
-        for field in self.fields[::4]:  # 每隔3个字段
+        for field in self.fields[::4]:
             field_expr = self._get_field_expr(field)
-            
-            # clamp(x, lower, upper) - 限制值在范围内
             self.expressions.append(f'clamp({field_expr}, lower=0.95, upper=1.05)')
             self.expressions.append(f'clamp({field_expr}, lower=-0.1, upper=0.1)')
-            
-            # 对时间序列返回值使用clamp
             self.expressions.append(f'clamp(-ts_returns({field_expr}, 5), lower=-0.05, upper=0.05)')
             self.expressions.append(f'clamp(ts_delta({field_expr}, 10), lower=-0.1, upper=0.1)')
     
     def _generate_ts_target_tvr_operators(self):
         """生成ts_target_tvr系列操作符 - 必须使用完整的命名参数"""
-        for field in self.fields[::4]:  # 每隔3个字段
+        for field in self.fields[::4]:
             field_expr = self._get_field_expr(field)
-            
-            # ts_target_tvr_decay(x, lambda_min, lambda_max, target_tvr)
             self.expressions.append(f'ts_target_tvr_decay({field_expr}, lambda_min=0, lambda_max=1, target_tvr=0.1)')
             self.expressions.append(f'ts_target_tvr_decay({field_expr}, lambda_min=0, lambda_max=0.5, target_tvr=0.05)')
-            
-            # ts_target_tvr_hump(x, lambda_min, lambda_max, target_tvr)
             self.expressions.append(f'ts_target_tvr_hump({field_expr}, lambda_min=0, lambda_max=1, target_tvr=0.1)')
             self.expressions.append(f'ts_target_tvr_hump({field_expr}, lambda_min=0, lambda_max=0.5, target_tvr=0.05)')
         
-        # ts_target_tvr_delta_limit(x, y, lambda_min, lambda_max, target_tvr) - 需要两个字段
         if len(self.fields) >= 2:
             for i, field1 in enumerate(self.fields[:3]):
                 for field2 in self.fields[i+1:min(i+2, len(self.fields))]:
@@ -251,11 +221,11 @@ class AlphaExpressionGenerator:
         
         groups = ['subindustry', 'industry', 'sector']
         
-        for field in self.fields[::3]:  # 每隔两个字段
+        for field in self.fields[::3]:
             field_expr = self._get_field_expr(field)
             
             for op in group_ops:
-                for group in groups[:2]:  # 只用前2个分组
+                for group in groups[:2]:
                     if op == 'group_mean':
                         self.expressions.append(f'{op}({field_expr}, 1, {group})')
                     else:
@@ -270,7 +240,7 @@ class AlphaExpressionGenerator:
                 expr1 = self._get_field_expr(field1)
                 expr2 = self._get_field_expr(field2)
                 
-                for op in dual_ops[:3]:  # 只用前3个操作符
+                for op in dual_ops[:3]:
                     self.expressions.append(f'{op}({expr1}, {expr2})')
     
     def _generate_triple_param(self):
@@ -289,18 +259,159 @@ class AlphaExpressionGenerator:
             field_expr = self._get_field_expr(field)
             self.expressions.append(f'if_else(greater({field_expr}, 0), {field_expr}, -{field_expr})')
 
+# ============================= 核心修复：模拟任务处理函数 =============================
+def generate_sim_data_fixed(alpha_item, region, uni, neut):
+    """
+    修复版：生成单条模拟数据（解决400错误）
+    alpha_item: 单个任务元组 (expr, decay)
+    """
+    alpha, decay = alpha_item
+    simulation_data = {
+        'type': 'REGULAR',
+        'settings': {
+            'instrumentType': 'EQUITY',
+            'region': region,
+            'universe': uni,
+            'delay': 1,
+            'decay': decay,
+            'neutralization': neut,
+            'truncation': 0.08,
+            'pasteurization': 'ON',
+            'testPeriod': 'P0Y',
+            'unitHandling': 'VERIFY',
+            'nanHandling': 'ON',
+            'language': 'FASTEXPR',
+            'visualization': False,
+        },
+        'regular': alpha
+    }
+    return simulation_data
+
+def multi_simulate_fixed(alpha_pools, neut, region, universe, start):
+    """
+    修复版：批量模拟函数
+    1. 解决400 Bad Request（单任务不包裹数组）
+    2. 任务失败自动跳过，继续下一个
+    3. 增强异常处理，避免卡住
+    """
+    global s
+    if s is None:
+        s = login()
+    
+    brain_api_url = 'https://api.worldquantbrain.com'
+    failed_tasks = []  # 记录失败任务
+    
+    for x, pool in enumerate(alpha_pools):
+        if x < start: 
+            continue
+        
+        print(f"\n[Pool {x}] 开始处理 {len(pool)} 个任务...")
+        progress_urls = []
+        
+        # 遍历每个任务，逐个处理（失败跳过）
+        for y, task in enumerate(pool):
+            try:
+                # 生成单条模拟数据（不包裹数组）
+                sim_data = generate_sim_data_fixed(task, region, universe, neut)
+                
+                # 提交前添加延迟，避免限流
+                time.sleep(GLOBAL_REQUEST_DELAY)
+                
+                # 核心修复：单任务直接提交（非数组），多任务才用数组
+                simulation_response = s.post(
+                    'https://api.worldquantbrain.com/simulations',
+                    json=sim_data  # 单任务：直接传字典（非数组）
+                )
+                
+                # 处理429限流
+                if simulation_response.status_code == 429:
+                    retry_after = int(simulation_response.headers.get("Retry-After", 10))
+                    print(f"⚠ [Pool {x}-Task {y}] 限流，等待 {retry_after} 秒...")
+                    time.sleep(retry_after)
+                    # 重试提交
+                    simulation_response = s.post(
+                        'https://api.worldquantbrain.com/simulations',
+                        json=sim_data
+                    )
+                
+                simulation_response.raise_for_status()
+                simulation_progress_url = simulation_response.headers.get('Location')
+                
+                if simulation_progress_url:
+                    progress_urls.append((simulation_progress_url, task))
+                    print(f"✅ [Pool {x}-Task {y}] 提交成功: {task[0][:50]}...")
+                else:
+                    print(f"⚠ [Pool {x}-Task {y}] 无进度URL，跳过")
+                    failed_tasks.append((x, y, task, "无进度URL"))
+                    
+            except requests.exceptions.HTTPError as e:
+                error_msg = f"HTTP错误: {e.response.status_code} - {e.response.text[:100]}"
+                print(f"❌ [Pool {x}-Task {y}] 提交失败: {error_msg}")
+                failed_tasks.append((x, y, task, error_msg))
+                # 跳过当前任务，继续下一个
+                continue
+            except Exception as e:
+                error_msg = f"系统错误: {str(e)[:100]}"
+                print(f"❌ [Pool {x}-Task {y}] 提交失败: {error_msg}")
+                failed_tasks.append((x, y, task, error_msg))
+                # 重新登录（如果需要）
+                if "401" in str(e) or "unauthorized" in str(e).lower():
+                    print(f"🔄 重新登录...")
+                    s = login()
+                # 跳过当前任务，继续下一个
+                continue
+        
+        print(f"[Pool {x}] 提交完成 - 成功: {len(progress_urls)} | 失败: {len(failed_tasks)}")
+        
+        # 检查任务进度（失败不影响后续）
+        for j, (progress, task) in enumerate(progress_urls):
+            try:
+                while True:
+                    time.sleep(GLOBAL_REQUEST_DELAY)
+                    simulation_progress = s.get(progress)
+                    
+                    if simulation_progress.headers.get("Retry-After"):
+                        sleep_time = float(simulation_progress.headers["Retry-After"])
+                        print(f"⚠ [Pool {x}-Progress {j}] 限流，等待 {sleep_time} 秒...")
+                        time.sleep(sleep_time)
+                        continue
+                    
+                    status = simulation_progress.json().get("status", "UNKNOWN")
+                    if status in ["COMPLETE", "FAILED", "CANCELLED"]:
+                        print(f"📊 [Pool {x}-Progress {j}] 状态: {status}")
+                        break
+                    else:
+                        print(f"⌛ [Pool {x}-Progress {j}] 状态: {status}，等待中...")
+                        time.sleep(2)
+                        
+            except Exception as e:
+                print(f"❌ [Pool {x}-Progress {j}] 进度查询失败: {str(e)[:100]}")
+                continue  # 跳过进度查询失败的任务
+        
+        print(f"✅ [Pool {x}] 处理完成")
+    
+    # 输出失败任务汇总
+    if failed_tasks:
+        print(f"\n📝 失败任务汇总（共{len(failed_tasks)}个）:")
+        for idx, (x, y, task, err) in enumerate(failed_tasks[:5]):  # 只显示前5个
+            print(f"  - Pool{x}-Task{y}: {task[0][:50]}... | 原因: {err}")
+        if len(failed_tasks) > 5:
+            print(f"  - 还有 {len(failed_tasks)-5} 个失败任务，略过显示")
+    else:
+        print(f"\n🎉 所有任务提交成功！")
+
 # ============================= 主流程 =============================
 def main():
     """主执行函数 - 完整的执行流程"""
-    global s  # 使用全局Session
+    global s
     
     print("=" * 70)
-    print(f"WorldQuant Brain 批量Alpha生成 - 完整操作符版（防429限流）")
+    print(f"WorldQuant Brain 批量Alpha生成 - 完整操作符版（防429+自动跳过失败任务）")
     print("=" * 70)
     print(f"\n配置: {DATASET_ID} | {REGION}/{UNIVERSE}/D{DELAY}")
     print(f"支持操作符: {len(basic_ops + ts_ops)}个")
-    print(f"中性化配置: {len(NEUTRALIZATIONS)}个 - {NEUTRALIZATIONS}")
-    print(f"⚠ 已降低并发和字段数量，避免429错误")
+    print(f"中性化配置: {len(NEUTRALIZATIONS)}个 - {NEUTRALIZATIONS[:3]}...")
+    print(f"⚠ 单任务提交模式（修复400错误）| 失败任务自动跳过")
     print("-" * 70)
     
     # 1. 确保登录成功
@@ -315,7 +426,7 @@ def main():
     
     print(f"  ✓ 登录状态正常")
     
-    # 2. 获取数据字段（增加容错处理）
+    # 2. 获取数据字段
     print(f"\n[2/6] 获取数据字段...")
     try:
         gdf = get_datafields(
@@ -343,7 +454,7 @@ def main():
             print(f"  示例: {fields[0]}")
             
     except Exception as e:
-        print(f"❌ 获取数据字段失败: {str(e)}")
+        print(f"❌ 获取数据字段失败: {str(e)[:100]}")
         print("→ 使用默认测试字段继续...")
         fields = ['close', 'volume', 'open', 'high', 'low']
         DATA_TYPE = 'MATRIX'
@@ -359,7 +470,7 @@ def main():
         if expressions:
             print(f"  示例: {expressions[0]}")
     except Exception as e:
-        print(f"❌ 生成表达式失败: {str(e)}")
+        print(f"❌ 生成表达式失败: {str(e)[:100]}")
         expressions = [f"rank(ts_returns({field}, 5))" for field in fields[:3]]
         print(f"→ 使用简化表达式继续: {expressions}")
     
@@ -369,8 +480,8 @@ def main():
         first_order = first_order_factory(expressions, ops_set)
         print(f"  ✓ First Order: {len(first_order)}")
     except Exception as e:
-        print(f"❌ 生成First Order失败: {str(e)}")
-        first_order = expressions[:10]  # 使用前10个表达式
+        print(f"❌ 生成First Order失败: {str(e)[:100]}")
+        first_order = expressions[:10]
         print(f"→ 使用简化First Order继续: {len(first_order)}个")
     
     # 5. 准备任务
@@ -385,13 +496,13 @@ def main():
         print(f"  衰减: {INIT_DECAY}")
         
         if pools:
-            print(f"  示例任务: {pools[0][0] if pools[0] else 'N/A'}")
+            print(f"  示例任务: {pools[0][0][0][:50]}...")
     except Exception as e:
-        print(f"❌ 准备任务失败: {str(e)}")
+        print(f"❌ 准备任务失败: {str(e)[:100]}")
         print("→ 程序无法继续，退出")
         return
     
-    # 6. 批量模拟 - 循环执行每个中性化配置
+    # 6. 批量模拟（使用修复版函数）
     print(f"\n[6/6] 批量模拟...")
     total_neutralizations = len(NEUTRALIZATIONS)
     
@@ -399,14 +510,15 @@ def main():
         print(f"⚠ 没有中性化配置，程序退出")
         return
     
+    # 遍历所有中性化配置，失败不终止
     for idx, neutralization in enumerate(NEUTRALIZATIONS, 1):
         print("\n" + "=" * 70)
         print(f"执行中性化配置 [{idx}/{total_neutralizations}]: {neutralization}")
         print("=" * 70)
         
         try:
-            # 执行多模拟任务
-            multi_simulate(
+            # 调用修复版模拟函数
+            multi_simulate_fixed(
                 alpha_pools=pools,
                 neut=neutralization,
                 region=REGION,
@@ -415,8 +527,11 @@ def main():
             )
             print(f"  ✓ 中性化配置 {neutralization} 执行完成")
         except Exception as e:
-            print(f"❌ 执行中性化配置 {neutralization} 失败: {str(e)}")
-            print(f"→ 继续执行下一个配置...")
+            error_msg = str(e)[:150]
+            print(f"❌ 执行中性化配置 {neutralization} 失败: {error_msg}")
+            print(f"→ 跳过当前配置，继续下一个...")
+            # 增加延迟，避免连续失败
+            time.sleep(5)
             continue
     
     print("\n" + "=" * 70)
@@ -426,6 +541,27 @@ def main():
 # ============================= 程序入口 =============================
 if __name__ == "__main__":
     """程序执行入口 - 关键：确保main函数被调用"""
+    # 初始化全局配置（从machine_lib导入）
+    GLOBAL_REQUEST_DELAY = 1.0
+    MAX_RETRIES = 5
+    RETRY_BACKOFF_FACTOR = 2
+    
+    # 基础操作符定义（防止缺失）
+    basic_ops = ["reverse", "inverse", "rank", "zscore", "quantile", "normalize",
+                 "right_tail", "left_tail", "tail", "bucket", "truncate", "winsorize",
+                 "clamp", "ts_target_tvr_decay", "ts_target_tvr_hump", "densify",
+                 "group_rank", "group_zscore", "group_neutralize", "group_mean",
+                 "group_scale", "group_normalize", "add", "subtract", "multiply",
+                 "divide", "power", "ts_corr", "ts_covariance", "if_else", "greater"]
+     
+    ts_ops = ["ts_rank", "ts_zscore", "ts_delta",  "ts_sum", "ts_delay", 
+              "ts_std_dev", "ts_mean",  "ts_arg_min", "ts_arg_max","ts_scale", 
+              "ts_quantile", "ts_backfill", "ts_av_diff", "ts_returns", "ts_product",
+              "ts_ir", "ts_decay_linear", "ts_max", "ts_min", "ts_median",
+              "ts_kurtosis", "ts_skewness", "ts_target_tvr_delta_limit"]
+     
+    ops_set = basic_ops + ts_ops
+    
     try:
         # 先登录
         s = login()
@@ -434,22 +570,6 @@ if __name__ == "__main__":
     except KeyboardInterrupt:
         print(f"\n\n⚠ 用户中断程序执行")
     except Exception as e:
-        print(f"\n\n❌ 程序执行出错: {str(e)}")
+        print(f"\n\n❌ 程序执行出错: {str(e)[:200]}")
         import traceback
         traceback.print_exc()
-
-# 补充缺失的基础操作符定义（防止导入失败）
-basic_ops = ["reverse", "inverse", "rank", "zscore", "quantile", "normalize",
-             "right_tail", "left_tail", "tail", "bucket", "truncate", "winsorize",
-             "clamp", "ts_target_tvr_decay", "ts_target_tvr_hump", "densify",
-             "group_rank", "group_zscore", "group_neutralize", "group_mean",
-             "group_scale", "group_normalize", "add", "subtract", "multiply",
-             "divide", "power", "ts_corr", "ts_covariance", "if_else", "greater"]
- 
-ts_ops = ["ts_rank", "ts_zscore", "ts_delta",  "ts_sum", "ts_delay", 
-          "ts_std_dev", "ts_mean",  "ts_arg_min", "ts_arg_max","ts_scale", 
-          "ts_quantile", "ts_backfill", "ts_av_diff", "ts_returns", "ts_product",
-          "ts_ir", "ts_decay_linear", "ts_max", "ts_min", "ts_median",
-          "ts_kurtosis", "ts_skewness", "ts_target_tvr_delta_limit"]
- 
-ops_set = basic_ops + ts_ops
