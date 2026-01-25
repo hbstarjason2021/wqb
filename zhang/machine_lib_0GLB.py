@@ -60,8 +60,8 @@ ops_set = basic_ops + ts_ops
 def login():
     """登录函数 - 带重试和限流处理"""
     # ========== 请替换为你的账号密码 ==========
-    username = "your_username_here"
-    password = "your_password_here"
+    username = "user"
+    password = "pass"
     # ==========================================
     
     if not username or not password:
@@ -605,4 +605,27 @@ def get_check_submission(s, alpha_id):
             return "sleep"
         checks_df = pd.DataFrame(result.json()["is"]["checks"])
         pc = checks_df[checks_df.name == "PROD_CORRELATION"]["value"].values[0]
-        if not any(checks_df["result"] ==
+        # 修复：补全未闭合的括号和条件语句
+        if not any(checks_df["result"] == "FAIL"):
+            return pc
+        else:
+            return "fail"
+    except Exception as e:
+        print(f"❌ 检查Alpha提交状态失败: {str(e)}")
+        return "error"
+
+# 补充缺失的辅助函数（避免调用失败）
+def ts_comp_factory(op, field, param_name, param_values):
+    """时间序列复合工厂函数（补全缺失的函数）"""
+    output = []
+    for val in param_values:
+        alpha = f"{op}({field}, {param_name}={val})"
+        output.append(alpha)
+    return output
+
+def vector_factory(op, field):
+    """向量工厂函数（补全缺失的函数）"""
+    output = []
+    alpha = f"{op}({field})"
+    output.append(alpha)
+    return output
