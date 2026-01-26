@@ -1,0 +1,181 @@
+{
+  "version": "1.0",
+  "description": "Template bank for structured alpha generation. LLM selects template + fields + parameters.",
+  "templates": [
+    {
+      "id": "momentum_rank",
+      "category": "momentum",
+      "template": "rank(ts_delta({field}, {window}))",
+      "description": "Pure momentum signal: rank of price/value change",
+      "params": {"window": [5, 10, 20, 60, 120]}
+    },
+    {
+      "id": "momentum_rank_neg",
+      "category": "reversal",
+      "template": "-rank(ts_delta({field}, {window}))",
+      "description": "Mean reversion: negative rank of change",
+      "params": {"window": [5, 10, 20, 60, 120]}
+    },
+    {
+      "id": "zscore",
+      "category": "normalized",
+      "template": "ts_zscore({field}, {window})",
+      "description": "Normalized value relative to rolling history",
+      "params": {"window": [20, 60, 120, 252]}
+    },
+    {
+      "id": "vol_adjusted_momentum",
+      "category": "risk_adjusted",
+      "template": "divide(ts_delta({field}, {window}), ts_std_dev({field}, {window}))",
+      "description": "Volatility-adjusted momentum (change / volatility)",
+      "params": {"window": [10, 20, 60]}
+    },
+    {
+      "id": "information_ratio",
+      "category": "risk_adjusted",
+      "template": "ts_ir({field}, {window})",
+      "description": "Information ratio: mean / std over window",
+      "params": {"window": [20, 60, 120, 252]}
+    },
+    {
+      "id": "rank_mean",
+      "category": "level",
+      "template": "rank(ts_mean({field}, {window}))",
+      "description": "Rank of smoothed level",
+      "params": {"window": [5, 10, 20, 60]}
+    },
+    {
+      "id": "rank_ts_rank",
+      "category": "momentum",
+      "template": "rank(ts_rank({field}, {window}, constant=0))",
+      "description": "Rank of time-series percentile",
+      "params": {"window": [20, 60, 120]}
+    },
+    {
+      "id": "acceleration",
+      "category": "momentum",
+      "template": "ts_delta(ts_delta({field}, {window1}), {window2})",
+      "description": "Acceleration: change of change",
+      "params": {"window1": [5, 10, 20], "window2": [5, 10, 20]}
+    },
+    {
+      "id": "momentum_quality",
+      "category": "composite",
+      "template": "multiply(ts_delta({field1}, {window}), {field2})",
+      "description": "Momentum weighted by quality/level",
+      "params": {"window": [10, 20, 60]}
+    },
+    {
+      "id": "low_vol_premium",
+      "category": "risk_adjusted",
+      "template": "multiply({field}, inverse(ts_std_dev({field}, {window})))",
+      "description": "Level weighted by inverse volatility",
+      "params": {"window": [20, 60, 120]}
+    },
+    {
+      "id": "mean_reversion",
+      "category": "reversal",
+      "template": "subtract(ts_mean({field}, {long_window}), ts_mean({field}, {short_window}))",
+      "description": "Mean reversion: long-term mean minus short-term",
+      "params": {"long_window": [60, 120], "short_window": [5, 10, 20]}
+    },
+    {
+      "id": "relative_strength",
+      "category": "momentum",
+      "template": "divide(ts_mean({field}, {short_window}), ts_mean({field}, {long_window}))",
+      "description": "Relative strength: short/long mean ratio",
+      "params": {"short_window": [5, 10, 20], "long_window": [60, 120, 252]}
+    },
+    {
+      "id": "trend_strength",
+      "category": "momentum",
+      "template": "divide(ts_delta({field}, {window}), ts_std_dev({field}, {window}))",
+      "description": "Trend strength: return / volatility",
+      "params": {"window": [20, 60, 120]}
+    },
+    {
+      "id": "winsorized_rank",
+      "category": "robust",
+      "template": "rank(winsorize({field}, {limit}))",
+      "description": "Rank of winsorized values (outlier robust)",
+      "params": {"limit": [0.01, 0.02, 0.05]}
+    },
+    {
+      "id": "group_neutralized",
+      "category": "neutral",
+      "template": "group_neutralize({field}, subindustry)",
+      "description": "Subindustry-neutralized signal",
+      "params": {}
+    },
+    {
+      "id": "decay_weighted",
+      "category": "smoothed",
+      "template": "ts_decay_linear({field}, {window})",
+      "description": "Linearly decay-weighted average",
+      "params": {"window": [5, 10, 20, 60]}
+    },
+    {
+      "id": "rank_combo_add",
+      "category": "composite",
+      "template": "rank(add({field1}, {field2}))",
+      "description": "Rank of sum of two fields",
+      "params": {}
+    },
+    {
+      "id": "rank_combo_multiply",
+      "category": "composite",
+      "template": "rank(multiply({field1}, {field2}))",
+      "description": "Rank of product of two fields",
+      "params": {}
+    },
+    {
+      "id": "momentum_with_reversal",
+      "category": "composite",
+      "template": "add(ts_delta({field}, {short_window}), multiply(-1, ts_delta({field}, {long_window})))",
+      "description": "Short-term momentum + long-term reversal",
+      "params": {"short_window": [5, 10], "long_window": [60, 120]}
+    },
+    {
+      "id": "quality_momentum",
+      "category": "composite",
+      "template": "multiply(rank({field1}), rank(ts_delta({field2}, {window})))",
+      "description": "Quality rank times momentum rank",
+      "params": {"window": [20, 60]}
+    },
+    {
+      "id": "stability_weighted",
+      "category": "risk_adjusted",
+      "template": "multiply({field}, reverse(ts_std_dev({field}, {window})))",
+      "description": "Value weighted by stability (inverse vol)",
+      "params": {"window": [20, 60, 120]}
+    },
+    {
+      "id": "regime_switch",
+      "category": "conditional",
+      "template": "if_else(greater(ts_delta({field}, {window}), 0), {field}, multiply(-1, {field}))",
+      "description": "Conditional on momentum direction",
+      "params": {"window": [10, 20, 60]}
+    },
+    {
+      "id": "percentile_extreme",
+      "category": "signal",
+      "template": "subtract(ts_rank({field}, {window}, constant=0), 0.5)",
+      "description": "Centered percentile rank (-0.5 to 0.5)",
+      "params": {"window": [20, 60, 120]}
+    },
+    {
+      "id": "signed_power",
+      "category": "nonlinear",
+      "template": "signed_power({field}, {power})",
+      "description": "Signed power transformation",
+      "params": {"power": [0.5, 2]}
+    },
+    {
+      "id": "rank_subtract",
+      "category": "composite",
+      "template": "rank(subtract({field1}, {field2}))",
+      "description": "Rank of difference between two fields",
+      "params": {}
+    }
+  ]
+}
