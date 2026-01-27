@@ -1,6 +1,8 @@
 ### 
 apt install mysql-client-core-8.0 -y
 
+pip install mysql-connector-python --break-system-packages
+
 mkdir -p /home/mysql8/init
 
 ### cat > /home/mysql8/init/01-create-db.sql << EOF
@@ -32,5 +34,4 @@ docker run  -d  \
 --lower_case_table_names=1
 
 
-####### pip install mysql-connector-python --break-system-packages
 ####### mysql -h 172.30.1.2 -uroot -P 3310 -p
