@@ -89,14 +89,15 @@ class AlphaCrawler:
     def load_config(self) -> Dict:
         """加载配置文件"""
         try:
-            config_path = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'credentials.json')
-            with open(config_path, 'r', encoding='utf-8') as f:
-                config = json.load(f)
-            logger.info("配置文件加载成功")
-            return config
+           script_dir = os.path.abspath(os.path.dirname(__file__))
+           config_path = os.path.join(script_dir, 'credentials.json')
+           with open(config_path, 'r', encoding='utf-8') as f:
+             config = json.load(f)
+           logger.info(f"配置文件加载成功，路径：{config_path}")
+           return config
         except Exception as e:
-            logger.error(f"配置文件加载失败: {e}")
-            return {}
+           logger.error(f"配置文件加载失败: {e}")
+        return {}
     
     def _try_shared_session(self):
         """
@@ -1781,6 +1782,7 @@ if __name__ == "__main__":
     
     # 根据执行结果退出
     sys.exit(0 if success else 1)
+
 
 
 
