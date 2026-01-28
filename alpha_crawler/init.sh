@@ -35,3 +35,5 @@ docker run  -d  \
 
 
 ####### mysql -h 172.30.1.2 -uroot -P 3310 -p
+
+##### registry.cn-wulanchabu.aliyuncs.com/hbstarjason/mysql:8
