@@ -44,6 +44,7 @@ cp 01.json /home/grafana/dashboards/
 cp 02.json /home/grafana/dashboards/
 cp 03.json /home/grafana/dashboards/
 cp 04.json /home/grafana/dashboards/
+cp 05.json /home/grafana/dashboards/
 
 # 统一设置目录和文件权限（避免容器读取失败，关键步骤）
 chmod -R 755 /home/grafana/
