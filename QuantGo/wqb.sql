@@ -281,3 +281,20 @@ CREATE TABLE combined_alpha_performance (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='Alpha Combin表现指标表';
+
+-- ------------------------------------------------------- 六维数据表 ----------------------------------------------
+
+CREATE TABLE tie_breaker_criteria (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    operators_per_alpha DECIMAL(10, 4) NULL COMMENT 'Alpha的平均操作符(算子)数量',
+    operators_used INT NULL COMMENT '使用的(不重复)操作符(算子)总数',
+    fields_per_alpha DECIMAL(10, 4) NULL COMMENT 'Alpha的平均字段使用数量',
+    fields_used INT NULL COMMENT '使用的字段总数',
+    community_activity DECIMAL(10, 4) NULL COMMENT '社区活跃度',
+    max_simulation_streak INT NULL COMMENT '最大连续(模拟)回测天数',
+    genius_level VARCHAR(20) NULL COMMENT 'Genius等级',
+    genius_quarter VARCHAR(50) NULL COMMENT 'Genius季度',
+    quarter_start_date VARCHAR(20) NULL COMMENT '季度开始日期，格式: YYYY-MM-DD',
+    quarter_end_date VARCHAR(20) NULL COMMENT '季度结束日期，格式: YYYY-MM-DD',
+    calculation_date VARCHAR(100) NOT NULL COMMENT '计算日期范围字符串，格式如: January 1st, 2026 – March 31st, 2026'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='六维数据表';
