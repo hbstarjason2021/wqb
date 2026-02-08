@@ -596,8 +596,8 @@ def main():
     ALPHA_IDS = [
         "Jj0booLe",  # 示例Alpha ID 1
         "RRZdl3Ob",  # 示例Alpha ID 2
-        "0rvY7wx",   # 示例Alpha ID 3
-        "RZdlgwj",
+        "P0rvY7wx",   # 示例Alpha ID 3
+        "RRZdlgwj",
         "Gr0kzXzO",
         "e78Lv9zz",
         "O0wog72R"
