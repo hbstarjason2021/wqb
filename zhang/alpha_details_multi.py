@@ -594,9 +594,13 @@ def main():
     # ⭐⭐⭐ 在这里设置多个Alpha ID ⭐⭐⭐
     # ============================================
     ALPHA_IDS = [
-        "d58Qe2Pv",  # 示例Alpha ID 1
-        "abc12345",  # 示例Alpha ID 2
-        "def67890"   # 示例Alpha ID 3
+        "Jj0booLe",  # 示例Alpha ID 1
+        "RRZdl3Ob",  # 示例Alpha ID 2
+        "0rvY7wx",   # 示例Alpha ID 3
+        "RZdlgwj",
+        "Gr0kzXzO",
+        "e78Lv9zz",
+        "O0wog72R"
     ]
     # 批量处理时每个Alpha之间的延迟（秒），建议5-10秒
     BATCH_DELAY = 5
