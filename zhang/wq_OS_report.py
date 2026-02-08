@@ -11,8 +11,8 @@ from openpyxl.utils import get_column_letter
 
 username = ""
 password = ""
-start_date = "2026-01-01"  # alpha提交日期筛选
-end_date = "2026-01-21"
+start_date = "2026-02-01"  # alpha提交日期筛选
+end_date = "2026-02-08"
 
 ####################################
 
