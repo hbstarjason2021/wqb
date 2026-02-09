@@ -1075,9 +1075,9 @@ class cfg:
         raise FileNotFoundError(
             f"配置文件 {brain_file} 不存在！\n"
             f"请在该路径创建 brain.txt 文件，内容格式为 JSON 数组：\n"
-            f'["your_username", "your_password"]\n'
+            f'["email", "pass"]\n'
             f"用户名和密码用双引号包围，不要有额外空格或换行。\n"
-            f"例如：[\"john.doe@example.com\", \"your_password\"]"
+            f"例如：[\"email\", \"pass\"]"
         )
     
     # 读取账号密码
